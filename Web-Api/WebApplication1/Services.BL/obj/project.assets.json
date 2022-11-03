@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Services.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Services.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.DAL.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Services.DAL/1.0.0": {
+      "type": "project",
+      "path": "../Services.DAL/Services.DAL.csproj",
+      "msbuildProject": "../Services.DAL/Services.DAL.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Services.DAL >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ELMALEK\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\Services_App4\\Web-Api\\WebApplication1\\Services.DAL\\Services.DAL.csproj": {
+              "projectPath": "E:\\Services_App4\\Web-Api\\WebApplication1\\Services.DAL\\Services.DAL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

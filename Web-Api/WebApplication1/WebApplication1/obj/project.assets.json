@@ -88,6 +88,29 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Services.BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Services.DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.BL.dll": {}
+        }
+      },
+      "Services.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Services.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.DAL.dll": {}
+        }
       }
     }
   },
@@ -216,10 +239,21 @@
         "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Services.BL/1.0.0": {
+      "type": "project",
+      "path": "../Services.BL/Services.BL.csproj",
+      "msbuildProject": "../Services.BL/Services.BL.csproj"
+    },
+    "Services.DAL/1.0.0": {
+      "type": "project",
+      "path": "../Services.DAL/Services.DAL.csproj",
+      "msbuildProject": "../Services.DAL/Services.DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Services.BL >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -249,7 +283,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\Services_App4\\Web-Api\\WebApplication1\\Services.BL\\Services.BL.csproj": {
+              "projectPath": "E:\\Services_App4\\Web-Api\\WebApplication1\\Services.BL\\Services.BL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

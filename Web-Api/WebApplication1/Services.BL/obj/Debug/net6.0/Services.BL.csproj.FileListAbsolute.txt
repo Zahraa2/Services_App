@@ -1,0 +1,15 @@
+E:\Services_App4\Web-Api\WebApplication1\Services.BL\bin\Debug\net6.0\Services.BL.deps.json
+E:\Services_App4\Web-Api\WebApplication1\Services.BL\bin\Debug\net6.0\Services.BL.dll
+E:\Services_App4\Web-Api\WebApplication1\Services.BL\bin\Debug\net6.0\Services.BL.pdb
+E:\Services_App4\Web-Api\WebApplication1\Services.BL\bin\Debug\net6.0\Services.DAL.dll
+E:\Services_App4\Web-Api\WebApplication1\Services.BL\bin\Debug\net6.0\Services.DAL.pdb
+E:\Services_App4\Web-Api\WebApplication1\Services.BL\obj\Debug\net6.0\Services.BL.csproj.AssemblyReference.cache
+E:\Services_App4\Web-Api\WebApplication1\Services.BL\obj\Debug\net6.0\Services.BL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Services_App4\Web-Api\WebApplication1\Services.BL\obj\Debug\net6.0\Services.BL.AssemblyInfoInputs.cache
+E:\Services_App4\Web-Api\WebApplication1\Services.BL\obj\Debug\net6.0\Services.BL.AssemblyInfo.cs
+E:\Services_App4\Web-Api\WebApplication1\Services.BL\obj\Debug\net6.0\Services.BL.csproj.CoreCompileInputs.cache
+E:\Services_App4\Web-Api\WebApplication1\Services.BL\obj\Debug\net6.0\Services.BL.csproj.CopyComplete
+E:\Services_App4\Web-Api\WebApplication1\Services.BL\obj\Debug\net6.0\Services.BL.dll
+E:\Services_App4\Web-Api\WebApplication1\Services.BL\obj\Debug\net6.0\refint\Services.BL.dll
+E:\Services_App4\Web-Api\WebApplication1\Services.BL\obj\Debug\net6.0\Services.BL.pdb
+E:\Services_App4\Web-Api\WebApplication1\Services.BL\obj\Debug\net6.0\ref\Services.BL.dll
