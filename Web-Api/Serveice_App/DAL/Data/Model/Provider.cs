@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DAL;
+
+public class Provider
+{
+    public Guid id { get; set; }
+    [ForeignKey("user")]
+    public string? UserId { get; set; }
+    [ForeignKey("service")]
+    public Guid? ServiceId { get; set; }
+    public CustomeUser user { get; set; } = null!;
+
+    public string sammary { get; set; } = null!;
+
+    public decimal AvgRate { get; set; }
+    
+    public string profilePicture { get; set; } = null!;
+    public ICollection<Request> requests = new HashSet<Request>();
+    public ICollection<Post> posts = new HashSet<Post>();
+    public Service? service { get; set; }
+
+}
