@@ -21,11 +21,19 @@ builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(c
 
 #endregion
 
-#region Repos
+#region Reposatories
+builder.Services.AddScoped<ICategoryRepo, CategoryRepo>();
+builder.Services.AddScoped<ICustomerRepo, CutomerRepo>();
+builder.Services.AddScoped<IMediaRepo,MediaRepo>();
+builder.Services.AddScoped<IPostRepo, PostRepo>();
+builder.Services.AddScoped<IProviderRepo,ProviderRepo>();
+builder.Services.AddScoped<IRequestRepo, RequestRepo>();
+builder.Services.AddScoped<IServiceRepo, ServiceRepo>();
 
 #endregion
 
 #region Unit Of Work
+builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
 #endregion
 
 #region AutoMapper

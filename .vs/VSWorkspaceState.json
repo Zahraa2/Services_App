@@ -3,10 +3,7 @@
     "",
     "\\Web-Api",
     "\\Web-Api\\Serveice_App",
-    "\\Web-Api\\Serveice_App\\DAL",
-    "\\Web-Api\\Serveice_App\\DAL\\Data",
-    "\\Web-Api\\Serveice_App\\DAL\\Data\\Context"
+    "\\Web-Api\\Serveice_App\\DAL"
   ],
-  "SelectedNode": "\\Web-Api\\Serveice_App\\DAL\\Data\\Context\\DatabaseContext.cs",
   "PreviewInSolutionExplorer": false
 }
