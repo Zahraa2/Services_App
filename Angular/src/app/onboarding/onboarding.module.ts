@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TestimonialComponent } from './Testimonial/Testimonial.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [TestimonialComponent],
   imports: [
-    CommonModule
+    CommonModule 
+  ] , 
+  exports:[
+    TestimonialComponent
   ]
 })
 export class OnboardingModuleModule { }
