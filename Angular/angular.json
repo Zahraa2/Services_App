@@ -26,6 +26,10 @@
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6580953ab32711b8388c92f972a2ae59e0eb45e3
             ]
           },
           "configurations": {

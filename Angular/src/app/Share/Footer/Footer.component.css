@@ -1,0 +1,8 @@
+footer{
+   position: fixed;
+   bottom: 0;
+   width: 100%; 
+}
+footer .Copyright{
+    font-size: 0.8rem;
+}
