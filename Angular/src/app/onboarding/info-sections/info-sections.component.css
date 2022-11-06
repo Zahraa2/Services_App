@@ -1,0 +1,14 @@
+
+.info {
+    background-image: url(../../../assets/1.webp);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.shadow{
+    background-color: rgba(229, 137, 1 , 0.8);
+}
+.info-header{
+    font-size: 3rem;
+    font-weight: bold;
+}
