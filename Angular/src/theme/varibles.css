@@ -1,0 +1,25 @@
+/* ================================ Globals Styling ================================  */
+html,
+body {
+  height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* ================================ Variables ================================  */
+:root {
+  --primary: #E58901;
+  --secondary: #581000;
+  --light: #bec1be;
+  --light-green: #006E5F;
+  --bold-font: font-family: 'Lalezar', cursive;
+  --light-font: font-family:
+}
+
+
+/* ================================ Utilities ================================  */
