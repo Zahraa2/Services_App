@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
-@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
->>>>>>> 964d6a2ec9f342ce88496c8aa304ad867f524fa0
 
 body { margin: 0; font-family: 'Amiri', serif;  text-align: right; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Archivo:wght@300&family=Cairo:wght@200&family=Lalezar&family=Roboto+Condensed&family=Space+Grotesk:wght@700&display=swap');
