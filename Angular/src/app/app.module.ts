@@ -5,18 +5,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OnboardingModuleModule } from './onboarding/onboarding.module';
 
-
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     OnboardingModuleModule
-    
-  ],
+ ],
   providers: [],
   bootstrap: [AppComponent]
 })
