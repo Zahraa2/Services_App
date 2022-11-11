@@ -4,16 +4,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OnboardingModuleModule } from './onboarding/onboarding.module';
+import { ShareModule } from './Share/share.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent,
+    // ShareComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    OnboardingModuleModule
+    OnboardingModuleModule,
+    ShareModule
  ],
   providers: [],
   bootstrap: [AppComponent]

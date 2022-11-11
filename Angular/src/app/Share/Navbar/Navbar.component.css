@@ -4,7 +4,7 @@
   text-align: right;
 }
 .navbar h1 {
-  font-size:2rem; 
+  font-size:1.5rem; 
   font-weight:bold;
   padding-top:1rem;
   font-family: 'Noto Nastaliq Urdu', serif;
@@ -27,11 +27,11 @@
  padding-left:1.7rem; 
  cursor:pointer;
  font-size:1.2rem;
- font-weight:bold
+ font-weight:bold;
 }
 
 .icons i:hover {
-  color:#E58901
+  color:var(--secondary)
 } 
 
 .fa-user {
@@ -41,11 +41,11 @@
 
 .dropdown {
   border :none;
-  background: transparent
+  background: transparent,
 } 
 
 .fa-earth-americas {
-  color:#006E5F
+  color:var(--secondary)
 }
 /* ===================== Toggle ===================== */
 

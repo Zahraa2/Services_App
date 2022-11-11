@@ -1,5 +1,4 @@
 footer{
- 
    bottom: 0;
    width: 100%; 
 }
@@ -23,4 +22,11 @@ footer .Copyright{
 .container-fluid .icon-foo-div{
     justify-content: space-between;
     width: 60%;
+}
+.svg-style{
+    background-color:#fff
+}
+.footer_more_inf{
+    color: #fff;
+    text-decoration: none;
 }
