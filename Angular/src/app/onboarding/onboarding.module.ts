@@ -8,6 +8,7 @@ import { OnboardingComponent } from './UI/onboarding.component';
 
 
 
+
 const onboardingSharedComponent=[
   InfoSectionsComponent,TestimonialComponent , AboutSectionsComponent , OnboardingComponent
 ]
@@ -17,7 +18,8 @@ const onboardingSharedComponent=[
   ],
   imports: [
     CommonModule,
-    ShareModule
+    ShareModule,
+    
   ],
   exports:[
     onboardingSharedComponent

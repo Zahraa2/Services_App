@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
+.accordion-custom{
+    width: 100% ;
+    text-align: right;
+    font-size: 1.3rem;
+    padding: 1rem;
+    font-weight: bold;
+    background-color: transparent;
+    font-family: 'Cairo', sans-serif;
+
+}
+.accordion-custom a , .accordion-body a{
+    text-decoration: none !important;
+    color: black;
+}
+.accordion-body{
+    transition: all 0.4rem;
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+}
+.accordion-body:hover{
+    background-color: #f2f2f2;
+    padding-right: 10px;
+    font-size: 1.2rem;
+   
+}
+.accordion-body:hover a{
+    color: blue;
+}

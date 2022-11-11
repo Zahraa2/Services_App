@@ -1,6 +1,6 @@
 /* ========================================start about section =================================== */
 #about{
-    background-image: url("../../../assets/Images/Sections/blutted-img.jpg")  ;
+    background-image: url("../../../../assets/Images/Sections/blutted-img2.jpg")  ;
     background-position: bottom top ;
     background-size: 30% ;
     background-repeat: no-repeat;
@@ -32,7 +32,7 @@
 
 	padding: 1rem 3rem;
 	list-style: none;
-	background-image: url('../../../assets/Images/Sections/blutted-img2.jpg');
+	background-image: url('../../../../assets/Images/Sections/blutted-img2.jpg');
 	background-repeat: no-repeat;
 	background-position: center right;
 	background-size: 40px;
@@ -60,7 +60,7 @@
 /* ==========================================statistics section======================================= */
 .statistics{
     background-color: #f2f2f2;
-    background-image: url("../../../assets/Images/Sections/blutted-img.jpg")  ;
+    background-image: url("../../../../assets/Images/Sections/blutted-img.jpg")  ;
     background-position: bottom right ;
     background-size: 50%;
     background-repeat: no-repeat;

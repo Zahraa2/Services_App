@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OnboardingModuleModule } from './onboarding/onboarding.module';
+import { CategoriesModuleModule } from './Categories/categories.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { OnboardingModuleModule } from './onboarding/onboarding.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    OnboardingModuleModule
+    OnboardingModuleModule,
+    CategoriesModuleModule
  ],
   providers: [],
   bootstrap: [AppComponent]
