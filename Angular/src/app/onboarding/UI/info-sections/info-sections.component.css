@@ -1,6 +1,6 @@
 
 .info {
-    background-image: url(../../../assets/1.webp);
+    background-image: url("../../../../assets/1.webp");
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;

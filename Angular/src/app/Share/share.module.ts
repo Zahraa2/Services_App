@@ -3,17 +3,21 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './Navbar/Navbar.component';
 import { MaterialModule } from '../material/material.module';
 import { FooterComponent } from './Footer/Footer.component';
-const sharedComponent=[NavbarComponent,FooterComponent]
+import { HeaderComponent } from './Header/Header.component';
+import { AppRoutingModule } from '../app-routing.module';
+
+const sharedComponent = [NavbarComponent, FooterComponent , HeaderComponent]
 @NgModule({
   declarations: [
     sharedComponent
   ],
   imports: [
-    CommonModule, 
-    MaterialModule
-  ] , 
+    CommonModule,
+    MaterialModule, 
+    AppRoutingModule
+  ],
   exports: [
-    sharedComponent,
+    sharedComponent
   ]
 })
 export class ShareModule { }
