@@ -115,3 +115,15 @@ body {
     transition: opacity .2s ease;
     border-radius: 50%;
 }
+body { margin: 0; font-family: 'Amiri', serif;  text-align: right; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Archivo:wght@300&family=Cairo:wght@200&family=Lalezar&family=Roboto+Condensed&family=Space+Grotesk:wght@700&display=swap');
+:root {
+    --primary: #FAB430;
+    --secondary: #497174;
+    --light: #EFF5F5;
+    --third:  #202020;
+    --bold-font:'Lalezar', cursive;
+  
+  }

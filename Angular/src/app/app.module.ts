@@ -12,7 +12,8 @@ import { HomeModuleModule } from './Home/home.module';
 
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent,
+    // ShareComponent,
   ],
   imports: [
     BrowserModule,
