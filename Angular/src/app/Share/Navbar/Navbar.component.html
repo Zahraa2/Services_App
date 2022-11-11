@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light my-nav pt-1 shadow">
+<nav class="navbar navbar-expand-lg navbar-light bg-light my-nav shadow">
   <!-- My Container -->
   <div class="container">
     <!-- Collapse Button -->
@@ -28,10 +28,10 @@
         <div>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">الصفحة الرئيسية</a>
+              <a class="nav-link active" routerLink="" routerLinkActive="active">الصفحة الرئيسية</a>
             </li>
             <li>
-              <a class="nav-link text-dark" href="#">خدماتنا</a>
+              <a class="nav-link text-dark" routerLink="خدماتنا" routerLinkActive="active">خدماتنا</a>
             </li>
             <li>
               <a class="nav-link text-dark" href="#">تسجيل الدخول</a>
@@ -47,10 +47,10 @@
     <div class="language">
       <!-- Language -->
       <button class="dropdown" mat-button [matMenuTriggerFor]="languages">
-        <h2>
+        <h5>
           <i class="fa-solid fa-earth-americas"></i> | {{language}}
             <i class="fa-solid fa-chevron-down"></i>
-        </h2>
+        </h5>
       </button>
       <mat-menu #languages="matMenu" >
         <button mat-menu-item class="text-right" (click)="handleToggleLang()">{{seconedLanguage}}</button>
@@ -58,3 +58,5 @@
     </div>
   </div>
 </nav>
+
+

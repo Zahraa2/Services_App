@@ -5,16 +5,16 @@ import { ServicesByCategoryComponent } from './feature/ServicesByCategory/Servic
 
 const routes: Routes = [
   {
-    path: 'الخدمات',
+    path: '',
     component: AllServicesComponent,
     data: { animation: 'isRight' }
   },
   {
-    path: 'الخدمات/:id',
+    path: 'خدماتنا/:id',
     component: ServicesByCategoryComponent
   },
   {
-    path: '', redirectTo: 'الخدمات/', pathMatch: 'full'
+    path: '', redirectTo: 'خدماتنا/', pathMatch: 'full'
   },
   {
     path: '**',

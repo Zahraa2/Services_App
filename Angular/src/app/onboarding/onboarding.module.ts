@@ -5,12 +5,14 @@ import { InfoSectionsComponent } from './UI/info-sections/info-sections.componen
 import { TestimonialComponent } from './UI/Testimonial/Testimonial.component';
 import { AboutSectionsComponent } from './UI/AboutSections/AboutSections.component';
 import { OnboardingComponent } from './UI/onboarding.component';
+import { HeaderComponent } from './UI/Header/Header.component';
 
-
-
-
-const onboardingSharedComponent=[
-  InfoSectionsComponent,TestimonialComponent , AboutSectionsComponent , OnboardingComponent
+const onboardingSharedComponent = [
+  InfoSectionsComponent,
+  TestimonialComponent,
+  AboutSectionsComponent,
+  OnboardingComponent,
+  HeaderComponent
 ]
 @NgModule({
   declarations: [
@@ -19,9 +21,9 @@ const onboardingSharedComponent=[
   imports: [
     CommonModule,
     ShareModule,
-    
+
   ],
-  exports:[
+  exports: [
     onboardingSharedComponent
   ]
 

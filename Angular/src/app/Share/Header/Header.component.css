@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 .Slider1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr) 0 repeat(2, 1fr);
@@ -87,11 +89,32 @@
 .div2:hover .div-on-imgheader,
 .div3:hover .div-on-imgheader,
 .div4:hover .div-on-imgheader {
-    background-color: rgba(229, 137, 1, 0.8);
+    background-color: var(--rgaPrimary);
 }
 
 
 
+.button {
+    --offset: 10px;
+    --border-size: 2px;
+    display: block;
+    position: relative;
+    padding: 1.5em 3em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--primary);
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+    transition: background 0.8s ease;
+    margin: 1rem;
+  
+  }
 
 
 /* =============================================================================================================== */
@@ -99,13 +122,14 @@
     height: 100vh;
     background-position: center center;
     background-size: 20% 20%;
+    background-image: url('../../../assets/Images/Header/slider2-bg3.webp')
 
 }
 
 .Slider2 .slider2-leftImg img {
-    box-shadow: -1px 6px 23px -4px rgb(229, 137, 1);
-    -webkit-box-shadow: -1px 6px 23px -4px rgb(229, 137, 1);
-    -moz-box-shadow: -1px 6px 23px -4px rgb(229, 137, 1);
+    box-shadow: -1px 6px 23px -4px var(--primary);
+    -webkit-box-shadow: -1px 6px 23px -4px var(--primary);
+    -moz-box-shadow: -1px 6px 23px -4px var(--primary);
 
 }
 
@@ -127,7 +151,7 @@
 .slider2-rightContent h3::before {
     content: "";
     position: absolute;
-    background-color: rgb(229, 137, 1);
+    background-color: var(--primary);
     bottom: -30%;
     width: 10%;
     height: 5px;
@@ -140,94 +164,15 @@
 
 }
 
-
-.button {
-    --offset: 10px;
-    --border-size: 2px;
-    display: block;
-    position: relative;
-    padding: 1.5em 3em;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: 0;
-    background: transparent;
-    color: rgb(229, 137, 1);
-    outline: none;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 0;
-    box-shadow: inset 0 0 0 var(--border-size) currentcolor;
-    transition: background 0.8s ease;
-    margin: 1rem;
-
-}
-
-.button:hover {
-    background: rgba(100, 0, 0, 0.03);
-}
-
-.button__horizontal,
-.button__vertical {
-    position: absolute;
-    top: var(--horizontal-offset, 0);
-    right: var(--vertical-offset, 0);
-    bottom: var(--horizontal-offset, 0);
-    left: var(--vertical-offset, 0);
-    transition: transform 0.4s ease;
-    will-change: transform;
-}
-
-.button__horizontal::before,
-.button__vertical::before {
-    content: "";
-    position: absolute;
-    border: inherit;
-}
-
-.button__horizontal {
-    --vertical-offset: calc(var(--offset) * -1);
-    border-top: var(--border-size) solid currentcolor;
-    border-bottom: var(--border-size) solid currentcolor;
-}
-
-.button__horizontal::before {
-    top: calc(var(--vertical-offset) - var(--border-size));
-    bottom: calc(var(--vertical-offset) - var(--border-size));
-    left: calc(var(--vertical-offset) * -1);
-    right: calc(var(--vertical-offset) * -1);
-}
-
-.button:hover .button__horizontal {
-    transform: scaleX(0);
-}
-
-.button__vertical {
-    --horizontal-offset: calc(var(--offset) * -1);
-    border-left: var(--border-size) solid currentcolor;
-    border-right: var(--border-size) solid currentcolor;
-}
-
-.button__vertical::before {
-    top: calc(var(--horizontal-offset) * -1);
-    bottom: calc(var(--horizontal-offset) * -1);
-    left: calc(var(--horizontal-offset) - var(--border-size));
-    right: calc(var(--horizontal-offset) - var(--border-size));
-}
-
-.button:hover .button__vertical {
-    transform: scaleY(0);
-}
-
 /* ========================================custome icons=================================================== */
 
 .custom-icon {
     position: absolute;
     left: 0px;
     top: 50%;
-    border: 1px solid rgb(229, 137, 1);
+    border: 1px solid var(--primary);
     padding: 1.2rem;
-    background-color: #E58901;
+    background-color: var(--primary);
 
 
 }
@@ -275,18 +220,18 @@
     .Slider2 .slider2-rightContent .on-image {
         width: 110%;
         right: 30%;
-      
-    }
-    
-    .slider2-rightContent h3 {
-        font-size: 1.1rem;
-    
+
     }
 
-    
+    .slider2-rightContent h3 {
+        font-size: 1.1rem;
+
+    }
+
+
     .slider2-rightContent h1 {
         font-size: 3.1rem;
-    
+
     }
 }
 
@@ -319,6 +264,7 @@
         font-size: 1rem;
 
     }
+
     .div2 .div-on-imgheader,
     .div3 .div-on-imgheader {
         width: 70%;
@@ -328,31 +274,31 @@
     .custom-icon {
         padding: 1.1rem;
     }
-    
+
     .custom-icon2 {
         left: -567%;
         top: 43% !important;
     }
- 
+
     .Slider2 .slider2-rightContent .on-image {
         width: 140%;
         right: 40%;
         top: 30%;
     }
-    
+
     .slider2-rightContent h3 {
         font-size: 1rem;
-    
+
     }
-    
+
     .slider2-rightContent h3::before {
         width: 15%;
- 
+
     }
-    
+
     .slider2-rightContent h1 {
         font-size: 2.6rem;
-    
+
     }
 }
 
@@ -416,44 +362,45 @@
         width: 70%;
         padding: 0px;
     }
-    
+
     .custom-icon {
         padding: 1rem;
     }
-    
+
     .custom-icon2 {
         left: -567%;
         top: 44% !important;
     }
-    .Slider2{
+
+    .Slider2 {
         height: 100vh;
     }
+
     .Slider2 .slider2-rightContent .on-image {
         width: 140%;
         right: 40%;
         top: 30%;
     }
-    
+
     .slider2-rightContent h3 {
         font-size: 1.2rem;
-    
+
     }
-    
+
     .slider2-rightContent h3::before {
         width: 30%;
- 
+
     }
-    
+
     .slider2-rightContent h1 {
         font-size: 1.7rem;
-    
+
     }
-    .button{
+
+    .button {
         padding: 0.3rem 3rem;
     }
 }
 
 
 /* ========================================end of header ========================================== */
-
-

@@ -9,14 +9,18 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
 import { AllServicesComponent } from './feature/AllServices/AllServices.component';
 import { ErrorComponent } from '../Error/Error.component';
-import { CategoriesRoutesModule } from './categories.routing'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { MostPopularComponent } from './feature/MostPopular/MostPopular.component';
+import { RouterModule } from '@angular/router';
+
 
 const importedComponent = [
   AllCategoriesComponent,
   CategoriesComponent,
   ServicesByCategoryComponent,
   AllServicesComponent,
+  MostPopularComponent,
   ErrorComponent
 ]
 
@@ -32,7 +36,8 @@ const importedComponent = [
     BrowserAnimationsModule,
     Ng2SearchPipeModule,
     FormsModule,
-    CategoriesRoutesModule
+    RouterModule,
+    CarouselModule
   ],
   exports: [
     CategoriesComponent

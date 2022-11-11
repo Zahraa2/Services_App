@@ -1,12 +1,25 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { ShareModule } from '../Share/share.module';
+import { HomeComponent } from './UI/Home/Home.component';
+import { CategoriesModuleModule } from '../Categories/categories.module';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    HomeComponent
+  ],
   imports: [
-    CommonModule
+    BrowserModule,
+    CommonModule, 
+    ShareModule,
+    CategoriesModuleModule
+  ],
+  exports: [
+    HomeComponent
   ]
+  
 })
 export class HomeModuleModule { }
