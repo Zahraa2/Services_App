@@ -24,3 +24,8 @@ E:\Services_App_\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\refint\DAL.dll
 E:\Services_App_\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.pdb
 E:\Services_App_\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
 E:\Services_App_\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\ref\DAL.dll
+<<<<<<< HEAD
+=======
+E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
+E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+>>>>>>> feature/auth
