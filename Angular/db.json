@@ -1,0 +1,275 @@
+{
+  "MostPopularServices": [
+    {
+      "Image": "https://images.unsplash.com/photo-1664575600796-ffa828c5cb6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "Name": "خدمة نقل",
+      "Providers": "50"
+    },
+    {
+      "Image": "https://media.istockphoto.com/id/1347150429/photo/professional-mechanic-working-on-the-engine-of-the-car-in-the-garage.jpg?s=612x612&w=is&k=20&c=mm_qpjCecdBCx1MwysDjzMNdD5yUgf6c3QWv2dMNZk4=",
+      "Name": "خدمة شبابيك",
+      "Providers": "60"
+    },
+    {
+      "Image": "https://media.istockphoto.com/id/1354070884/photo/man-inserts-a-power-cord-into-an-electric-car-for-charging-in-the-nature.jpg?s=612x612&w=is&k=20&c=zORKO5Mkx_KGAcHn_Mwir4lNIgpgyBbQnI21Fii-4eI=",
+      "Name": "خدمة غسيل اموال",
+      "Providers": "55"
+    },
+    {
+      "Image": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1175&q=80",
+      "Name": "خدمة الضحك",
+      "Providers": "14"
+    },
+    {
+      "Image": "https://media.istockphoto.com/id/1352825083/photo/male-automotive-engineer-wearing-hard-hat-standing-using-laptop-monitoring-control-equipment.jpg?s=612x612&w=is&k=20&c=vdmoZ3dU5GYA0b-ZYTD76hYTcl7nPBc_yx14wXB4t_c=",
+      "Name": "خدمة صناعة هبل ",
+      "Providers": "32"
+    },
+    {
+      "Image": "https://media.istockphoto.com/id/1336844470/photo/technician-using-digital-tablet-look-at-camera.jpg?s=612x612&w=is&k=20&c=saWkheId6EXu463Qj0GJ-ecrF_ib1TALnzT37-iDgKc=",
+      "Name": "خدمة نقل تاني",
+      "Providers": "25"
+    },
+    {
+      "Image": "https://media.istockphoto.com/id/1254973568/photo/empty-airport-terminal-lounge-with-airplane-on-background.jpg?s=612x612&w=is&k=20&c=9eFjG0Zio6dvuIaG5q3XI-ao5XlOLcmrHUmExFsfzyU=",
+      "Name": "خدمة كلام",
+      "Providers": "78"
+    },
+    {
+      "Image": "https://images.unsplash.com/photo-1455165814004-1126a7199f9b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "Name": "خدمة سوسو",
+      "Providers": "44"
+    }
+  ],
+  "allServices": [
+    {
+      "name": "ميكانيكي",
+      "img": "https://picsum.photos/400/300",
+      "number": 35
+    },
+    {
+      "name": "عامل حديد",
+      "img": "https://picsum.photos/400/300",
+      "number": 35
+    },
+    {
+      "name": "طلبيات",
+      "img": "https://picsum.photos/400/300",
+      "number": 35
+    },
+    {
+      "name": "حديقه",
+      "img": "https://picsum.photos/400/300",
+      "number": 35
+    },
+    {
+      "name": "مسبح",
+      "img": "https://picsum.photos/400/300",
+      "number": 35
+    },
+    {
+      "name": "سباكه",
+      "img": "https://picsum.photos/400/300",
+      "number": 35
+    },
+    {
+      "name": "ميكانيكي",
+      "img": "https://picsum.photos/400/300",
+      "number": 35
+    },
+    {
+      "name": "ميكانيكي",
+      "img": "https://picsum.photos/400/300",
+      "number": 35
+    },
+    {
+      "name": "ميكانيكي",
+      "img": "https://picsum.photos/400/300",
+      "number": 35
+    },
+    {
+      "name": "ميكانيكي",
+      "img": "https://picsum.photos/400/300",
+      "number": 35
+    },
+    {
+      "name": "ميكانيكي",
+      "img": "https://picsum.photos/400/300",
+      "number": 3
+    },
+    {
+      "name": "ميكانيكي",
+      "img": "https://picsum.photos/400/300",
+      "number": 3
+    },
+    {
+      "name": "ميكانيكي",
+      "img": "https://picsum.photos/400/300",
+      "number": 3
+    },
+    {
+      "name": "ميكانيكي",
+      "img": "https://picsum.photos/400/300",
+      "number": 3
+    },
+    {
+      "name": "ميكانيكي",
+      "img": "https://picsum.photos/400/300",
+      "number": 3
+    },
+    {
+      "name": "ميكانيكي",
+      "img": "https://picsum.photos/400/300",
+      "number": 35
+    },
+    {
+      "name": "ميكانيكي",
+      "img": "https://picsum.photos/400/300",
+      "number": 50
+    },
+    {
+      "name": "ميكانيكي",
+      "img": "https://picsum.photos/400/300",
+      "number": 10
+    },
+    {
+      "name": "ميكانيكي",
+      "img": "https://picsum.photos/400/300",
+      "number": 20
+    },
+    {
+      "name": "ميكانيكي",
+      "img": "https://picsum.photos/400/300",
+      "number": 100
+    },
+    {
+      "name": "صباغة",
+      "img": "https://picsum.photos/400/300",
+      "number": 200
+    }
+  ],
+  "ServiceByCategories":
+   [
+    {
+      "نجاره": [
+        {
+          "name": "ميكانيكي",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        },
+        {
+          "name": "عامل حديد",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        },
+        {
+          "name": "طلبيات",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        },
+        {
+          "name": "حديقه",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        },
+        {
+          "name": "مسبح",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        },
+        {
+          "name": "سباكه",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        },
+        {
+          "name": "ميكانيكي",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        }
+      ]
+    },
+    {
+      "تشطيب": [
+        {
+          "name": "ميكانيكي",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        },
+        {
+          "name": "ميكانيكي",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        },
+        {
+          "name": "ميكانيكي",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        },
+        {
+          "name": "ميكانيكي",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        }
+      ]
+    },
+    {
+      "حداده": [
+        {
+          "name": "ميكانيكي",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        },
+        {
+          "name": "ميكانيكي",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        },
+        {
+          "name": "ميكانيكي",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        },
+        {
+          "name": "ميكانيكي",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        },
+        {
+          "name": "ميكانيكي",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        }
+      ]
+    },
+    {
+      "طبخ": [
+        {
+          "name": "ميكانيكي",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        },
+        {
+          "name": "ميكانيكي",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        },
+        {
+          "name": "ميكانيكي",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        },
+        {
+          "name": "ميكانيكي",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        },
+        {
+          "name": "صباغة",
+          "img": "https://picsum.photos/400/300",
+          "number": 35
+        }
+      ]
+    }
+   ]
+  }

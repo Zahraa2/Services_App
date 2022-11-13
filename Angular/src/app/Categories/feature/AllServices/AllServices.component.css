@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
+
+.box-wrapper {
+  background-color: #fff;
+  overflow: hidden;
+  max-width: 320px;
+  text-align: center;
+  margin: 5rem 1rem;
+}
+.box-wrapper img {
+  max-width: 100%;
+}
+
+
+.box-wrapper .success {
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 999;
+}
+.expanded .box-wrapper .success {
+  opacity: 1;
+  transition: opacity 0.3s 0.6s;
+}
+.box-wrapper .success:before, .box-wrapper .success:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #fff;
+}
+.box-wrapper .success:before {
+  width: 40px;
+  height: 20px;
+  transform: rotate(45deg);
+}
+.box-wrapper .success:after {
+  width: 88px;
+  height: 20px;
+  transform: rotate(-45deg);
+  top: -16px;
+  left: 8px;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: 900;
+  margin: 0;
+  color: var(--light-green);
+}
+
+.desc {
+  font-family: "Satisfy", cursive;
+  font-size: 1.2em;
+}
+
+.box-content {
+  position: relative;
+  z-index: 1;
+}
+.box-content:before {
+  content: "";
+  width: 200%;
+  height: 100px;
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  transform: rotate(-8deg);
+  top: -50px;
+  left: -10%;
+  z-index: -1;
+}
+
+
+.expanded .box-content span {
+  width: 750px;
+  height: 750px;
+}
+.expanded .box-content span i {
+  display: none;
+}
+.box-content .profiles {
+  font-size: 1.2rem;
+  font-weight: 900;
+  display: block;
+  width: 50%;
+  margin: 20px auto 0;
+  position: relative;
+  font-family: "Satisfy", cursive;
+
+}
+.box-content .profiles:after, .box-content .profiles:before {
+  content: "";
+  height: 1px;
+  width: 50px;
+  display: block;
+  position: absolute;
+  background-color: #ddd;
+  top: 18px;
+}
+.box-content .profiles:before {
+  left: -50px;
+}
+.box-content .profiles:after {
+  right: -50px;
+}
+
+.profiles {
+  color: #00000093;
+}
+
+
+
+.button {
+  --offset: 10px;
+  --border-size: 2px;
+  display: block;
+  position: relative;
+  padding: .7em 1.1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--primary);
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+  transition: background 0.8s ease;
+
+}
+
+
+
+.my-pagination {
+  margin: 1rem;
+  font-size: 1.4rem;
+  font-family: 'Sono', sans-serif;
+  text-decoration: none !important;
+  list-style-type: none !important;
+
+}
+
+
+
+/* == */
+
+.l {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  height: 100px;
+}
+
+.container .search {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  background: var(--primary);
+  border-radius: 50%;
+  transition: all 1s;
+  z-index: 4;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+}
+
+.container .search:hover {
+  cursor: pointer;
+}
+
+.container .search::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 22px;
+  right: 0;
+  bottom: 0;
+  left: 22px;
+  width: 12px;
+  height: 2px;
+  background: white;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+
+.container .search::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: -5px;
+  right: 0;
+  bottom: 0;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: all 0.5s;
+}
+
+.container input {
+  font-family: "Inconsolata", monospace;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background: var(--primary);
+  color: white;
+  text-shadow: 0 0 10px var(--primary);
+  padding: 0 80px 0 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 25px 0 var(--primary), 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+  transition: all 1s;
+  opacity: 0;
+  z-index: 5;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+}
+
+.container input:hover {
+  cursor: pointer;
+}
+
+.container input:focus {
+  width: 300px;
+  opacity: 1;
+  cursor: text;
+}
+
+.container input:focus~.search {
+  right: -250px;
+  background: #151515;
+  z-index: 6;
+}
+
+.container input:focus~.search::before {
+  top: 0;
+  left: 0;
+  width: 25px;
+}
+
+.container input:focus~.search::after {
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  border: none;
+  background: white;
+  border-radius: 0%;
+  transform: rotate(-45deg);
+}
+
+.container input::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-weight: bolder;
+}

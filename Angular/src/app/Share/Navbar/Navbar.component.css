@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
+/* ======================== SIDE NAV ======================== */
+
+nav {
+  padding: 0
+}
+
+.text-right {
+  text-align: right;
+}
+
+.navbar h1 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding-top: .4rem;
+  font-family: 'Noto Nastaliq Urdu', serif;
+  margin-bottom: 1.5rem;
+}
+
+.navbar-nav li {
+  font-size: 1.4rem;
+  padding-left: 2rem;
+  color: #000 !important
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgb(0 110 95 / 15%) !important
+}
+
+/* ===================== Icons ===================== */
+
+.icons i {
+  padding-left: 1.7rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold
+}
+
+.icons i:hover {
+  color: #E58901
+}
+
+.fa-user {
+  padding-left: 0 !important;
+}
+
+
+.dropdown {
+  border: none;
+  background: transparent
+}
+
+.fa-earth-americas {
+  color: #006E5F
+}
+
+/* ===================== Toggle ===================== */
+
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.fa-xmark {
+  font-size: 2rem
+}
+
+.fa-xmark {
+  font-size: 2rem;
+  transition: all .4s;
+  color: black;
+}
+
+.fa-xmark:hover {
+  font-size: 2rem;
+  transform: rotate(360deg)
+}
+
+@media (max-width: 992px) {
+
+  .language,
+  .logo {
+    display: none
+  }
+
+  .showLogo {
+    display: block !important;
+  }
+}
+
+/* ===================== Nav links hover animation ===================== */
+
+.nav-link {
+  color: black !important;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: all 1s;
+}
+
+.nav-link:hover::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #E58901;
+}
