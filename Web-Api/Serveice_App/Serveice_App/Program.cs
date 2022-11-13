@@ -1,3 +1,4 @@
+using BL;
 using DAL;
 using Microsoft.EntityFrameworkCore;
 
@@ -38,10 +39,12 @@ builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
 
 #region AutoMapper
 
-
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
 #endregion
 
 #region Managers
+builder.Services.AddScoped<ICategoryManger,CategoryManger>();
+builder.Services.AddScoped<IServiceManger,ServiceManger>();
 #endregion
 
 #endregion

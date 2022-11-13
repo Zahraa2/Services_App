@@ -9,7 +9,7 @@ namespace DAL;
 public class Category
 {
     public Guid Id { get; set; }
-    public string Name { get; set; }
+    public string Name { get; set; } = null!;
 
     public ICollection<Service> services { get; set; } = new HashSet<Service>();
 }

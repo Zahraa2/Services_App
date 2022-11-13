@@ -12,6 +12,7 @@ public class Service
 {
     public Guid id { get; set; }
     public string? Name { get; set; }
+    public int NumberOfOrders { get; set; }
 
     [ForeignKey("category")]
     public Guid? categoryId { get; set; }

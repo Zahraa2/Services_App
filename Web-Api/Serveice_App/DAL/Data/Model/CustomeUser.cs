@@ -15,6 +15,5 @@ public class CustomeUser: IdentityUser
 {
     public UserTypes Type { get; set; }
     public Customer customer { get; set; } = null!;
-
     public Provider provider { get; set; } = null!;
 }

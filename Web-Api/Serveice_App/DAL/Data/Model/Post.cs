@@ -5,15 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL
+namespace DAL;
+
+public class Post
 {
-    public class Post
-    {
-        public Guid Id { get; set; }
-        public string Description { get; set; } = null!;
-        [ForeignKey("provider")]
-        public Guid? PostId { get; set; }
-        public Provider Provider { get; set; } = null!;
-        public ICollection<Media> Medias = new HashSet<Media>();
-    }
+    public Guid Id { get; set; }
+    public string Description { get; set; } = null!;
+    [ForeignKey("provider")]
+    public Guid? PostId { get; set; }
+    public Provider Provider { get; set; } = null!;
+    public ICollection<Media> Medias = new HashSet<Media>();
 }

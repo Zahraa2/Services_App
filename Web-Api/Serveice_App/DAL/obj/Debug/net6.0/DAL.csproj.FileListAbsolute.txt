@@ -24,3 +24,17 @@ E:\Services_App_\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\refint\DAL.dll
 E:\Services_App_\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.pdb
 E:\Services_App_\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
 E:\Services_App_\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\ref\DAL.dll
+D:\GraduatITI\ServiceApp\Web-Api\Serveice_App\DAL\bin\Debug\net6.0\DAL.deps.json
+D:\GraduatITI\ServiceApp\Web-Api\Serveice_App\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
+D:\GraduatITI\ServiceApp\Web-Api\Serveice_App\DAL\bin\Debug\net6.0\DAL.dll
+D:\GraduatITI\ServiceApp\Web-Api\Serveice_App\DAL\bin\Debug\net6.0\DAL.pdb
+D:\GraduatITI\ServiceApp\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+D:\GraduatITI\ServiceApp\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\GraduatITI\ServiceApp\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+D:\GraduatITI\ServiceApp\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+D:\GraduatITI\ServiceApp\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+D:\GraduatITI\ServiceApp\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.dll
+D:\GraduatITI\ServiceApp\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\refint\DAL.dll
+D:\GraduatITI\ServiceApp\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.pdb
+D:\GraduatITI\ServiceApp\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+D:\GraduatITI\ServiceApp\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\ref\DAL.dll
