@@ -14,12 +14,15 @@ export class AllServicesComponent implements OnInit {
   active:number = 1
   size:number = 5
   totalNumber:number | any
+
   seleted:Service[] = [] 
   constructor(public selectedService:ourServicese) { }
 
   ngOnInit() {
-    this.seleted = this.selectedService.getAllServiecs()
-    this.totalNumber = this.selectedService.getAllServiecs().length
+    this.selectedService.getAllServiecs().subscribe(a =>{
+      this.seleted = a
+      this.totalNumber = a.length
+    })
   }
 
 }
