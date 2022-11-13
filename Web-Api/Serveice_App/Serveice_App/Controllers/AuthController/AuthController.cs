@@ -1,4 +1,5 @@
 ﻿using BL;
+using BL.DTO.AuthDTO;
 using DAL;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;

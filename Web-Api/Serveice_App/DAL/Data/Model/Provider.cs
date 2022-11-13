@@ -16,6 +16,7 @@ public class Provider
     [ForeignKey("service")]
     public Guid? ServiceId { get; set; }
     public CustomeUser user { get; set; } = null!;
+
     public string sammary { get; set; } = null!;
     public decimal? AvgRate { get; set; }
     public string? profilePicture { get; set; }

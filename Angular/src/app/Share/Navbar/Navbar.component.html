@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light my-nav shadow">
+  <!-- My Container -->
+  <div class="container">
+    <!-- Collapse Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" [attr.aria-expanded]="toggle" aria-label="Toggle navigation"
+      (click)="handleToggle()">
+      <span class="navbar-toggler-icon" *ngIf="!toggle"></span>
+      <i class="fa-solid fa-xmark" *ngIf="toggle"></i>
+    </button>
+
+    <div class="d-none showLogo">
+      <h1>العنوان</h1>
+    </div>
+
+    <div class="icons">
+      <i class="fa-regular fa-user"></i>
+      <i class="fa-solid fa-magnifying-glass language"></i>
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-regular fa-bell"></i>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="d-flex flex-column text-center m-auto">
+        <div class="logo">
+          <h1>العنوان</h1>
+        </div>
+        <div>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <li>
+              <a class="nav-link text-dark" href="#">إنشاء حساب</a>
+            </li>
+            <li>
+              <a class="nav-link text-dark" href="#">تسجيل الدخول</a>
+            </li>
+            <li>
+              <a class="nav-link text-dark" [routerLink]="['خدماتنا']" routerLinkActive="active">خدماتنا</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" [routerLink]="['']" routerLinkActive="active">الصفحة الرئيسية</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="language">
+      <!-- Language -->
+      <button class="dropdown" mat-button [matMenuTriggerFor]="languages">
+        <h5>
+          <i class="fa-solid fa-earth-americas"></i> | {{language}}
+          <i class="fa-solid fa-chevron-down"></i>
+        </h5>
+      </button>
+      <mat-menu #languages="matMenu">
+        <button mat-menu-item class="text-right" (click)="handleToggleLang()">{{seconedLanguage}}</button>
+      </mat-menu>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,32 @@
+footer{
+   bottom: 0;
+   width: 100%; 
+}
+footer .Copyright{
+    font-size: 0.9rem;
+    text-align: right;
+}
+.container-fluid .row{
+    text-align: right;
+}
+
+.container-fluid .row .afooter{
+    display: flex;
+    border: 1px solid #fff ;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;   
+    align-items: center;
+    padding-left: 0.48rem;
+}
+.container-fluid .icon-foo-div{
+    justify-content: space-between;
+    width: 60%;
+}
+.svg-style{
+    background-color:#fff
+}
+.footer_more_inf{
+    color: #fff;
+    text-decoration: none;
+}

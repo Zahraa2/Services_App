@@ -101,6 +101,8 @@ E:\Services_App_\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\scopedcss\bu
 E:\Services_App_\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.csproj.CopyComplete
 E:\Services_App_\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.genruntimeconfig.cache
 E:\Services_App_\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\ref\Serveice_App.dll
+<<<<<<< HEAD
+=======
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\AutoMapper.dll
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Humanizer.dll
@@ -148,3 +150,4 @@ E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\S
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\MailKit.dll
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\MimeKit.dll
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+>>>>>>> feature/auth

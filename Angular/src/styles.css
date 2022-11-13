@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Archivo:wght@300&family=Cairo:wght@200&family=Lalezar&family=Roboto+Condensed&family=Space+Grotesk:wght@700&display=swap');
+
+/* ================================ Globals Styling ================================  */
+html,
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  text-align: right;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* ================================ Variables ================================  */
+
+:root {
+  --primary: #FAB430;
+  --secondary: #497174;
+  --light: #EFF5F5;
+  --third: #202020;
+  --bold-font: 'Lalezar', cursive;
+
+}
+
+
+/* ================================================================ */
+
+.button:hover {
+  background: rgba(100, 0, 0, 0.03);
+}
+
+.button__horizontal,
+.button__vertical {
+  position: absolute;
+  top: var(--horizontal-offset, 0);
+  right: var(--vertical-offset, 0);
+  bottom: var(--horizontal-offset, 0);
+  left: var(--vertical-offset, 0);
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+.button__horizontal::before,
+.button__vertical::before {
+  content: "";
+  position: absolute;
+  border: inherit;
+}
+
+.button__horizontal {
+  --vertical-offset: calc(var(--offset) * -1);
+  border-top: var(--border-size) solid currentcolor;
+  border-bottom: var(--border-size) solid currentcolor;
+}
+
+.button__horizontal::before {
+  top: calc(var(--vertical-offset) - var(--border-size));
+  bottom: calc(var(--vertical-offset) - var(--border-size));
+  left: calc(var(--vertical-offset) * -1);
+  right: calc(var(--vertical-offset) * -1);
+}
+
+.button:hover .button__horizontal {
+  transform: scaleX(0);
+}
+
+.button__vertical {
+  --horizontal-offset: calc(var(--offset) * -1);
+  border-left: var(--border-size) solid currentcolor;
+  border-right: var(--border-size) solid currentcolor;
+}
+
+.button__vertical::before {
+  top: calc(var(--horizontal-offset) * -1);
+  bottom: calc(var(--horizontal-offset) * -1);
+  left: calc(var(--horizontal-offset) - var(--border-size));
+  right: calc(var(--horizontal-offset) - var(--border-size));
+}
+
+.button:hover .button__vertical {
+  transform: scaleY(0);
+}
+
+
+/*  ========================= Owl Carasoul ========================= */
+
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: var(--primary);
+}
+
+
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 15px;
+  height: 15px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  transition: opacity .2s ease;
+  border-radius: 50%;
+}

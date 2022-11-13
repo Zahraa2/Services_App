@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class DatabaseContext : IdentityDbContext <CustomeUser>
+    public class DatabaseContext : IdentityDbContext<CustomeUser>
     {
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Provider> Provider { get; set; }
@@ -24,13 +24,13 @@ namespace DAL
 
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
-            
+
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            
+
         }
     }
 }

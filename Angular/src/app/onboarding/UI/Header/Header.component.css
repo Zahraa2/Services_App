@@ -1,0 +1,459 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.Slider1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 0 repeat(2, 1fr);
+    grid-template-rows: 1fr 2fr 0 repeat(2, 1fr);
+    grid-column-gap: 9px;
+    grid-row-gap: 9px;
+    margin: 3rem;
+}
+
+.divs-shared {
+    position: relative;
+    overflow: hidden;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 6 / 4;
+}
+
+.div2 {
+    grid-area: 1 / 4 / 3 / 5;
+}
+
+.div3 {
+    grid-area: 1 / 5 / 3 / 6;
+}
+
+.div4 {
+    grid-area: 3 / 4 / 6 / 6;
+}
+
+
+.div1 .div-on-imgheader,
+.div2 .div-on-imgheader,
+.div3 .div-on-imgheader,
+.div4 .div-on-imgheader {
+    position: absolute;
+    background-color: rgba(50, 64, 72, 0.8);
+    width: 50%;
+    margin: 1rem;
+    padding: 1rem;
+    color: #fff;
+    bottom: 0px;
+    transition: all 0.6s;
+}
+
+.div2 .div-on-imgheader,
+.div3 .div-on-imgheader {
+    width: 80%;
+}
+
+.div1 .div-on-imgheader h3,
+.div4 .div-on-imgheader h3 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.div1 .div-on-imgheader h2,
+.div2 .div-on-imgheader h2,
+.div3 .div-on-imgheader h2,
+.div4 .div-on-imgheader h2 {
+    font-family: 'Lalezar', cursive;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.div1 img,
+.div2 img,
+.div3 img,
+.div4 img {
+    transition: all 0.6s;
+}
+
+.div1:hover img,
+.div2:hover img,
+.div3:hover img,
+.div4:hover img {
+    transform: scale(1.2)
+}
+
+.div1:hover .div-on-imgheader,
+.div2:hover .div-on-imgheader,
+.div3:hover .div-on-imgheader,
+.div4:hover .div-on-imgheader {
+    background-color: rgba(229, 137, 1, 0.8);
+}
+
+
+
+
+
+/* =============================================================================================================== */
+.Slider2 {
+    height: 100vh;
+    background-position: center center;
+    background-size: 20% 20%;
+
+}
+
+.Slider2 .slider2-leftImg img {
+    box-shadow: -1px 6px 23px -4px rgb(229, 137, 1);
+    -webkit-box-shadow: -1px 6px 23px -4px rgb(229, 137, 1);
+    -moz-box-shadow: -1px 6px 23px -4px rgb(229, 137, 1);
+
+}
+
+.Slider2 .slider2-rightContent .on-image {
+    position: relative;
+    width: 140%;
+    z-index: 2;
+    right: 50%;
+    top: 30%;
+}
+
+.slider2-rightContent h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    position: relative;
+
+}
+
+.slider2-rightContent h3::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(229, 137, 1);
+    bottom: -30%;
+    width: 10%;
+    height: 5px;
+}
+
+.slider2-rightContent h1 {
+    font-size: 4rem;
+    font-family: 'Lalezar', cursive;
+    font-weight: bold;
+
+}
+
+
+.button {
+    --offset: 10px;
+    --border-size: 2px;
+    display: block;
+    position: relative;
+    padding: 1.5em 3em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: rgb(229, 137, 1);
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+    transition: background 0.8s ease;
+    margin: 1rem;
+
+}
+
+.button:hover {
+    background: rgba(100, 0, 0, 0.03);
+}
+
+.button__horizontal,
+.button__vertical {
+    position: absolute;
+    top: var(--horizontal-offset, 0);
+    right: var(--vertical-offset, 0);
+    bottom: var(--horizontal-offset, 0);
+    left: var(--vertical-offset, 0);
+    transition: transform 0.4s ease;
+    will-change: transform;
+}
+
+.button__horizontal::before,
+.button__vertical::before {
+    content: "";
+    position: absolute;
+    border: inherit;
+}
+
+.button__horizontal {
+    --vertical-offset: calc(var(--offset) * -1);
+    border-top: var(--border-size) solid currentcolor;
+    border-bottom: var(--border-size) solid currentcolor;
+}
+
+.button__horizontal::before {
+    top: calc(var(--vertical-offset) - var(--border-size));
+    bottom: calc(var(--vertical-offset) - var(--border-size));
+    left: calc(var(--vertical-offset) * -1);
+    right: calc(var(--vertical-offset) * -1);
+}
+
+.button:hover .button__horizontal {
+    transform: scaleX(0);
+}
+
+.button__vertical {
+    --horizontal-offset: calc(var(--offset) * -1);
+    border-left: var(--border-size) solid currentcolor;
+    border-right: var(--border-size) solid currentcolor;
+}
+
+.button__vertical::before {
+    top: calc(var(--horizontal-offset) * -1);
+    bottom: calc(var(--horizontal-offset) * -1);
+    left: calc(var(--horizontal-offset) - var(--border-size));
+    right: calc(var(--horizontal-offset) - var(--border-size));
+}
+
+.button:hover .button__vertical {
+    transform: scaleY(0);
+}
+
+/* ========================================custome icons=================================================== */
+
+.custom-icon {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    border: 1px solid rgb(229, 137, 1);
+    padding: 1.2rem;
+    background-color: #E58901;
+
+
+}
+
+.custom-icon2 {
+    left: -567%;
+    top: 42% !important;
+}
+
+
+
+/* ==========================media query ====================================== */
+
+
+@media only screen and (max-width: 1110) {
+    .Slider1 {
+        margin: 2rem;
+    }
+
+    .div1 .div-on-imgheader,
+    .div2 .div-on-imgheader,
+    .div3 .div-on-imgheader,
+    .div4 .div-on-imgheader {
+
+        padding: 0.5rem;
+
+    }
+
+
+    .div1 .div-on-imgheader h3,
+    .div4 .div-on-imgheader h3 {
+        font-size: 0.7rem;
+
+    }
+
+    .div1 .div-on-imgheader h2,
+    .div2 .div-on-imgheader h2,
+    .div3 .div-on-imgheader h2,
+    .div4 .div-on-imgheader h2 {
+
+        font-size: 1.4rem;
+
+    }
+
+    .Slider2 .slider2-rightContent .on-image {
+        width: 110%;
+        right: 30%;
+      
+    }
+    
+    .slider2-rightContent h3 {
+        font-size: 1.1rem;
+    
+    }
+
+    
+    .slider2-rightContent h1 {
+        font-size: 3.1rem;
+    
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .Slider1 {
+        margin: 1.5rem;
+    }
+
+    .div1 .div-on-imgheader,
+    .div2 .div-on-imgheader,
+    .div3 .div-on-imgheader,
+    .div4 .div-on-imgheader {
+
+        padding: 0.2rem;
+        width: 90%;
+
+    }
+
+    .div1 .div-on-imgheader h3,
+    .div4 .div-on-imgheader h3 {
+        font-size: 0.5rem;
+
+    }
+
+    .div1 .div-on-imgheader h2,
+    .div2 .div-on-imgheader h2,
+    .div3 .div-on-imgheader h2,
+    .div4 .div-on-imgheader h2 {
+
+        font-size: 1rem;
+
+    }
+    .div2 .div-on-imgheader,
+    .div3 .div-on-imgheader {
+        width: 70%;
+        padding: 0px;
+    }
+
+    .custom-icon {
+        padding: 1.1rem;
+    }
+    
+    .custom-icon2 {
+        left: -567%;
+        top: 43% !important;
+    }
+ 
+    .Slider2 .slider2-rightContent .on-image {
+        width: 140%;
+        right: 40%;
+        top: 30%;
+    }
+    
+    .slider2-rightContent h3 {
+        font-size: 1rem;
+    
+    }
+    
+    .slider2-rightContent h3::before {
+        width: 15%;
+ 
+    }
+    
+    .slider2-rightContent h1 {
+        font-size: 2.6rem;
+    
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .Slider1 {
+        margin: 0.7rem;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 9px;
+        grid-row-gap: 9px;
+    }
+
+    .div1 {
+        grid-area: 1 / 1 / 4 / 7;
+    }
+
+    .div2 {
+        grid-area: 4 / 1 / 7 / 3;
+    }
+
+    .div3 {
+        grid-area: 4 / 3 / 7 / 5;
+    }
+
+    .div4 {
+        grid-area: 4 / 5 / 7 / 7;
+    }
+
+    .div1 .div-on-imgheader,
+    .div2 .div-on-imgheader,
+    .div3 .div-on-imgheader,
+    .div4 .div-on-imgheader {
+
+        width: 90%;
+        height: 30%;
+        bottom: 0px;
+        padding: 0px;
+    }
+
+    .div1 .div-on-imgheader h3,
+    .div4 .div-on-imgheader h3 {
+        font-size: 0.8rem;
+        font-weight: 100;
+    }
+
+    .div1 .div-on-imgheader h2,
+    .div2 .div-on-imgheader h2,
+    .div3 .div-on-imgheader h2,
+    .div4 .div-on-imgheader h2 {
+
+        font-size: 1rem;
+        margin: 0px !important;
+        padding: 5px !important;
+        font-weight: 100;
+    }
+
+    .div2 .div-on-imgheader,
+    .div3 .div-on-imgheader {
+        width: 70%;
+        padding: 0px;
+    }
+    
+    .custom-icon {
+        padding: 1rem;
+    }
+    
+    .custom-icon2 {
+        left: -567%;
+        top: 44% !important;
+    }
+    .Slider2{
+        height: 100vh;
+    }
+    .Slider2 .slider2-rightContent .on-image {
+        width: 140%;
+        right: 40%;
+        top: 30%;
+    }
+    
+    .slider2-rightContent h3 {
+        font-size: 1.2rem;
+    
+    }
+    
+    .slider2-rightContent h3::before {
+        width: 30%;
+ 
+    }
+    
+    .slider2-rightContent h1 {
+        font-size: 1.7rem;
+    
+    }
+    .button{
+        padding: 0.3rem 3rem;
+    }
+}
+
+
+/* ========================================end of header ========================================== */
+
+
