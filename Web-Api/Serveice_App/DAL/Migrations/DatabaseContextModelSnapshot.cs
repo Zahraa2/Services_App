@@ -188,15 +188,12 @@ namespace DAL.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("profilePicture")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("sammary")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
@@ -204,7 +201,8 @@ namespace DAL.Migrations
                     b.HasIndex("ServiceId");
 
                     b.HasIndex("UserId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[UserId] IS NOT NULL");
 
                     b.ToTable("Provider");
                 });
@@ -257,6 +255,9 @@ namespace DAL.Migrations
                     b.Property<string>("Location")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("MoreDetails")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid?>("ProviderId")
                         .HasColumnType("uniqueidentifier");
 
@@ -286,6 +287,9 @@ namespace DAL.Migrations
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NumberOfOrders")
+                        .HasColumnType("int");
 
                     b.Property<Guid?>("categoryId")
                         .IsRequired()
@@ -472,9 +476,7 @@ namespace DAL.Migrations
 
                     b.HasOne("DAL.CustomeUser", "user")
                         .WithOne("provider")
-                        .HasForeignKey("DAL.Provider", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("DAL.Provider", "UserId");
 
                     b.Navigation("service");
 

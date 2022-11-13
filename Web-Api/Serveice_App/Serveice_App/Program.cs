@@ -1,4 +1,5 @@
 using BL;
+using BL;
 using BL.Managers.UserManager;
 using DAL;
 using Microsoft.AspNetCore.Identity;
@@ -88,10 +89,14 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 #endregion
 
 #region AutoMapper
+
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
 builder.Services.AddAutoMapper(typeof(MapperProfile).Assembly);
 #endregion
 
 #region Managers
+builder.Services.AddScoped<ICategoryManger,CategoryManger>();
+builder.Services.AddScoped<IServiceManger,ServiceManger>();
 builder.Services.AddScoped<IAuthServices, AuthServices>();
 builder.Services.AddScoped<ICustomUserManager, CustomUserManager>();
 #endregion

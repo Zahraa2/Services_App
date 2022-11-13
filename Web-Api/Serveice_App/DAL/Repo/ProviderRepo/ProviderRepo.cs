@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,4 +15,10 @@ public class ProviderRepo : GenericRepo<Provider>, IProviderRepo
     {
         this.context = context;
     }
+
+    public List<Provider> GetProvidersByService(string Name)
+    {
+        return context.Provider.Include(s => s.service).Where(s => s.service.Name == Name).ToList();
+    }
+
 }

@@ -8,4 +8,5 @@ namespace DAL;
 
 public interface IProviderRepo:IGenericRepo<Provider>
 {
+    public List<Provider> GetProvidersByService(string Name);
 }

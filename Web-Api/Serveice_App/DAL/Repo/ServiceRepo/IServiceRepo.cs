@@ -8,5 +8,6 @@ namespace DAL;
 
 public interface IServiceRepo:IGenericRepo<Service>
 {
-
+    public List<Service> GetServicesByCategory(string Name);
+    public List<Service> GetMostServices();
 }

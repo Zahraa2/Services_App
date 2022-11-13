@@ -15,6 +15,8 @@ namespace DAL
         public DateTime CreateDate { get; set; }
         public DateTime  EndDate { get; set; }
         public string? Review { get; set; }
+        public string? MoreDetails { get; set; }
+
         public decimal Rate { get; set; }
         [ForeignKey("Customer")]
         public Guid? CustomerId { get; set; }

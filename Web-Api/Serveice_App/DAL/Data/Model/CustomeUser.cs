@@ -21,4 +21,5 @@ public class CustomeUser: IdentityUser
 
     public Provider? provider { get; set; } = null!;
     public ICollection<RefreshToken> RefreshTokens { get; set; } = new HashSet<RefreshToken>();
+
 }
