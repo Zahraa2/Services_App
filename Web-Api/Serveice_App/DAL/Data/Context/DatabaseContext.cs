@@ -19,6 +19,9 @@ namespace DAL
         public DbSet<Request> Requests { get; set; }
         public DbSet<Category> Categories { get; set; }
 
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<CustomeUser> customeUsers { get; set; }
+
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
             

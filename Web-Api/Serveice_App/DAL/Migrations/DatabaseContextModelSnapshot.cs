@@ -74,6 +74,14 @@ namespace DAL.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Fname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Lname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
@@ -173,7 +181,7 @@ namespace DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("AvgRate")
+                    b.Property<decimal?>("AvgRate")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<Guid?>("ServiceId")
@@ -184,7 +192,6 @@ namespace DAL.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("profilePicture")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("sammary")
@@ -199,6 +206,36 @@ namespace DAL.Migrations
                         .IsUnique();
 
                     b.ToTable("Provider");
+                });
+
+            modelBuilder.Entity("DAL.RefreshToken", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreationOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ExpirationOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("RevokedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("RefreshTokens");
                 });
 
             modelBuilder.Entity("DAL.Request", b =>
@@ -443,6 +480,17 @@ namespace DAL.Migrations
                     b.Navigation("user");
                 });
 
+            modelBuilder.Entity("DAL.RefreshToken", b =>
+                {
+                    b.HasOne("DAL.CustomeUser", "user")
+                        .WithMany("RefreshToken")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("user");
+                });
+
             modelBuilder.Entity("DAL.Request", b =>
                 {
                     b.HasOne("DAL.Customer", "Customer")
@@ -527,11 +575,11 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("DAL.CustomeUser", b =>
                 {
-                    b.Navigation("customer")
-                        .IsRequired();
+                    b.Navigation("RefreshToken");
 
-                    b.Navigation("provider")
-                        .IsRequired();
+                    b.Navigation("customer");
+
+                    b.Navigation("provider");
                 });
 
             modelBuilder.Entity("DAL.Service", b =>
