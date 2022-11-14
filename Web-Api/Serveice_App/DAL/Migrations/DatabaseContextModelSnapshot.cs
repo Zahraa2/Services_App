@@ -63,6 +63,10 @@ namespace DAL.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -486,7 +490,7 @@ namespace DAL.Migrations
             modelBuilder.Entity("DAL.RefreshToken", b =>
                 {
                     b.HasOne("DAL.CustomeUser", "user")
-                        .WithMany("RefreshToken")
+                        .WithMany("RefreshTokens")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -578,7 +582,7 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("DAL.CustomeUser", b =>
                 {
-                    b.Navigation("RefreshToken");
+                    b.Navigation("RefreshTokens");
 
                     b.Navigation("customer");
 

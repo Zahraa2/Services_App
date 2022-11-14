@@ -12,9 +12,7 @@ namespace BL
     {
         public string Token { get; set; }
         public DateTime ExpirOn { get; set; }
-        [JsonIgnore]
         public string RefreshToken { get; set; }
-        [JsonIgnore]
         public DateTime RefershTokenExpirOn { get; set; }
         public string Message { get; set; }
     }
