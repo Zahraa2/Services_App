@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,4 +15,9 @@ public class PostRepo : GenericRepo<Post>, IPostRepo
     {
         this.context = context;
     }
+
+    //public List<Post> GetPostsOfProvider(Guid providerId)
+    //{
+    //    var posts = context.posts.Include(p=> p.Provider).Where(p=>p.p)
+    //}
 }
