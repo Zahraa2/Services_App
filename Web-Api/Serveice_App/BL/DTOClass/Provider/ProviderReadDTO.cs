@@ -16,5 +16,9 @@ public class ProviderReadDTO
 
     public decimal AvgRate { get; set; }
     public string? profilePicture { get; set; }
-    public ICollection<PostReadDTO> posts = new HashSet<PostReadDTO>();
+    public ICollection<PostReadDTO> posts {get; set;}
+    public ProviderReadDTO()
+    {
+        posts = new HashSet<PostReadDTO>();
+    }
 }

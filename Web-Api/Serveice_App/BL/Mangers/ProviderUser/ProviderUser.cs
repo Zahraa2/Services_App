@@ -18,8 +18,6 @@ public class ProviderUser : IProviderUser
         _mapper = mapper; 
     }
 
-    public IUnitOfWork UnitOfWork { get; }
-
     //get all providers by service name
     public List<ProviderUserReadDTO>? GetAllProviders(string Name)
     {
@@ -34,10 +32,10 @@ public class ProviderUser : IProviderUser
         }
         return providerUserReadDTO;
     }
-
+    // function Get All data About Provider with his Posts and Medias
     public ProviderReadDTO? GetProviderbyid(Guid id)
     {
-        Provider? provider = UnitOfWork.ProviderRepo.SelectAlldata(id);
+        Provider? provider = _unitOfWork.ProviderRepo.SelectAlldata(id);
         ProviderReadDTO providerReadDTO = _mapper.Map<ProviderReadDTO>(provider);
         providerReadDTO.ServiceName= _unitOfWork.ServiceRepo.GetById(provider.ServiceId).Name;
         var User = _unitOfWork.userRepo.GetUserById(provider.UserId);
@@ -45,7 +43,7 @@ public class ProviderUser : IProviderUser
         providerReadDTO.Location = User.City;
         return providerReadDTO;
     }
-
+    // map Provider to ProviderUser 
     public ProviderUserReadDTO ProviderUserReadDTO(Provider provider)
     {
         var Provider_DTO = _mapper.Map<ProviderUserReadDTO>(provider);

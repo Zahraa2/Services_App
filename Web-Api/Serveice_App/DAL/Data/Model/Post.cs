@@ -14,5 +14,9 @@ public class Post
     [ForeignKey("provider")]
     public Guid? ProviderID { get; set; }
     public Provider Provider { get; set; } = null!;
-    public ICollection<Media>? Medias = new HashSet<Media>();
+    public ICollection<Media>? Medias { get; set; }
+    public Post()
+    {
+        Medias = new HashSet<Media>();
+    }
 }
