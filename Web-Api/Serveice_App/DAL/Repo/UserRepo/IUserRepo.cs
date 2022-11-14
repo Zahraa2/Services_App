@@ -9,5 +9,6 @@ namespace DAL
     public interface IUserRepo
     {
         public List<CustomeUser> UserRefreshToken();
+        public CustomeUser GetUserById(string Id);
     }
 }

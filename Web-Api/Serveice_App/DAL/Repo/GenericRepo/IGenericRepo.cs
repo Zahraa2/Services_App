@@ -9,7 +9,7 @@ namespace DAL;
 public interface IGenericRepo<T>
 {
     List<T> GetAll();
-    T? GetById(Guid id);
+    T? GetById(Guid? id);
     void Add(T entity);
     void Edit(T entity);
     void Delete(T entity);

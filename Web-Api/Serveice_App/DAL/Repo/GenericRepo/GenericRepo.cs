@@ -18,7 +18,7 @@ public class GenericRepo<T> : IGenericRepo<T> where T : class
     {
         return _context.Set<T>().ToList();
     }
-    public T? GetById(Guid id)
+    public T? GetById(Guid? id)
     {
         return _context.Set<T>().Find(id);
     }
@@ -41,4 +41,6 @@ public class GenericRepo<T> : IGenericRepo<T> where T : class
     {
         _context.SaveChanges();
     }
+
+    
 }

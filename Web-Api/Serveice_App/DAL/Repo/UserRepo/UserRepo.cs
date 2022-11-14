@@ -14,6 +14,12 @@ namespace DAL
         {
             _context = context;
         }
+
+        public CustomeUser GetUserById(string Id)
+        {
+            return _context.customeUsers.First(a => a.Id == Id);
+        }
+
         public List<CustomeUser> UserRefreshToken()
         {
             var RefreshTokens = _context.customeUsers.Include(r => r.RefreshTokens).ToList();

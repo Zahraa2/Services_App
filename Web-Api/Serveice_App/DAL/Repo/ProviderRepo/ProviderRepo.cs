@@ -16,6 +16,13 @@ public class ProviderRepo : GenericRepo<Provider>, IProviderRepo
         this.context = context;
     }
 
+    public List<Provider> GetProviderByServices(string Name)
+    {
+        Service service = context.Services.First(s => s.Name == Name);
+        var providers = context.Provider.Where(P => P.ServiceId == service.id).ToList();
+        return providers;
+    }
+
     public List<Provider> GetProvidersByService(string Name)
     {
         return context.Provider.Include(s => s.service).Where(s => s.service.Name == Name).ToList();

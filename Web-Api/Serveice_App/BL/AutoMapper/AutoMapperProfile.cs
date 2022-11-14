@@ -32,5 +32,7 @@ public class AutoMapperProfile :Profile
 
         CreateMap<Service, ServiceReadDTO>();
         CreateMap<ServiceWriteDTO, Service>();
+
+        CreateMap<Provider, ProviderUserReadDTO>();
     }
 }
