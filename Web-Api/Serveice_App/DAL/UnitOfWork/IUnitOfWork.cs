@@ -15,4 +15,5 @@ public interface IUnitOfWork
     IProviderRepo ProviderRepo { get; }
     IRequestRepo RequestRepo { get; }
     IServiceRepo ServiceRepo { get; }
+    IUserRepo userRepo { get; }
 }

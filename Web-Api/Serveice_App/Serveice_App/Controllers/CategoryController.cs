@@ -21,6 +21,12 @@ namespace Serveice_App.Controllers
             List<string> CategoryNames = category.GetAllNames();
             return CategoryNames;
         }
+        [HttpPost]
+        [Route("Addcatigorty")]
+        public void addcatigory(CategoryWriteDTO category5)
+        {
+            category.Add(category5);
+        }
 
 
     }

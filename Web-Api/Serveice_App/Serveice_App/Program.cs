@@ -99,6 +99,9 @@ builder.Services.AddScoped<ICategoryManger,CategoryManger>();
 builder.Services.AddScoped<IServiceManger,ServiceManger>();
 builder.Services.AddScoped<IAuthServices, AuthServices>();
 builder.Services.AddScoped<ICustomUserManager, CustomUserManager>();
+builder.Services.AddScoped<IProviderUser, ProviderUser>();
+builder.Services.AddScoped<IProviderManger, ProviderManger>();
+
 #endregion
 
 #endregion

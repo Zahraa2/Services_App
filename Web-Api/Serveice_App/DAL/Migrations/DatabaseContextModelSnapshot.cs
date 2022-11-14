@@ -166,15 +166,12 @@ namespace DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("PostId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("Providerid")
+                    b.Property<Guid?>("ProviderID")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Providerid");
+                    b.HasIndex("ProviderID");
 
                     b.ToTable("posts");
                 });
@@ -465,9 +462,7 @@ namespace DAL.Migrations
                 {
                     b.HasOne("DAL.Provider", "Provider")
                         .WithMany()
-                        .HasForeignKey("Providerid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProviderID");
 
                     b.Navigation("Provider");
                 });

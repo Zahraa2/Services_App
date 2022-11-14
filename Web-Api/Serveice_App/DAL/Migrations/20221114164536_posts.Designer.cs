@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAL.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20221114004908_create-database")]
-    partial class createdatabase
+    [Migration("20221114164536_posts")]
+    partial class posts
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -168,15 +168,12 @@ namespace DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("PostId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("Providerid")
+                    b.Property<Guid?>("ProviderID")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Providerid");
+                    b.HasIndex("ProviderID");
 
                     b.ToTable("posts");
                 });
@@ -467,9 +464,7 @@ namespace DAL.Migrations
                 {
                     b.HasOne("DAL.Provider", "Provider")
                         .WithMany()
-                        .HasForeignKey("Providerid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProviderID");
 
                     b.Navigation("Provider");
                 });

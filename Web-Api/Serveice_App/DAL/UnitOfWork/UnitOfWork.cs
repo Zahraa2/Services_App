@@ -21,8 +21,9 @@ public class UnitOfWork : IUnitOfWork
     public IRequestRepo RequestRepo { get; }
 
     public IServiceRepo ServiceRepo { get; }
+    public IUserRepo userRepo  { get;}
 
-    public UnitOfWork(ICategoryRepo categoryRepo,ICustomerRepo customerRepo,IMediaRepo mediaRepo ,IPostRepo postRepo,IProviderRepo providerRepo,IRequestRepo requestRepo,IServiceRepo serviceRepo)
+    public UnitOfWork(ICategoryRepo categoryRepo,ICustomerRepo customerRepo,IMediaRepo mediaRepo ,IPostRepo postRepo,IProviderRepo providerRepo,IRequestRepo requestRepo,IServiceRepo serviceRepo, IUserRepo userRepo)
     {
         this.CategoryRepo = categoryRepo;
         this.CustomerRepo = customerRepo;
@@ -31,5 +32,6 @@ public class UnitOfWork : IUnitOfWork
         this.ProviderRepo = providerRepo;
         this.RequestRepo = requestRepo;
         this.ServiceRepo = serviceRepo;
+        this.userRepo = userRepo;
     }
 }

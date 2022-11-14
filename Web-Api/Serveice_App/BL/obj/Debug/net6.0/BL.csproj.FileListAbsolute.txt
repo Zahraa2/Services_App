@@ -13,3 +13,33 @@ E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\B
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\refint\BL.dll
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.pdb
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\ref\BL.dll
+E:\Services_App5\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.csproj.AssemblyReference.cache
+E:\Services_App5\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Services_App5\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.AssemblyInfoInputs.cache
+E:\Services_App5\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.AssemblyInfo.cs
+E:\Services_App5\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.csproj.CoreCompileInputs.cache
+E:\Services_App5\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.dll
+E:\Services_App5\Web-Api\Serveice_App\BL\obj\Debug\net6.0\refint\BL.dll
+E:\Services_App5\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.pdb
+E:\Services_App5\Web-Api\Serveice_App\BL\bin\Debug\net6.0\BL.deps.json
+E:\Services_App5\Web-Api\Serveice_App\BL\bin\Debug\net6.0\BL.dll
+E:\Services_App5\Web-Api\Serveice_App\BL\bin\Debug\net6.0\BL.pdb
+E:\Services_App5\Web-Api\Serveice_App\BL\bin\Debug\net6.0\DAL.dll
+E:\Services_App5\Web-Api\Serveice_App\BL\bin\Debug\net6.0\DAL.pdb
+E:\Services_App5\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.csproj.CopyComplete
+E:\Services_App5\Web-Api\Serveice_App\BL\obj\Debug\net6.0\ref\BL.dll
+D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\BL\bin\Debug\net6.0\BL.deps.json
+D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\BL\bin\Debug\net6.0\BL.dll
+D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\BL\bin\Debug\net6.0\BL.pdb
+D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\BL\bin\Debug\net6.0\DAL.dll
+D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\BL\bin\Debug\net6.0\DAL.pdb
+D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.csproj.AssemblyReference.cache
+D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.AssemblyInfoInputs.cache
+D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.AssemblyInfo.cs
+D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.csproj.CoreCompileInputs.cache
+D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.csproj.CopyComplete
+D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.dll
+D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\refint\BL.dll
+D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.pdb
+D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\ref\BL.dll
