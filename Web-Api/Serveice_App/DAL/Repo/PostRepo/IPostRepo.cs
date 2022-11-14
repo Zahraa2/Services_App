@@ -8,5 +8,5 @@ namespace DAL;
 
 public interface IPostRepo:IGenericRepo<Post>
 {
-   // public List<Post> GetPostsOfProvider(Guid providerId);
+    public List<Post> GetPostsOfProvider(Guid providerId);
 }

@@ -16,8 +16,9 @@ public class PostRepo : GenericRepo<Post>, IPostRepo
         this.context = context;
     }
 
-    //public List<Post> GetPostsOfProvider(Guid providerId)
-    //{
-    //    var posts = context.posts.Include(p=> p.Provider).Where(p=>p.p)
-    //}
+    public List<Post> GetPostsOfProvider(Guid providerId)
+    {
+        var posts = context.posts.Include(p => p.Provider).Where(p => p.ProviderID == providerId).ToList();
+        return posts;
+    }
 }

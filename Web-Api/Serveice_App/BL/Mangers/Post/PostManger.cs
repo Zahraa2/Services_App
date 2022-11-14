@@ -10,57 +10,73 @@ namespace BL;
 
 public class PostManger : IPostManger
 {
-    private readonly IPostRepo PostRepo;
-    public IMapper Mapper { get; }
+    private readonly IPostRepo _postRepo;
+    private readonly IMediaRepo _mediaRepo;
+    private readonly IMapper _Mapper;
 
-    public PostManger(IPostRepo PostRepo, IMapper mapper)
+    public PostManger(IPostRepo PostRepo, IMapper mapper, IMediaRepo mediaRepo)
     {
-        this.PostRepo = PostRepo;
-        Mapper = mapper;
+        _postRepo = PostRepo;
+        _Mapper = mapper;
+        _mediaRepo = mediaRepo;
     }
 
 
 
     public void Add(PostWriteDTO Post)
     {
-        var repo = Mapper.Map<Post>(Post);
+        var repo = _Mapper.Map<Post>(Post);
         repo.Id = Guid.NewGuid();
-        PostRepo.Add(repo);
-        PostRepo.SaveChange();
+        _postRepo.Add(repo);
+        _postRepo.SaveChange();
     }
 
     public void Delete(Guid id)
     {
-        var repo = PostRepo.GetById(id);
+        var repo = _postRepo.GetById(id);
         if (repo != null)
-            PostRepo.Delete(repo);
+            _postRepo.Delete(repo);
     }
 
     public List<PostReadDTO> GetAll()
     {
-        var repo = PostRepo.GetAll();
-        var DTO = Mapper.Map<List<PostReadDTO>>(repo);
+        var repo = _postRepo.GetAll();
+        var DTO = _Mapper.Map<List<PostReadDTO>>(repo);
         return DTO;
     }
 
     public PostReadDTO? GetByID(Guid id)
     {
-        var repo = PostRepo.GetById(id);
+        var repo = _postRepo.GetById(id);
         if (repo == null)
             return null;
-        var DTO = Mapper.Map<PostReadDTO>(repo);
+        var DTO = _Mapper.Map<PostReadDTO>(repo);
         return DTO;
     }
 
     public bool Update(PostWriteDTO Post)
     {
-        var repo = PostRepo.GetById(Post.Id);
+        var repo = _postRepo.GetById(Post.Id);
         if (repo == null)
             return false;
 
-        Mapper.Map(Post, repo);
-        PostRepo.SaveChange();
+        _Mapper.Map(Post, repo);
+        _postRepo.SaveChange();
         return true;
+    }
+
+    public List<MediasforPost> GetPostsOfProvider(Guid providerId)
+    {
+        var posts = _postRepo.GetPostsOfProvider(providerId);
+        List<MediasforPost> MediasforPost = new List<MediasforPost>();
+        foreach(var post in posts)
+        {
+            var mediaForPost = _Mapper.Map<MediasforPost>(post);
+            mediaForPost.Imgs = _mediaRepo.GetimgsOfPost(post.Id);
+            MediasforPost.Add(mediaForPost);
+        }
+
+        return MediasforPost;
     }
 }
 

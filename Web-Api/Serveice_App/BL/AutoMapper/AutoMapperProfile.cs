@@ -34,5 +34,7 @@ public class AutoMapperProfile :Profile
         CreateMap<ServiceWriteDTO, Service>();
 
         CreateMap<Provider, ProviderUserReadDTO>();
+
+        CreateMap<Post, MediasforPost>();
     }
 }
