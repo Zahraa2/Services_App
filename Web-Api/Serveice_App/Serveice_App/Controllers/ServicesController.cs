@@ -34,8 +34,8 @@ namespace Serveice_App.Controllers
             return _serviceManger.GetMostServices();
         }
         [HttpPost]
-        [Route("ADDService")]
-        public void addcatigory(ServiceWriteDTO Service)
+        [Route("AddService")]
+        public void AddService(ServiceWriteDTO Service)
         {
             _serviceManger.Add(Service);
         }

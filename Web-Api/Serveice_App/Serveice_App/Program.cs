@@ -91,7 +91,6 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 #region AutoMapper
 
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
-builder.Services.AddAutoMapper(typeof(MapperProfile).Assembly);
 #endregion
 
 #region Managers

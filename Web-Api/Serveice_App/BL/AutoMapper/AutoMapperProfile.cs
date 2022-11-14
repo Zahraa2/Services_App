@@ -12,6 +12,12 @@ public class AutoMapperProfile :Profile
 {
     public AutoMapperProfile()
     {
+        #region AuthMapper
+        CreateMap<UserSignUp, CustomeUser>();
+        CreateMap<SignUpCustomer, UserSignUp>();
+        CreateMap<SignUpProvider, UserSignUp>();
+        #endregion
+
         CreateMap<Category,CategoryReadDTO>();
         CreateMap<CategoryWriteDTO, Category>();
 
