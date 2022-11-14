@@ -11,4 +11,5 @@ public class PostReadDTO
     public Guid Id { get; set; }
     public string Description { get; set; } = null!;
     public Guid? PostId { get; set; }
+    public List<MediaReadDTO>? Medias { get; set; }
 }

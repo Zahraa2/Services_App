@@ -28,4 +28,10 @@ public class ProviderRepo : GenericRepo<Provider>, IProviderRepo
         return context.Provider.Include(s => s.service).Where(s => s.service.Name == Name).ToList();
     }
 
+    public Provider? SelectAlldata(Guid id)
+    {
+        Provider provider = context.Provider.Include(p=>p.posts).ThenInclude(post=>post.Medias).First(p=>p.id==id);
+        return provider;
+       
+    }
 }

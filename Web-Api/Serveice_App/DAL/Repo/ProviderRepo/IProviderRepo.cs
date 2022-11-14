@@ -10,4 +10,5 @@ public interface IProviderRepo:IGenericRepo<Provider>
 {
     public List<Provider> GetProvidersByService(string Name);
     public List<Provider> GetProviderByServices(string Name);
+    public Provider SelectAlldata(Guid id);
 }

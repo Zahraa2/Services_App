@@ -28,4 +28,11 @@ public class ProviderController : ControllerBase
         return providerUser.GetAllProviders(Name);
     }
 
+    [HttpGet]
+    [Route("SelectProviderById")]
+    public ActionResult<ProviderReadDTO> ProviderProfile(Guid id)
+    {
+        return providerUser.GetProviderbyid(id);
+    }
+
 }

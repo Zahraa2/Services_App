@@ -23,7 +23,7 @@ public class Provider
     
     public string? profilePicture { get; set; } 
     public ICollection<Request> requests = new HashSet<Request>();
-    public ICollection<Post> posts = new HashSet<Post>();
+    public ICollection<Post>? posts = new HashSet<Post>();
     public Service? service { get; set; }
 
 }
