@@ -23,9 +23,9 @@ public class ProviderController : ControllerBase
     }
     [HttpGet]
     [Route("ProvidersByService")]
-    public void ProvidersByService(string Name)
+    public ActionResult<List<ProviderUserReadDTO>> ProvidersByService(string Name)
     {
-        providerUser.GetAllProviders(Name);
+        return providerUser.GetAllProviders(Name);
     }
 
 }

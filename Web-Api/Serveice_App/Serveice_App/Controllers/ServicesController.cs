@@ -33,6 +33,12 @@ namespace Serveice_App.Controllers
         {
             return _serviceManger.GetMostServices();
         }
+        [HttpPost]
+        [Route("ADDService")]
+        public void addcatigory(ServiceWriteDTO Service)
+        {
+            _serviceManger.Add(Service);
+        }
 
 
     }

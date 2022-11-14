@@ -8,6 +8,7 @@ namespace BL;
 
 public class ProviderUserReadDTO
 {
+	public Guid id { get; set; }
 	public string? Name { get; set; }
 	public string? profilePicture { get; set; }
 	public decimal AvgRate { get; set; }
