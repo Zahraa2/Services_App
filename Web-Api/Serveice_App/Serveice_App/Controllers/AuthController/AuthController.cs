@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
 using System.Net.Mail;
 
 namespace Serveice_App.Controllers.AuthController
@@ -120,10 +121,13 @@ namespace Serveice_App.Controllers.AuthController
             return Ok();
         }
 
-        [HttpGet("forgerPassword")]
-        public async Task<ActionResult> ForgerPassword(string email)
+        [HttpPost("forgerPassword")]
+        public async Task<ActionResult> ForgerPassword(ForgetPassword model)
         {
-            var user = await _userManager.FindByEmailAsync(email);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var user = await _userManager.FindByEmailAsync(model.Email);
             if (user == null)
             {
                 return BadRequest("invalid Email");
@@ -135,12 +139,18 @@ namespace Serveice_App.Controllers.AuthController
             var mailText = str.ReadToEnd();
             str.Close();
 
-            var confirmationLink = Url.Action(nameof(ResetPassword), "Auth", new { token, email = user.Email }, Request.Scheme);
+            //var confirmationLink = Url.Action(nameof(model.Url), "Auth", new { token, email = user.Email }, Request.Scheme);
+            var param = new Dictionary<string, string?>
+            {
+                {"token", token },
+                {"email", user.Email }
+            };
+            var confirmationLink = QueryHelpers.AddQueryString(model.Url, param);
 
             mailText = mailText.Replace("[username]", user.UserName).Replace("[email]", user.Email).Replace("[Link]", confirmationLink);
 
             await _authServices.SendingEmail(user.Email, "Welcome to our Website", mailText);
-            return Ok();
+            return Ok(new { link = confirmationLink });
 
         }
 
