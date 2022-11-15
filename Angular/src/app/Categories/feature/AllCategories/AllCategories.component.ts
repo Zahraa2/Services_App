@@ -7,6 +7,7 @@ import { Categorie } from '../../data-access/Classes/categorie';
   templateUrl: './AllCategories.component.html',
   styleUrls: ['./AllCategories.component.css']
 })
+
 export class AllCategoriesComponent implements OnInit {
 
 

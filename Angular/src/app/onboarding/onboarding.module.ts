@@ -14,6 +14,8 @@ const onboardingSharedComponent = [
   OnboardingComponent,
   HeaderComponent
 ]
+
+
 @NgModule({
   declarations: [
     onboardingSharedComponent
@@ -21,6 +23,7 @@ const onboardingSharedComponent = [
   imports: [
     CommonModule,
     ShareModule,
+  
 
   ],
   exports: [
@@ -28,4 +31,4 @@ const onboardingSharedComponent = [
   ]
 
 })
-export class OnboardingModuleModule { }
+export class OnboardingModule { }

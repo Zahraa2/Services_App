@@ -8,11 +8,11 @@ import { ServicesByCategoryComponent } from './feature/ServicesByCategory/Servic
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
 import { AllServicesComponent } from './feature/AllServices/AllServices.component';
-import { ErrorComponent } from '../Error/Error.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MostPopularComponent } from './feature/MostPopular/MostPopular.component';
-import { RouterModule } from '@angular/router';
+import { ShareModule } from '../Share/share.module';
+import { CategoriesRoutesModule } from './categories.routing.module';
+
 
 const importedComponent = [
   AllCategoriesComponent,
@@ -20,7 +20,6 @@ const importedComponent = [
   ServicesByCategoryComponent,
   AllServicesComponent,
   MostPopularComponent,
-  ErrorComponent,
 ]
 
 
@@ -29,17 +28,17 @@ const importedComponent = [
     importedComponent
   ],
   imports: [
-    CommonModule,
     MaterialModule,
     NgxPaginationModule,
-    BrowserAnimationsModule,
     Ng2SearchPipeModule,
     FormsModule,
-    RouterModule,
     CarouselModule,
+    CommonModule,
+    // ShareModule,
+    CategoriesRoutesModule
   ],
   exports: [
     CategoriesComponent
   ]
 })
-export class CategoriesModuleModule { }
+export class CategoriesModule { }
