@@ -14,14 +14,12 @@ import { ShareModule } from '../Share/share.module';
 import { CategoriesRoutesModule } from './categories.routing.module';
 
 
-
 const importedComponent = [
   AllCategoriesComponent,
   CategoriesComponent,
   ServicesByCategoryComponent,
   AllServicesComponent,
   MostPopularComponent,
-
 ]
 
 

@@ -1,0 +1,141 @@
+/* .info .container2{
+width: 90%;
+background-color: #f2f6ef;
+padding: 5rem 3rem 2rem;
+border-radius: 25%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.101), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+.info{
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8rem;
+}
+.imagem {
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+}
+  
+  
+  .img {
+	height:200px;
+	width: 200px;
+	margin-top: 20px;
+	border-radius: 50%;
+  }
+  .sub-button{
+    display: flex;
+    justify-content: center;
+  }
+  .edit-contain{
+    border-right: 4px solid;
+    border-color: rgb(121, 119, 119);
+  }
+  .about-info{
+    text-align: start;
+  } */
+
+  .card { 
+    border: none 
+} 
+ 
+.image { 
+    position: relative 
+} 
+ 
+.image span { 
+    background-color: var(--primary); 
+    color: #fff; 
+    padding: 6px; 
+    height: 30px; 
+    width: 30px; 
+    border-radius: 50%; 
+    font-size: 13px; 
+    position: absolute; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    top: -0px; 
+    right: 0px 
+} 
+ 
+.user-details h4 { 
+    color: var(--third) 
+} 
+ 
+.ratings { 
+    font-size: 30px; 
+    font-weight: 600; 
+    display: flex; 
+    justify-content: left; 
+    align-items: center; 
+    color: var(--primary) 
+} 
+ 
+.user-details span { 
+    text-align: left 
+} 
+ 
+.inputs label { 
+    display: flex; 
+    margin-left: 3px; 
+    font-weight: 500; 
+    font-size: 13px; 
+    margin-bottom: 4px 
+} 
+ 
+.inputs input { 
+    font-size: 14px; 
+    height: 40px; 
+    border: 2px solid #ced4da 
+} 
+ 
+.inputs input:focus { 
+    box-shadow: none; 
+    border: 2px solid var(--primary) 
+} 
+ 
+.about-inputs label { 
+    display: flex; 
+    margin-left: 3px; 
+    font-weight: 500; 
+    font-size: 13px; 
+    margin-bottom: 4px 
+} 
+ 
+.about-inputs textarea { 
+    font-size: 14px; 
+    height: 100px; 
+    border: 2px solid #ced4da; 
+    resize: none 
+} 
+ 
+.about-inputs textarea:focus { 
+    box-shadow: none 
+} 
+ 
+.btn { 
+    font-weight: 600 
+} 
+ 
+.btn:focus { 
+    box-shadow: none 
+} 
+ 
+ 
+#upload { 
+    opacity: 0; 
+    color: var(--primary); 
+} 
+ 
+#upload-label { 
+    position: absolute; 
+    top: 50%; 
+    left: 1rem; 
+    transform: translateY(-50%); 
+    color: var(--primary); 
+}
