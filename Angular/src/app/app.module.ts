@@ -18,7 +18,7 @@ import { OnboardingModule} from './onboarding/onboarding.module';
     HttpClientModule,
     RouterModule,   
     ShareModule,
-    OnboardingModule
+    OnboardingModule,
  ],
   providers: [],
   bootstrap: [AppComponent]

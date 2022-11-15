@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: '', component: OnboardingComponent},
 
   {path: 'خدماتنا', loadChildren: () => import('./Categories/categories.module').then(m => m.CategoriesModule)},
+  {path: 'Profile', loadChildren: () => import('./Profile/profile.module').then(m => m.ProfileModule)},
 
 ];
 
