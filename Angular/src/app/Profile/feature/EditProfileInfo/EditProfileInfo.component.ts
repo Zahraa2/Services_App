@@ -11,18 +11,23 @@ import { ProfileService } from '../../data-access/profile-service.service';
 })
 export class EditProfileInfoComponent implements OnInit {
 
-  profile:Profile = {ServiceName:'', Pic:'',Name:'',Summary:'',Location:'',Rate:0,Posts:[]}
+  profile: Profile = { ServiceName: '', Pic: '', Name: '', Summary: '', Location: '', Rate: 0, Posts: [] }
   service: Service | any
-  constructor(public profileService:ProfileService , public allService:ourServicese) { }
+  constructor(public profileService: ProfileService, public allService: ourServicese) { }
 
   ngOnInit() {
-    this.profileService.getProfileData().subscribe( a =>{
+    this.profileService.getProfileData().subscribe(a => {
       this.profile = a
     })
-    this.allService.getAllServiecs().subscribe(a =>{
-      this.service  = a
+    this.allService.getAllServiecs().subscribe(a => {
+      this.service = a
     }
-      )
+    )
+  }
+
+  uploadImage(event:HTMLElement){
+    console.log(event);
+
   }
 
 }

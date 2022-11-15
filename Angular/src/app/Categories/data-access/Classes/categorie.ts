@@ -1,5 +1,3 @@
-export class Categorie {
-
-constructor(public categorieName:string){}
-
+export interface Categorie {
+    categorieName: string
 }

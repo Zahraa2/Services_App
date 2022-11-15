@@ -1,9 +1,10 @@
 <div class="container my-5">
+    
     <div class="card p-3 text-center my-5">
         <div class="d-flex flex-row justify-content-center mb-3">
             <div class="image"> <img src="https://i.imgur.com/hczKIze.jpg" class="rounded-circle">
                 <span>
-                    <i class="fa-solid fa-camera"></i>
+                    <i class="fa-solid fa-camera"  for="inputGroupFile02"></i>
                 </span>
             </div>
             <div class="d-flex flex-column ms-3 user-details">
@@ -41,24 +42,26 @@
             </div>
 
             <div class="col-md-6 my-2">
-                <div class="input-group my-3 px-2 border bg-white shadow-sm">
-                    <input id="upload" type="file" #uploded class="form-control border-0">
-                    <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
-                    <div class="input-group-append">
-                      <label for="upload" class="btn btn-light m-0 rounded-pill px-4">
-                        <i class="fa fa-cloud-upload mr-2 text-warning"></i>
-                        <small class="text-uppercase font-weight-bold text-muted">Choose file</small>
-                      </label>
-                    </div>
-                  </div>
+
+                <div class="input-group my-3">
+                    <input type="file" class="form-control" id="inputGroupFile02" #i3 (change)="uploadImage(i3)" />
+                    <label class="input-group-text" for="inputGroupFile02">
+                        <div class="input-group-append">
+                            <i class="fa fa-cloud-upload mr-2 text-warning"></i>
+                            <small class="text-uppercase font-weight-bold text-muted">Choose file</small>
+                        </div>
+                    </label>
+                </div>
+
             </div>
-        
+
         </div>
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="about-inputs">
                     <label>Summery</label>
-                    <textarea class="form-control" type="text" placeholder="Tell us about yourself" [value]="profile.Summary"> </textarea>
+                    <textarea class="form-control" type="text" placeholder="Tell us about yourself"
+                        [value]="profile.Summary"> </textarea>
                 </div>
             </div>
         </div>
