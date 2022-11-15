@@ -127,7 +127,7 @@ namespace BL
         {
 
             var usermodel = _mapper.Map<UserSignUp>(model);
-            usermodel.Type = UserTypes.Customer;
+            usermodel.Type = UserTypes.Provider;
             usermodel.Role = "Customer";
 
 
