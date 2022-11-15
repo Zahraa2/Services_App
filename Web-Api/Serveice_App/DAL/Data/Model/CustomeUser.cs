@@ -14,7 +14,13 @@ public enum UserTypes
 public class CustomeUser: IdentityUser 
 {
     public UserTypes Type { get; set; }
-    public Customer customer { get; set; } = null!;
 
-    public Provider provider { get; set; } = null!;
+    public string Fname { get; set; }
+    public string Lname { get; set; }
+    public string City { get; set; }
+    public Customer? customer { get; set; } = null!;
+
+    public Provider? provider { get; set; } = null!;
+    public ICollection<RefreshToken> RefreshTokens { get; set; } = new HashSet<RefreshToken>();
+
 }

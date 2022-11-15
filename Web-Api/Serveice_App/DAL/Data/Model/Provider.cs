@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -14,13 +15,13 @@ public class Provider
     public string? UserId { get; set; }
     [ForeignKey("service")]
     public Guid? ServiceId { get; set; }
-    public CustomeUser user { get; set; } = null!;
+    public CustomeUser? user { get; set; } 
 
-    public string sammary { get; set; } = null!;
+    public string? sammary { get; set; } 
 
-    public decimal AvgRate { get; set; }
+    public decimal? AvgRate { get; set; }
     
-    public string profilePicture { get; set; } = null!;
+    public string? profilePicture { get; set; } 
     public ICollection<Request> requests = new HashSet<Request>();
     public ICollection<Post> posts = new HashSet<Post>();
     public Service? service { get; set; }

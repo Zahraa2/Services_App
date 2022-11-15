@@ -63,6 +63,10 @@ namespace DAL.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -73,6 +77,14 @@ namespace DAL.Migrations
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("Fname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Lname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -154,15 +166,12 @@ namespace DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("PostId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("Providerid")
+                    b.Property<Guid?>("ProviderID")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Providerid");
+                    b.HasIndex("ProviderID");
 
                     b.ToTable("posts");
                 });
@@ -173,22 +182,19 @@ namespace DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("AvgRate")
+                    b.Property<decimal?>("AvgRate")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<Guid?>("ServiceId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("profilePicture")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("sammary")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
@@ -196,9 +202,40 @@ namespace DAL.Migrations
                     b.HasIndex("ServiceId");
 
                     b.HasIndex("UserId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[UserId] IS NOT NULL");
 
                     b.ToTable("Provider");
+                });
+
+            modelBuilder.Entity("DAL.RefreshToken", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreationOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ExpirationOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("RevokedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("RefreshTokens");
                 });
 
             modelBuilder.Entity("DAL.Request", b =>
@@ -217,6 +254,9 @@ namespace DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Location")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MoreDetails")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid?>("ProviderId")
@@ -248,6 +288,9 @@ namespace DAL.Migrations
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NumberOfOrders")
+                        .HasColumnType("int");
 
                     b.Property<Guid?>("categoryId")
                         .IsRequired()
@@ -419,9 +462,7 @@ namespace DAL.Migrations
                 {
                     b.HasOne("DAL.Provider", "Provider")
                         .WithMany()
-                        .HasForeignKey("Providerid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProviderID");
 
                     b.Navigation("Provider");
                 });
@@ -434,11 +475,20 @@ namespace DAL.Migrations
 
                     b.HasOne("DAL.CustomeUser", "user")
                         .WithOne("provider")
-                        .HasForeignKey("DAL.Provider", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("DAL.Provider", "UserId");
 
                     b.Navigation("service");
+
+                    b.Navigation("user");
+                });
+
+            modelBuilder.Entity("DAL.RefreshToken", b =>
+                {
+                    b.HasOne("DAL.CustomeUser", "user")
+                        .WithMany("RefreshTokens")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("user");
                 });
@@ -527,11 +577,11 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("DAL.CustomeUser", b =>
                 {
-                    b.Navigation("customer")
-                        .IsRequired();
+                    b.Navigation("RefreshTokens");
 
-                    b.Navigation("provider")
-                        .IsRequired();
+                    b.Navigation("customer");
+
+                    b.Navigation("provider");
                 });
 
             modelBuilder.Entity("DAL.Service", b =>
