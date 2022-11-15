@@ -151,7 +151,8 @@
       "number": 200
     }
   ],
-  "ServiceByCategories": [
+  "ServiceByCategories":
+   [
     {
       "نجاره": [
         {
@@ -273,5 +274,10 @@
         }
       ]
     }
+<<<<<<< HEAD
   ]
 }
+=======
+   ]
+  }
+>>>>>>> e00f792892fec825d1b4d6f275d6abc42a5b204f

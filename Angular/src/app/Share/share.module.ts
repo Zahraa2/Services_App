@@ -11,6 +11,12 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
 
 const sharedComponent = [NavbarComponent, FooterComponent ,ScorllToTopComponent,SharedHeaderComponent,LoadingSpinnerComponent]
 
+<<<<<<< HEAD
+=======
+
+const sharedComponent = [NavbarComponent, FooterComponent ,ScorllToTopComponent,SharedHeaderComponent]
+
+>>>>>>> e00f792892fec825d1b4d6f275d6abc42a5b204f
 @NgModule({
   declarations: [
     sharedComponent,

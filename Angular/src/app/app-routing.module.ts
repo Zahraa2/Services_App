@@ -10,6 +10,7 @@ import { RegisterComponent } from './Auth/Regiter/Register/Register.component';
 import { UserRegComponent } from './Auth/user/UserReg/UserReg.component';
 import { ProviderRegComponent } from './Auth/serviceProvider/provider-reg/provider-reg.component';
 
+
 const routes: Routes = [
   { path: '', component: OnboardingComponent },
 
@@ -26,7 +27,12 @@ const routes: Routes = [
   { path: 'forgetPassword', component: ForgetPasswordComponent ,canActivate: [AuthGuard]},
   { path: 'resetpassword', component: ResetPasswordComponent ,canActivate: [AuthGuard]},
   { path: 'profile', component: TestComponent },
+  { path: '', component: OnboardingComponent},
+
+  {path: 'خدماتنا', loadChildren: () => import('./Categories/categories.module').then(m => m.CategoriesModule)},
+
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
