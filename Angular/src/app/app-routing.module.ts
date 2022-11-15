@@ -1,17 +1,35 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ErrorComponent } from './Error/Error.component';
-import { MostPopularComponent } from './Home/MostPopular/MostPopular.component';
+import { AuthGuard } from './Auth/guards/auth.guard';
+import { UserLoginComponent } from './Auth/UserLogin/UserLogin.component';
 import { OnboardingComponent } from './onboarding/UI/onboarding.component';
+import { TestComponent } from './Profile/test/test.component';
+import { ForgetPasswordComponent } from './Auth/password/forget-password/forget-password.component';
+import { ResetPasswordComponent } from './Auth/password/reset-password/reset-password.component';
+import { RegisterComponent } from './Auth/Regiter/Register/Register.component';
+import { UserRegComponent } from './Auth/user/UserReg/UserReg.component';
+import { ProviderRegComponent } from './Auth/serviceProvider/provider-reg/provider-reg.component';
 
 const routes: Routes = [
-  {path: '' , component:OnboardingComponent}, 
-  {path:'خدماتنا' , component:MostPopularComponent},
-  {path:'**' , component:ErrorComponent}
+  { path: '', component: OnboardingComponent },
+
+  {
+    path: 'خدماتنا',
+    loadChildren: () =>
+      import('./Categories/categories.module').then((m) => m.CategoriesModule),
+  },
+
+  { path: 'login', component: UserLoginComponent, canActivate: [AuthGuard] },
+  { path: 'register', component: RegisterComponent, canActivate: [AuthGuard] },
+  { path: 'userRegister', component: UserRegComponent, canActivate: [AuthGuard] },
+  { path: 'sellerRegister', component: ProviderRegComponent, canActivate: [AuthGuard] },
+  { path: 'forgetPassword', component: ForgetPasswordComponent ,canActivate: [AuthGuard]},
+  { path: 'resetpassword', component: ResetPasswordComponent ,canActivate: [AuthGuard]},
+  { path: 'profile', component: TestComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

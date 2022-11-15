@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Archivo:wght@300&family=Cairo:wght@200&family=Lalezar&family=Roboto+Condensed&family=Space+Grotesk:wght@700&display=swap');
@@ -6,10 +6,11 @@
 /* ================================ Globals Styling ================================  */
 html,
 body {
-  height: 100%;
-  font-family: 'Amiri', serif;  
-  text-align: right; 
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  text-align: right;
 }
+
 
 * {
   padding: 0;
@@ -19,26 +20,18 @@ body {
 
 
 /* ================================ Variables ================================  */
+
 :root {
-  --primary: #1E4A53;
-  --secondary: #581000;
-  --light: #bec1be;
-  --light-green: #38b3a3;
-  --bold-font:'Lalezar', cursive;
+  --primary: #FAB430;
+  --secondary: #497174;
+  --light: #EFF5F5;
+  --third: #202020;
+  --bold-font: 'Lalezar', cursive;
 
 }
 
 
-/* ================================ Utilities ================================  */
-
-  /*
-   #EAAD9A
-  #DA7C4F
-  #1E4A53 
-  #E7E5D9
-  */
-
-
+/* ================================================================ */
 
 .button:hover {
   background: rgba(100, 0, 0, 0.03);
@@ -100,30 +93,19 @@ body {
 /*  ========================= Owl Carasoul ========================= */
 
 
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-    background: var(--primary);
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: var(--primary);
 }
 
 
 
 .owl-theme .owl-dots .owl-dot span {
-    width: 15px;
-    height: 15px;
-    margin: 5px 7px;
-    background: #D6D6D6;
-    display: block;
-    transition: opacity .2s ease;
-    border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  transition: opacity .2s ease;
+  border-radius: 50%;
 }
-body { margin: 0; font-family: 'Amiri', serif;  text-align: right; }
-@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Archivo:wght@300&family=Cairo:wght@200&family=Lalezar&family=Roboto+Condensed&family=Space+Grotesk:wght@700&display=swap');
-:root {
-    --primary: #FAB430;
-    --secondary: #497174;
-    --light: #EFF5F5;
-    --third:  #202020;
-    --bold-font:'Lalezar', cursive;
-  
-  }

@@ -14,7 +14,10 @@
     </div>
 
     <div class="icons">
-      <i class="fa-regular fa-user"></i>
+      <a  (click) ="profileRoute()">
+          <i class="fa-regular fa-user text-dark">
+          </i>
+        </a>
       <i class="fa-solid fa-magnifying-glass language"></i>
       <i class="fa-regular fa-heart"></i>
       <i class="fa-regular fa-bell"></i>
@@ -27,19 +30,26 @@
         </div>
         <div>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" routerLink="" routerLinkActive="active">الصفحة الرئيسية</a>
+
+            <li *ngIf="isAuthenticated; else loggedout">
+              <a class="nav-link text-dark cursor-pointer" (click)="logout()" >تسجيل الخروج </a>
             </li>
+            <ng-template #loggedout>
+              <li >
+                <a class="nav-link text-dark" [routerLink]="['register']" >إنشاء حساب</a>
+              </li>
+              <li>
+                <a class="nav-link text-dark" [routerLink]="['login']">تسجيل الدخول</a>
+              </li>
+            </ng-template>
             <li>
-              <a class="nav-link text-dark" routerLink="خدماتنا" routerLinkActive="active">خدماتنا</a>
-            </li>
-            <li>
-              <a class="nav-link text-dark" href="#">تسجيل الدخول</a>
+              <a class="nav-link text-dark" [routerLink]="['خدماتنا']" routerLinkActive="active">خدماتنا</a>
             </li>
 
-            <li>
-              <a class="nav-link text-dark" href="#">إنشاء حساب</a>
+            <li class="nav-item">
+              <a class="nav-link active" [routerLink]="['']" routerLinkActive="active">الصفحة الرئيسية</a>
             </li>
+
           </ul>
         </div>
       </div>
@@ -49,14 +59,12 @@
       <button class="dropdown" mat-button [matMenuTriggerFor]="languages">
         <h5>
           <i class="fa-solid fa-earth-americas"></i> | {{language}}
-            <i class="fa-solid fa-chevron-down"></i>
+          <i class="fa-solid fa-chevron-down"></i>
         </h5>
       </button>
-      <mat-menu #languages="matMenu" >
+      <mat-menu #languages="matMenu">
         <button mat-menu-item class="text-right" (click)="handleToggleLang()">{{seconedLanguage}}</button>
       </mat-menu>
     </div>
   </div>
 </nav>
-
-

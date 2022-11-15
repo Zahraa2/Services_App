@@ -1,6 +1,6 @@
 
 .info {
-    background-image: url(../../../../assets/Images/Sections/statistes3.jpg);
+    background-image: url('../../../../assets/Images/Sections/statistes3.jpg');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
