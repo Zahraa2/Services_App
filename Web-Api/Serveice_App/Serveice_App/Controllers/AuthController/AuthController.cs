@@ -35,7 +35,6 @@ namespace Serveice_App.Controllers.AuthController
             {
                 return BadRequest(result.Message);
             }
-            SetRefreshTokenInCookie(result.RefreshToken, result.RefershTokenExpirOn);
 
             var user = await _userManager.FindByNameAsync(model.UserName);
             sendConfirmEmail(user);
@@ -55,8 +54,6 @@ namespace Serveice_App.Controllers.AuthController
             {
                 return BadRequest(result.Message);
             }
-            SetRefreshTokenInCookie(result.RefreshToken, result.RefershTokenExpirOn);
-
             var user = await _userManager.FindByNameAsync(model.UserName);
             sendConfirmEmail(user);
 
@@ -74,11 +71,7 @@ namespace Serveice_App.Controllers.AuthController
             if (result.Message != null)
             {
                 return BadRequest(result.Message);
-            }
-
-            if (!string.IsNullOrEmpty(result.RefreshToken))
-                SetRefreshTokenInCookie(result.RefreshToken, result.RefershTokenExpirOn);
-
+            }   
 
             return Ok(result);
         }
@@ -91,10 +84,10 @@ namespace Serveice_App.Controllers.AuthController
 
         }
 
-        [HttpGet("refreshtoken")]
-        public async Task<IActionResult> RefreshTokenAsync()
+        [HttpPost("refreshtoken")]
+        public async Task<IActionResult> RefreshTokenAsync(string refreshtoken)
         {
-            var refreshToken = Request.Cookies["refreshToken"];
+            var refreshToken = refreshtoken;
 
             if (refreshToken == null)
             {
@@ -106,8 +99,6 @@ namespace Serveice_App.Controllers.AuthController
             {
                 return BadRequest(result.Message);
             }
-
-            SetRefreshTokenInCookie(result.RefreshToken, result.RefershTokenExpirOn);
 
             return Ok(result);
         }
@@ -178,26 +169,19 @@ namespace Serveice_App.Controllers.AuthController
             return  Ok();
         }
 
-        [HttpGet("getdata")]
+        [HttpGet("GetLoggedInUser")]
         [Authorize]
-        public async Task<ActionResult<string>> GetLoggedInUser()
+        public async Task<ActionResult<logedUser>> GetLoggedInUser()
         {
             var user = await _userManager.GetUserAsync(User);
 
-            return user.Id;
-        }
 
-        private void SetRefreshTokenInCookie(string refreshToken, DateTime expires)
-        {
-            var cookieOptions = new CookieOptions
+            return new logedUser
             {
-                HttpOnly = true,
-                Expires = expires.ToLocalTime()
+                Type = user.Type,
+                Name = user.Fname +" " + user.Lname
             };
-
-            Response.Cookies.Append("refreshToken", refreshToken, cookieOptions);
         }
-
 
         private void sendConfirmEmail(CustomeUser user)
         {
