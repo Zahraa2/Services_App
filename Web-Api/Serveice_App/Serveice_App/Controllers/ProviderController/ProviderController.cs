@@ -22,7 +22,7 @@ public class ProviderController : ControllerBase
         providerManger.Add(providerWriteDTO);
     }
     [HttpGet]
-    [Route("ProvidersByService")]
+    [Route("ProvidersByService/{Name}")]
     public ActionResult<List<ProviderUserReadDTO>> ProvidersByService(string Name)
     {
         return providerUser.GetAllProviders(Name);

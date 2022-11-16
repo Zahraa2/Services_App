@@ -1,4 +1,5 @@
 import {  Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Service } from '../../data-access/Classes/Service';
 import { ourServicese } from '../../data-access/Services.service';
 
@@ -16,13 +17,16 @@ export class AllServicesComponent implements OnInit {
   totalNumber:number | any
 
   seleted:Service[] = [] 
-  constructor(public selectedService:ourServicese) { }
+  constructor(public selectedService:ourServicese  , public route:Router) { }
 
   ngOnInit() {
     this.selectedService.getAllServiecs().subscribe(a =>{
       this.seleted = a
       this.totalNumber = a.length
     })
+  }
+  routeTo(){
+    this.route.navigateByUrl("services")
   }
 
 }

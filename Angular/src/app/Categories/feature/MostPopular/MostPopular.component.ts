@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { service } from '../../data-access/Classes/serivce';
 import { MostPopularService } from '../../data-access/MostPopular.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Service } from '../../data-access/Classes/Service';
 
 
 @Component({
@@ -14,8 +14,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class MostPopularComponent implements OnInit {
 
   constructor(private servies:MostPopularService) { }
-
-  mostPopularService:service[] =[]
+  mostPopularService:Service[] =[]
   ngOnInit() {
     this.onFetchServices();
   }
@@ -23,7 +22,6 @@ export class MostPopularComponent implements OnInit {
   onFetchServices(){
     this.servies.fetchServices().subscribe(services => {
       this.mostPopularService = services;
-      
     });
   }
 

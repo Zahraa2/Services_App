@@ -14,6 +14,7 @@ import { CategoriesRoutesModule } from './categories.routing.module';
 import { SharedHeaderComponent } from './feature/Categorie-header/shared-header.component';
 
 
+
 const importedComponent = [
   AllCategoriesComponent,
   CategoriesComponent,
@@ -37,7 +38,8 @@ const importedComponent = [
     CarouselModule,
     CommonModule,
     // ShareModule,
-    CategoriesRoutesModule
+    CategoriesRoutesModule,
+  
   ],
   exports: [
     CategoriesComponent

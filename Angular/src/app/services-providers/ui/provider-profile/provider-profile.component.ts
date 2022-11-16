@@ -12,7 +12,9 @@ export class ProviderProfileComponent implements OnInit {
   constructor(public provider:ProvidersService) { }
 
   ngOnInit(): void {
-    this.providers=this.provider.getAllProviderss();
+    // this.provider.getAllProviders().subscribe(allProviders =>{
+    //   this.providers = allProviders
+    // })
   }
 
 }

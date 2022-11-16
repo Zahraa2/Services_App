@@ -14,7 +14,7 @@ const routes: Routes = [
         path:'' , component : AllServicesComponent
       },
       {
-        path:'الجميع' , component : AllServicesComponent
+        path:'all' , component : AllServicesComponent
       },
       {
         path:':id' , component: ServicesByCategoryComponent

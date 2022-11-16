@@ -13,20 +13,6 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 
-#region core
-var myAllowSpecificOrigins = "_myAllowSpecificOrigins";
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy(name: myAllowSpecificOrigins,
-        builder =>
-        {
-            builder.WithOrigins("http://localhost:4200")
-            .AllowAnyMethod()
-            .AllowAnyHeader();
-        });
-});
-#endregion
-
 // Add services to the container.
 #region Services
 
@@ -123,6 +109,23 @@ builder.Services.AddScoped<IPostManger, PostManger>();
 #endregion
 
 
+#region core
+
+var myAllowSpecificOrigins = "_myAllowSpecificOrigins";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: myAllowSpecificOrigins,
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:4200")
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+        });
+});
+
+
+#endregion
+
 var app = builder.Build();
 
 #region Middlewares
@@ -132,6 +135,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(myAllowSpecificOrigins);
 
 app.UseHttpsRedirection();
 

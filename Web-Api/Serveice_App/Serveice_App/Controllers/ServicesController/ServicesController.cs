@@ -21,7 +21,7 @@ namespace Serveice_App.Controllers
         }
 
         [HttpGet]
-        [Route("ByCatigory")]
+        [Route("ByCatigory/{Name}")]
         public ActionResult<List<ServiceReadDTO>> GetServicesByCatigory(string Name)
         {
             return _serviceManger.GetServicesByCategory(Name);

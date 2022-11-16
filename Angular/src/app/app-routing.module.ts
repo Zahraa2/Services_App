@@ -14,12 +14,12 @@ const routes: Routes = [
   { path: '', component: OnboardingComponent },
 
   {
-    path: 'خدماتنا',
+    path: 'Categories',
     loadChildren: () =>
       import('./Categories/categories.module').then((m) => m.CategoriesModule),
   },
   {path: 'Profile', loadChildren: () => import('./Profile/profile.module').then(m => m.ProfileModule)},
-  {path: 'العروض', loadChildren: () => import('./services-providers/services-providers.module').then(m => m.ServicesProvidersModule)},
+  {path: 'services', loadChildren: () => import('./services-providers/services-providers.module').then(m => m.ServicesProvidersModule)},
   { path: 'login', component: UserLoginComponent, canActivate: [AuthGuard] },
   { path: 'register', component: RegisterComponent, canActivate: [AuthGuard] },
   { path: 'userRegister', component: UserRegComponent, canActivate: [AuthGuard] },
