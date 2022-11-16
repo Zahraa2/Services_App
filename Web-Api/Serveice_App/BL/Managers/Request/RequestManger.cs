@@ -21,7 +21,7 @@ public class RequestManger : IRequestManger
 
 
 
-    public void Add(RequestWriteDTO Request)
+    public void Add(RequestCostemerProviderWriteDTO Request)
     {
         var repo = Mapper.Map<Request>(Request);
         repo.Id = Guid.NewGuid();
@@ -52,13 +52,23 @@ public class RequestManger : IRequestManger
         return DTO;
     }
 
-    public bool Update(RequestWriteDTO Request)
+    public bool Update(RequestProviderCustomerWriteDTO Request)
     {
         var repo = RequestRepo.GetById(Request.Id);
         if (repo == null)
             return false;
 
         Mapper.Map(Request, repo);
+        RequestRepo.SaveChange();
+        return true;
+    }
+
+    public bool UpdateState(RequestUpdateStateWriteDTO model)
+    {
+        var repo = RequestRepo.GetById(model.Id);
+        if (repo == null)
+            return false;
+        repo.State = model.State;
         RequestRepo.SaveChange();
         return true;
     }
