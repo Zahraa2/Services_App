@@ -11,15 +11,18 @@ namespace BL;
 public class ServiceManger : IServiceManger
 {
     private readonly IServiceRepo ServiceRepo;
-    private readonly UnitOfWork unitOfWork;
+    private readonly IProviderRepo providerRepo;
+    //private readonly UnitOfWork unitOfWork;
 
     public IMapper Mapper { get; }
 
-    public ServiceManger(IServiceRepo ServiceRepo, IMapper mapper, UnitOfWork unitOfWork)
+    public ServiceManger(IServiceRepo ServiceRepo, IMapper mapper, IProviderRepo providerRepo)
     {
         this.ServiceRepo = ServiceRepo;
+        this.providerRepo = providerRepo;
+
         Mapper = mapper;
-        this.unitOfWork = unitOfWork;
+        //this.unitOfWork = unitOfWork;
     }
 
 
@@ -45,7 +48,7 @@ public class ServiceManger : IServiceManger
         var DTO = Mapper.Map<List<ServiceReadDTO>>(repo);
         foreach(ServiceReadDTO Service in DTO)
         {
-            Service.NumberOfProviders=unitOfWork.ProviderRepo.GetAll().Where(p=>p.ServiceId==Service.id).Count();
+            Service.NumberOfProviders=providerRepo.GetAll().Where(p=>p.ServiceId==Service.id).Count();
         }
         return DTO;
     }
@@ -78,7 +81,7 @@ public class ServiceManger : IServiceManger
 
         foreach (ServiceReadDTO Service in DTO)
         {
-            Service.NumberOfProviders = unitOfWork.ProviderRepo.GetAll().Where(p => p.ServiceId == Service.id).Count();
+            Service.NumberOfProviders = providerRepo.GetAll().Where(p => p.ServiceId == Service.id).Count();
         }
         return DTO;
     }
@@ -88,7 +91,7 @@ public class ServiceManger : IServiceManger
         var DTO = Mapper.Map<List<ServiceReadDTO>>(ServiceRepo.GetMostServices());
         foreach (ServiceReadDTO Service in DTO)
         {
-            Service.NumberOfProviders = unitOfWork.ProviderRepo.GetAll().Where(p => p.ServiceId == Service.id).Count();
+            Service.NumberOfProviders = providerRepo.GetAll().Where(p => p.ServiceId == Service.id).Count();
         }
         return DTO;
     }

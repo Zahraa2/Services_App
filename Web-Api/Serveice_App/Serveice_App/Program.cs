@@ -119,6 +119,7 @@ builder.Services.AddScoped<ICustomUserManager, CustomUserManager>();
 builder.Services.AddScoped<IProviderUser, ProviderUser>();
 builder.Services.AddScoped<IProviderManger, ProviderManger>();
 builder.Services.AddScoped<IRequestManger, RequestManger>();
+builder.Services.AddScoped<ICustomerManager, CustomerManger>();
 
 #endregion
 
