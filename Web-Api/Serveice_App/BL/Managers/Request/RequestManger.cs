@@ -10,13 +10,13 @@ namespace BL;
 
 public class RequestManger : IRequestManger
 {
-    private readonly IRequestRepo RequestRepo;
+    private readonly IUnitOfWork _unitOfWork;
     public IMapper Mapper { get; }
 
-    public RequestManger(IRequestRepo RequestRepo, IMapper mapper)
+    public RequestManger(IRequestRepo RequestRepo, IMapper mapper, IUnitOfWork unitOfWork)
     {
-        this.RequestRepo = RequestRepo;
         Mapper = mapper;
+        _unitOfWork = unitOfWork;
     }
 
 
@@ -25,27 +25,27 @@ public class RequestManger : IRequestManger
     {
         var repo = Mapper.Map<Request>(Request);
         repo.Id = Guid.NewGuid();
-        RequestRepo.Add(repo);
-        RequestRepo.SaveChange();
+        _unitOfWork.RequestRepo.Add(repo);
+        _unitOfWork.RequestRepo.SaveChange();
     }
 
     public void Delete(Guid id)
     {
-        var repo = RequestRepo.GetById(id);
+        var repo = _unitOfWork.RequestRepo.GetById(id);
         if (repo != null)
-            RequestRepo.Delete(repo);
+            _unitOfWork.RequestRepo.Delete(repo);
     }
 
     public List<RequestReadDTO> GetAll()
     {
-        var repo = RequestRepo.GetAll();
+        var repo = _unitOfWork.RequestRepo.GetAll();
         var DTO = Mapper.Map<List<RequestReadDTO>>(repo);
         return DTO;
     }
 
     public RequestReadDTO? GetByID(Guid id)
     {
-        var repo = RequestRepo.GetById(id);
+        var repo = _unitOfWork.RequestRepo.GetById(id);
         if (repo == null)
             return null;
         var DTO = Mapper.Map<RequestReadDTO>(repo);
@@ -54,22 +54,22 @@ public class RequestManger : IRequestManger
 
     public bool Update(RequestProviderCustomerWriteDTO Request)
     {
-        var repo = RequestRepo.GetById(Request.Id);
+        var repo = _unitOfWork.RequestRepo.GetById(Request.Id);
         if (repo == null)
             return false;
 
         Mapper.Map(Request, repo);
-        RequestRepo.SaveChange();
+        _unitOfWork.RequestRepo.SaveChange();
         return true;
     }
 
     public bool UpdateState(RequestUpdateStateWriteDTO model)
     {
-        var repo = RequestRepo.GetById(model.Id);
+        var repo = _unitOfWork.RequestRepo.GetById(model.Id);
         if (repo == null)
             return false;
         repo.State = model.State;
-        RequestRepo.SaveChange();
+        _unitOfWork.RequestRepo.SaveChange();
         return true;
     }
 }

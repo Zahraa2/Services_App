@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BL;
 
-public class RequestRejectWriteDTO
+public class RequestmessageWriteDTO
 {
     public Guid ProviderId { get; set; }
     public Guid CustomerId { get; set; }

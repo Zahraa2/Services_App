@@ -1,4 +1,5 @@
 using BL;
+using BL;
 using BL.Managers.UserManager;
 using DAL;
 using Microsoft.AspNetCore.Identity;
@@ -138,9 +139,16 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseRouting();
+
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<NotificationHup>("/notify");
+});
 
 app.MapControllers();
 

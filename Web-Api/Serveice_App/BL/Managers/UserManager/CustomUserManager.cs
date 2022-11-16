@@ -9,16 +9,16 @@ namespace BL.Managers.UserManager
 {
     public class CustomUserManager : ICustomUserManager
     {
-        private readonly IUserRepo _userRepo;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public CustomUserManager(IUserRepo userRepo)
+        public CustomUserManager(IUserRepo userRepo, IUnitOfWork unitOfWork)
         {
-            _userRepo = userRepo;
+            _unitOfWork = unitOfWork;
         }
 
         public List<CustomeUser> UserRefreshToken()
         {
-            return _userRepo.UserRefreshToken();
+            return _unitOfWork.userRepo.UserRefreshToken();
         }
     }
 }

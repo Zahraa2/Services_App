@@ -10,19 +10,14 @@ namespace BL;
 
 public class ServiceManger : IServiceManger
 {
-    private readonly IServiceRepo ServiceRepo;
-    private readonly IProviderRepo providerRepo;
-    //private readonly UnitOfWork unitOfWork;
+    private readonly IUnitOfWork unitOfWork;
 
     public IMapper Mapper { get; }
 
-    public ServiceManger(IServiceRepo ServiceRepo, IMapper mapper, IProviderRepo providerRepo)
+    public ServiceManger(IUnitOfWork unitOfWork, IMapper mapper)
     {
-        this.ServiceRepo = ServiceRepo;
-        this.providerRepo = providerRepo;
-
         Mapper = mapper;
-        //this.unitOfWork = unitOfWork;
+        this.unitOfWork = unitOfWork;
     }
 
 
@@ -31,31 +26,31 @@ public class ServiceManger : IServiceManger
     {
         var repo = Mapper.Map<Service>(Service);
         repo.id = Guid.NewGuid();
-        ServiceRepo.Add(repo);
-        ServiceRepo.SaveChange();
+        unitOfWork.ServiceRepo.Add(repo);
+        unitOfWork.ServiceRepo.SaveChange();
     }
 
     public void Delete(Guid id)
     {
-        var repo = ServiceRepo.GetById(id);
+        var repo = unitOfWork.ServiceRepo.GetById(id);
         if (repo != null)
-            ServiceRepo.Delete(repo);
+            unitOfWork.ServiceRepo.Delete(repo);
     }
 
     public List<ServiceReadDTO> GetAll()
     {
-        var repo = ServiceRepo.GetAll();
+        var repo = unitOfWork.ServiceRepo.GetAll();
         var DTO = Mapper.Map<List<ServiceReadDTO>>(repo);
         foreach(ServiceReadDTO Service in DTO)
         {
-            Service.NumberOfProviders=providerRepo.GetAll().Where(p=>p.ServiceId==Service.id).Count();
+            Service.NumberOfProviders = unitOfWork.ProviderRepo.GetAll().Where(p=>p.ServiceId==Service.id).Count();
         }
         return DTO;
     }
 
     public ServiceReadDTO? GetByID(Guid id)
     {
-        var repo = ServiceRepo.GetById(id);
+        var repo = unitOfWork.ServiceRepo.GetById(id);
         if (repo == null)
             return null;
         var DTO = Mapper.Map<ServiceReadDTO>(repo);
@@ -64,34 +59,34 @@ public class ServiceManger : IServiceManger
 
     public bool Update(ServiceWriteDTO Service)
     {
-        var repo = ServiceRepo.GetById(Service.id);
+        var repo = unitOfWork.ServiceRepo.GetById(Service.id);
         if (repo == null)
             return false;
 
         Mapper.Map(Service, repo);
-        ServiceRepo.SaveChange();
+        unitOfWork.ServiceRepo.SaveChange();
         return true;
     }
 
     public List<ServiceReadDTO> GetServicesByCategory(string Name)
     {
-        var DTO = Mapper.Map<List<ServiceReadDTO>>(ServiceRepo.GetServicesByCategory(Name));
+        var DTO = Mapper.Map<List<ServiceReadDTO>>(unitOfWork.ServiceRepo.GetServicesByCategory(Name));
         if (DTO.Count == 0)
             return null;
 
         foreach (ServiceReadDTO Service in DTO)
         {
-            Service.NumberOfProviders = providerRepo.GetAll().Where(p => p.ServiceId == Service.id).Count();
+            Service.NumberOfProviders = unitOfWork.ProviderRepo.GetAll().Where(p => p.ServiceId == Service.id).Count();
         }
         return DTO;
     }
 
     public List<ServiceReadDTO> GetMostServices()
     {
-        var DTO = Mapper.Map<List<ServiceReadDTO>>(ServiceRepo.GetMostServices());
+        var DTO = Mapper.Map<List<ServiceReadDTO>>(unitOfWork.ServiceRepo.GetMostServices());
         foreach (ServiceReadDTO Service in DTO)
         {
-            Service.NumberOfProviders = providerRepo.GetAll().Where(p => p.ServiceId == Service.id).Count();
+            Service.NumberOfProviders = unitOfWork.ProviderRepo.GetAll().Where(p => p.ServiceId == Service.id).Count();
         }
         return DTO;
     }

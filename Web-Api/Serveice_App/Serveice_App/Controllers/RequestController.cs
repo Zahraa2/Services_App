@@ -54,9 +54,10 @@ namespace Serveice_App.Controllers
             return Ok();
         }
         //Provider Rejects Request
+
         [HttpPost]
-        [Route("ProviderRejectOffer")]
-        public ActionResult ProviderRejectOffer(RequestRejectWriteDTO model)
+        [Route("ProviderRejectRequest")]
+        public ActionResult ProviderRejectRequest(RequestmessageWriteDTO model)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
@@ -69,6 +70,46 @@ namespace Serveice_App.Controllers
 
             var UpdateModel = _mapper.Map<RequestUpdateStateWriteDTO>(model);
             UpdateModel.State = stateType.ProviderReject;
+            _requestManger.UpdateState(UpdateModel);
+            return Ok(model.Message);
+        }
+
+        //Customer Reject offer
+        [HttpPost]
+        [Route("CustomerRejectOffer")]
+        public ActionResult CustomerRejectOffer(RequestmessageWriteDTO model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest();
+
+            var provider = _providerManger.GetByID(model.ProviderId);
+            var customer = _customerManager.GetByID(model.CustomerId);
+            if (provider is null || customer is null)
+                return BadRequest();
+
+
+            var UpdateModel = _mapper.Map<RequestUpdateStateWriteDTO>(model);
+            UpdateModel.State = stateType.CustomerReject;
+            _requestManger.UpdateState(UpdateModel);
+            return Ok(model.Message);
+        }
+
+        //Customer acsept offer
+        [HttpPost]
+        [Route("CustomerAcceptOffer")]
+        public ActionResult CustomerAcceptOffer(RequestmessageWriteDTO model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest();
+
+            var provider = _providerManger.GetByID(model.ProviderId);
+            var customer = _customerManager.GetByID(model.CustomerId);
+            if (provider is null || customer is null)
+                return BadRequest();
+
+
+            var UpdateModel = _mapper.Map<RequestUpdateStateWriteDTO>(model);
+            UpdateModel.State = stateType.Acceptted;
             _requestManger.UpdateState(UpdateModel);
             return Ok(model.Message);
         }

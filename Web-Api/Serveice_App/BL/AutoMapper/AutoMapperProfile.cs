@@ -38,7 +38,7 @@ public class AutoMapperProfile :Profile
         CreateMap<RequestCostemerProviderWriteDTO, Request>();
         CreateMap<RequestProviderCustomerWriteDTO, Request>();
         
-        CreateMap <RequestRejectWriteDTO, RequestUpdateStateWriteDTO>();
+        CreateMap <RequestmessageWriteDTO, RequestUpdateStateWriteDTO>();
 
         CreateMap<Service, ServiceReadDTO>();
         CreateMap<ServiceWriteDTO, Service>();

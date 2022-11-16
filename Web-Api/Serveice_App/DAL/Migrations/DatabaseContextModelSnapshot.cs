@@ -461,7 +461,7 @@ namespace DAL.Migrations
             modelBuilder.Entity("DAL.Media", b =>
                 {
                     b.HasOne("DAL.Post", "Post")
-                        .WithMany()
+                        .WithMany("Medias")
                         .HasForeignKey("PostId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -472,7 +472,7 @@ namespace DAL.Migrations
             modelBuilder.Entity("DAL.Post", b =>
                 {
                     b.HasOne("DAL.Provider", "Provider")
-                        .WithMany()
+                        .WithMany("posts")
                         .HasForeignKey("ProviderID");
 
                     b.Navigation("Provider");
@@ -597,6 +597,16 @@ namespace DAL.Migrations
                     b.Navigation("customer");
 
                     b.Navigation("provider");
+                });
+
+            modelBuilder.Entity("DAL.Post", b =>
+                {
+                    b.Navigation("Medias");
+                });
+
+            modelBuilder.Entity("DAL.Provider", b =>
+                {
+                    b.Navigation("posts");
                 });
 
             modelBuilder.Entity("DAL.Service", b =>

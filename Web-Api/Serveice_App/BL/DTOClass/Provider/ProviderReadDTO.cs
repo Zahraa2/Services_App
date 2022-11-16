@@ -9,6 +9,7 @@ namespace BL;
 public class ProviderReadDTO
 {
     public Guid id { get; set; }
+    public string? UserId { get; set; }
     public string? Name { get; set; }
     public string? ServiceName { get; set; }
     public string? sammary { get; set; }

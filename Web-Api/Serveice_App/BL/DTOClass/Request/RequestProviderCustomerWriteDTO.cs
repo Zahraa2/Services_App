@@ -16,5 +16,6 @@ public class RequestProviderCustomerWriteDTO
     public DateTime ProviderStartDate { get; set; }
     public int Price { get; set; }
     public string PhoneNumber { get; set; }
+    public string message { get; set; }
 
 }
