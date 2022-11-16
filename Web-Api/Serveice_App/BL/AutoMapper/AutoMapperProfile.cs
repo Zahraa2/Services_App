@@ -12,6 +12,12 @@ public class AutoMapperProfile :Profile
 {
     public AutoMapperProfile()
     {
+        #region AuthMapper
+        CreateMap<UserSignUp, CustomeUser>();
+        CreateMap<SignUpCustomer, UserSignUp>();
+        CreateMap<SignUpProvider, UserSignUp>();
+        #endregion
+
         CreateMap<Category,CategoryReadDTO>();
         CreateMap<CategoryWriteDTO, Category>();
 
@@ -29,10 +35,18 @@ public class AutoMapperProfile :Profile
 
         CreateMap<Request, RequestReadDTO>();
         CreateMap<RequestWriteDTO, Request>();
+        CreateMap<RequestCostemerProviderWriteDTO, Request>();
+        CreateMap<RequestProviderCustomerWriteDTO, Request>();
+        
+        CreateMap <RequestRejectWriteDTO, RequestUpdateStateWriteDTO>();
 
         CreateMap<Service, ServiceReadDTO>();
         CreateMap<ServiceWriteDTO, Service>();
 
         CreateMap<Provider, ProviderUserReadDTO>();
+
+        CreateMap<Post, MediasforPost>();
+
+        
     }
 }

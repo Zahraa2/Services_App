@@ -9,6 +9,7 @@ namespace BL;
 public class PostReadDTO
 {
     public Guid Id { get; set; }
+    public string Image { get; set; }
     public string Description { get; set; } = null!;
     public ICollection<MediaReadDTO>? Medias { get; set; }
     public PostReadDTO()

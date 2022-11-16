@@ -4,14 +4,32 @@ using DAL;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+#region core
+var myAllowSpecificOrigins = "_myAllowSpecificOrigins";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: myAllowSpecificOrigins,
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:4200")
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+        });
+});
+#endregion
+
 // Add services to the container.
 #region Services
+
+builder.Services.AddSignalR();
 
 #region Asp Identity
 
@@ -85,12 +103,12 @@ builder.Services.AddScoped<IUserRepo, UserRepo>();
 
 #region Unit Of Work
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IAuthContollerUnitOfWork, AuthContollerUnitOfWork>();
 #endregion
 
 #region AutoMapper
 
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
-builder.Services.AddAutoMapper(typeof(MapperProfile).Assembly);
 #endregion
 
 #region Managers
@@ -100,6 +118,7 @@ builder.Services.AddScoped<IAuthServices, AuthServices>();
 builder.Services.AddScoped<ICustomUserManager, CustomUserManager>();
 builder.Services.AddScoped<IProviderUser, ProviderUser>();
 builder.Services.AddScoped<IProviderManger, ProviderManger>();
+builder.Services.AddScoped<IRequestManger, RequestManger>();
 
 #endregion
 

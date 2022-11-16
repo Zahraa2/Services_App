@@ -14,4 +14,10 @@ public class CutomerRepo : GenericRepo<Customer>, ICustomerRepo
     {
         this.context = context;
     }
+
+    public Customer GetCustomerByUserId(string Id)
+    {
+        Customer customer = context.Customers.FirstOrDefault(u => u.UserId == Id);
+        return customer;
+    }
 }

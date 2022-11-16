@@ -1,0 +1,50 @@
+<!-- <section class="p-5 mx-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col-lg-4 col-md-6" *ngFor="let item of providers">
+        <div class="card">
+          <div class="img-container bg-dark">
+            <img src="{{ item.pic }}" alt="..." class="imafe" />
+          </div>
+
+          <div class="card-body mx-3 text-center">
+            <h2 class="card-title fw-bold">{{ item.name }}</h2>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3">
+      <div class="card col-lg-3 col-md-4 mx-2"  *ngFor="let item of providers">
+        <div class="imagem">
+          <img class="img" src="{{ item.pic }}" />
+        </div>
+
+        <div class="texto">
+          <h2 class="titulo">{{ item.name }}</h2>
+          <p class="desc">
+            Como é precioso o teu amor, <br />
+            ó Deus! Os homens encontram <br />refúgio à sombra das tuas asas.
+            <br />
+            - Salmos 36:7
+          </p>
+        </div>
+
+        <div class="button">
+          <button type="buttom" class="btn">
+            <a href="#"> Saiba mais </a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
