@@ -22,17 +22,25 @@ public class ProviderController : ControllerBase
         providerManger.Add(providerWriteDTO);
     }
     [HttpGet]
-    [Route("ProvidersByService")]
+    [Route("ProvidersByService/{Name}")]
     public ActionResult<List<ProviderUserReadDTO>> ProvidersByService(string Name)
     {
-        return providerUser.GetAllProviders(Name);
+        var providerlist= providerUser.GetAllProviders(Name);
+        if(providerlist==null)
+        {
+            return NotFound($"NO Providers in {Name}");
+        }
+        return providerlist;
     }
 
     [HttpGet]
-    [Route("SelectProviderById")]
+    [Route("SelectProviderById/{id}")]
     public ActionResult<ProviderReadDTO> ProviderProfile(Guid id)
     {
-        return providerUser.GetProviderbyid(id);
+        var provider = providerUser.GetProviderbyid(id);
+        if (provider == null)
+            return NotFound("This Provider Not Found");
+        return provider;
     }
 
 }

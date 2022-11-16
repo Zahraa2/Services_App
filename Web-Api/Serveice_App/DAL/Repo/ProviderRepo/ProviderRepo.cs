@@ -30,7 +30,8 @@ public class ProviderRepo : GenericRepo<Provider>, IProviderRepo
 
     public  Provider? SelectAlldata(Guid id)
     {
-        Provider provider = context.Provider.Include(po => po.posts).ThenInclude(post=>post.Medias).First(p=>p.id==id);
+
+        Provider? provider = context.Provider.Include(po => po.posts).ThenInclude(post=>post.Medias).FirstOrDefault(p=>p.id==id);
         return provider;
        
     }

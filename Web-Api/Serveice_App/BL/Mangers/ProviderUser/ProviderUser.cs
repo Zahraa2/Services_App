@@ -21,10 +21,14 @@ public class ProviderUser : IProviderUser
     //get all providers by service name
     public List<ProviderUserReadDTO>? GetAllProviders(string Name)
     {
-        var Service = _unitOfWork.ServiceRepo.GetAll().First(s => s.Name == Name);
+       
+        var Service = _unitOfWork.ServiceRepo.GetAll().FirstOrDefault(s => s.Name == Name);
+        if (Service == null)
+            return null;
         var Providers = _unitOfWork.ProviderRepo.GetAll()
             .Where(p => p.ServiceId == Service.id);
-
+        if (Providers == null)
+            return null;
         List<ProviderUserReadDTO> providerUserReadDTO = new List<ProviderUserReadDTO>();
         foreach(Provider p in Providers)
         {
@@ -36,6 +40,8 @@ public class ProviderUser : IProviderUser
     public ProviderReadDTO? GetProviderbyid(Guid id)
     {
         Provider? provider = _unitOfWork.ProviderRepo.SelectAlldata(id);
+        if (provider == null)
+            return null;
         ProviderReadDTO providerReadDTO = _mapper.Map<ProviderReadDTO>(provider);
         providerReadDTO.ServiceName= _unitOfWork.ServiceRepo.GetById(provider.ServiceId).Name;
         var User = _unitOfWork.userRepo.GetUserById(provider.UserId);
