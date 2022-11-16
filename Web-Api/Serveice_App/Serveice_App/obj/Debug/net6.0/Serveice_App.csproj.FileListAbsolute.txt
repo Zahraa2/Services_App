@@ -232,3 +232,5 @@ D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Deb
 D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.pdb
 D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.genruntimeconfig.cache
 D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\ref\Serveice_App.dll
+E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Net.WebSockets.WebSocketProtocol.dll
