@@ -1,4 +1,7 @@
 {
+  "signup": [
+   
+  ],
   "MostPopularServices": [
     {
       "Image": "https://images.unsplash.com/photo-1664575600796-ffa828c5cb6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -270,6 +273,7 @@
         }
       ]
     }
+<<<<<<< HEAD
   ],
   "Profiles": 
     {
@@ -300,3 +304,12 @@
     }
   
 }
+=======
+<<<<<<< HEAD
+  ]
+}
+=======
+   ]
+  }
+>>>>>>> e00f792892fec825d1b4d6f275d6abc42a5b204f
+>>>>>>> afaff65786b620c565ef3cb32bdde37623291919

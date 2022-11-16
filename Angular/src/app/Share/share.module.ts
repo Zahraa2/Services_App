@@ -22,7 +22,7 @@ const sharedComponent = [NavbarComponent, FooterComponent ,ScorllToTopComponent]
     
   ],
   exports: [
-    sharedComponent
+    sharedComponent,
   ]
 })
 export class ShareModule { }

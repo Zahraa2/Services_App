@@ -14,7 +14,10 @@
     </div>
 
     <div class="icons">
-      <i class="fa-regular fa-user"></i>
+      <a  (click) ="profileRoute()">
+          <i class="fa-regular fa-user text-dark">
+          </i>
+        </a>
       <i class="fa-solid fa-magnifying-glass language"></i>
       <i class="fa-regular fa-heart"></i>
       <i class="fa-regular fa-bell"></i>
@@ -28,15 +31,17 @@
         <div>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-            <li class="nav-item">
-              <a class="nav-link active" [routerLink]="['Profile']" routerLinkActive="active">profile </a>
+            <li *ngIf="isAuthenticated; else loggedout">
+              <a class="nav-link text-dark cursor-pointer" (click)="logout()" >تسجيل الخروج </a>
             </li>
-            <li>
-              <a class="nav-link text-dark" href="#">إنشاء حساب</a>
-            </li>
-            <li>
-              <a class="nav-link text-dark" href="#">تسجيل الدخول</a>
-            </li>
+            <ng-template #loggedout>
+              <li >
+                <a class="nav-link text-dark" [routerLink]="['register']" >إنشاء حساب</a>
+              </li>
+              <li>
+                <a class="nav-link text-dark" [routerLink]="['login']">تسجيل الدخول</a>
+              </li>
+            </ng-template>
             <li>
               <a class="nav-link text-dark" [routerLink]="['خدماتنا']" routerLinkActive="active">خدماتنا</a>
             </li>
