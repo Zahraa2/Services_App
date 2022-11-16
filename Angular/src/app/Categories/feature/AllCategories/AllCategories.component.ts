@@ -11,11 +11,13 @@ import { Categorie } from '../../data-access/Classes/categorie';
 export class AllCategoriesComponent implements OnInit {
 
 
-  constructor(public categorieService:CategoriesService) { }
-  categories:Categorie[] = []
+  constructor(public categorieService: CategoriesService) { }
+  categories: Categorie[] = []
 
   ngOnInit() {
-    this.categories = this.categorieService.getAllCategories()
+    this.categorieService.getAllCategories().subscribe(a => {
+      this.categories = a
+    })
   }
 
 }

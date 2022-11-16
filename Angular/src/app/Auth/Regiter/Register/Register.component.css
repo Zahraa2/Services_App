@@ -1,0 +1,18 @@
+.img-responsive {
+  width:90%; 
+  margin:auto;
+}
+
+.mat-flat-button.mat-primary,
+.mat-raised-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+  background-color: var(--primary);
+}
+
+.reg-btn {
+  margin: 3rem auto;
+  width:200px;
+  font-size:1.3rem;
+  font-weight: bold;
+}
