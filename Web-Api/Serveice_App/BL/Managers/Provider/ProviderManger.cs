@@ -62,4 +62,11 @@ public class ProviderManger : IProviderManger
         ProviderRepo.SaveChange();
         return true;
     }
+
+    public ProviderReadDTO GetProviderByUserId(string Id)
+    {
+        var provider = ProviderRepo.GetProviderByUserId(Id);
+        var DTO = Mapper.Map<ProviderReadDTO>(provider);
+        return DTO;
+    }
 }

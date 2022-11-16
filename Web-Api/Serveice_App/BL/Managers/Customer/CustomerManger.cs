@@ -62,5 +62,12 @@ public class CustomerManger:ICustomerManager
         CustomerRepo.SaveChange();
         return true;
     }
+
+    public CustomerReadDTO GetCustomerByUserId(string Id)
+    {
+        var customer = CustomerRepo.GetCustomerByUserId(Id);
+        var DTO = Mapper.Map<CustomerReadDTO>(customer);
+        return DTO;
+    }
 }
 
