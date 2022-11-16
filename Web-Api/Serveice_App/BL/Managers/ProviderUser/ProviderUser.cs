@@ -18,10 +18,6 @@ public class ProviderUser : IProviderUser
         _mapper = mapper; 
     }
 
-<<<<<<< HEAD:Web-Api/Serveice_App/BL/Mangers/ProviderUser/ProviderUser.cs
-    //get all providers by service name
-=======
->>>>>>> b1a094004979f0297e41a9fa0aa8dbc846bce816:Web-Api/Serveice_App/BL/Managers/ProviderUser/ProviderUser.cs
     public List<ProviderUserReadDTO>? GetAllProviders(string Name)
     {
        
