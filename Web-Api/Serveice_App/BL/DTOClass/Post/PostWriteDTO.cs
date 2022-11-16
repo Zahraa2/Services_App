@@ -11,6 +11,7 @@ public class PostWriteDTO
 {
     public Guid Id { get; set; }
     public string Description { get; set; } = null!;
+    public string Image { get; set; }
     [Required]
     public Guid ProviderId { get; set; }
 }
