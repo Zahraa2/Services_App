@@ -82,22 +82,21 @@ namespace Serveice_App.Controllers.AuthController
         }
 
         [HttpPost("refreshtoken")]
-        public async Task<IActionResult> RefreshTokenAsync(string refreshtoken)
+        public async Task<LoginToken> RefreshTokenAsync(string refreshtoken)
         {
-            var refreshToken = refreshtoken;
 
-            if (refreshToken == null)
+            if (refreshtoken == null)
             {
-                return BadRequest();
+                return new LoginToken { Message = "invalid token" };
             }
 
-            var result = await _unitOfWork.AuthServices.RefreshTokenAsync(refreshToken);
+            var result = await _unitOfWork.AuthServices.RefreshTokenAsync(refreshtoken);
             if (result.Token == null)
             {
-                return BadRequest(result.Message);
+                return new LoginToken { Message = "invalid token" };
             }
 
-            return Ok(result);
+            return result;
         }
 
         [Authorize]
