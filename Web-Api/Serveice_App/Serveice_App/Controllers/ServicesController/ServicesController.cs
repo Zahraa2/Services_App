@@ -22,9 +22,13 @@ namespace Serveice_App.Controllers
 
         [HttpGet]
         [Route("ByCatigory/{Name}")]
+
         public ActionResult<List<ServiceReadDTO>> GetServicesByCatigory(string Name)
         {
-            return _serviceManger.GetServicesByCategory(Name);
+            var service = _serviceManger.GetServicesByCategory(Name);
+            if (service == null)
+                return NotFound($"No Services in {Name}");
+            return service;
         }
 
         [HttpGet]

@@ -13,6 +13,7 @@ E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\B
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\refint\BL.dll
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.pdb
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\ref\BL.dll
+<<<<<<< HEAD
 E:\Services_App5\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.csproj.AssemblyReference.cache
 E:\Services_App5\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.GeneratedMSBuildEditorConfig.editorconfig
 E:\Services_App5\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.AssemblyInfoInputs.cache
@@ -58,3 +59,5 @@ D:\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.dll
 D:\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\refint\BL.dll
 D:\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.pdb
 D:\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\ref\BL.dll
+=======
+>>>>>>> ad85f955d5f658e4471812860fa4dc4f632669ff

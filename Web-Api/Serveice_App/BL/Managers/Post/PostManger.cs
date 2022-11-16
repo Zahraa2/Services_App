@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BL;
 
-public class PostManger : IPostManger
+public class PostManger : IPostManager
 {
     private readonly IPostRepo _postRepo;
     private readonly IMediaRepo _mediaRepo;

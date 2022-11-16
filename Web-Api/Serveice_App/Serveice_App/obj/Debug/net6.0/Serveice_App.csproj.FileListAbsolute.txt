@@ -33,6 +33,7 @@ E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\S
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.OpenApi.dll
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\MimeKit.dll
+E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Newtonsoft.Json.dll
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\BouncyCastle.Crypto.dll
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -40,6 +41,7 @@ E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\S
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Drawing.Common.dll
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Net.WebSockets.WebSocketProtocol.dll
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Runtime.Caching.dll
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Security.Permissions.dll
@@ -76,6 +78,7 @@ E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\S
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.pdb
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.genruntimeconfig.cache
 E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\ref\Serveice_App.dll
+<<<<<<< HEAD
 E:\Services_App5\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.csproj.AssemblyReference.cache
 E:\Services_App5\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.GeneratedMSBuildEditorConfig.editorconfig
 E:\Services_App5\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.AssemblyInfoInputs.cache
@@ -310,3 +313,5 @@ D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\refint\Servei
 D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.pdb
 D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.genruntimeconfig.cache
 D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\ref\Serveice_App.dll
+=======
+>>>>>>> ad85f955d5f658e4471812860fa4dc4f632669ff

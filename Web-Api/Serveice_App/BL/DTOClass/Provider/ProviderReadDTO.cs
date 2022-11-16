@@ -8,7 +8,19 @@ namespace BL;
 
 public class ProviderReadDTO
 {
+    public Guid id { get; set; }
+
+    public string? Name { get; set; }
+    public string? ServiceName { get; set; }
+    public string? Location { get; set; }
+
     public string sammary { get; set; } = null!;
+
     public decimal AvgRate { get; set; }
-    public string profilePicture { get; set; } = null!;
+    public string? profilePicture { get; set; }
+    public ICollection<PostReadDTO> posts {get; set;}
+    public ProviderReadDTO()
+    {
+        posts = new HashSet<PostReadDTO>();
+    }
 }

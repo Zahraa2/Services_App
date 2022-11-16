@@ -1,5 +1,4 @@
 using BL;
-using BL;
 using BL.Managers.UserManager;
 using DAL;
 using Microsoft.AspNetCore.Identity;
@@ -15,6 +14,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 #region Services
+
+builder.Services.AddSignalR();
 
 #region Asp Identity
 
@@ -88,6 +89,7 @@ builder.Services.AddScoped<IUserRepo, UserRepo>();
 
 #region Unit Of Work
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IAuthContollerUnitOfWork, AuthContollerUnitOfWork>();
 #endregion
 
 #region AutoMapper
@@ -102,7 +104,7 @@ builder.Services.AddScoped<IAuthServices, AuthServices>();
 builder.Services.AddScoped<ICustomUserManager, CustomUserManager>();
 builder.Services.AddScoped<IProviderUser, ProviderUser>();
 builder.Services.AddScoped<IProviderManger, ProviderManger>();
-builder.Services.AddScoped<IPostManger, PostManger>();
+builder.Services.AddScoped<IRequestManger, RequestManger>();
 
 #endregion
 

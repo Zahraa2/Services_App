@@ -8,4 +8,5 @@ namespace DAL;
 
 public interface IRequestRepo:IGenericRepo<Request>
 {
+
 }

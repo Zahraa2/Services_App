@@ -14,15 +14,11 @@ namespace Serveice_App.Controllers.AuthController
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly IAuthServices _authServices;
-        private readonly UserManager<CustomeUser> _userManager;
-        private readonly SignInManager<CustomeUser> _signInManager;
+        private readonly IAuthContollerUnitOfWork _unitOfWork;
 
-        public AuthController(IAuthServices authServices, UserManager<CustomeUser> userManager,SignInManager<CustomeUser> signInManager )
+        public AuthController(IAuthContollerUnitOfWork unitOfWork )
         {
-            _authServices = authServices;
-            _userManager = userManager;
-            _signInManager = signInManager;
+            _unitOfWork = unitOfWork;
         }
 
         [HttpPost("customer-register")]
@@ -31,13 +27,13 @@ namespace Serveice_App.Controllers.AuthController
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var result = await _authServices.CustomerRegisterAsync(model);
+            var result = await _unitOfWork.AuthServices.CustomerRegisterAsync(model);
             if (result.Message != null)
             {
                 return BadRequest(result.Message);
             }
 
-            var user = await _userManager.FindByNameAsync(model.UserName);
+            var user = await _unitOfWork.UserManager.FindByNameAsync(model.UserName);
             sendConfirmEmail(user);
 
             return Ok(result);
@@ -50,12 +46,12 @@ namespace Serveice_App.Controllers.AuthController
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var result = await _authServices.ProviderRegisterAsync(model);
+            var result = await _unitOfWork.AuthServices.ProviderRegisterAsync(model);
             if (result.Message != null)
             {
                 return BadRequest(result.Message);
             }
-            var user = await _userManager.FindByNameAsync(model.UserName);
+            var user = await _unitOfWork.UserManager.FindByNameAsync(model.UserName);
             sendConfirmEmail(user);
 
             return Ok(result);
@@ -68,7 +64,7 @@ namespace Serveice_App.Controllers.AuthController
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var result = await _authServices.LoginAsync(model);
+            var result = await _unitOfWork.AuthServices.LoginAsync(model);
             if (result.Message != null)
             {
                 return BadRequest(result.Message);
@@ -81,7 +77,7 @@ namespace Serveice_App.Controllers.AuthController
         public async Task LogOutAsync()
         {
             await RevokeToken();
-            await _signInManager.SignOutAsync();
+            await _unitOfWork.SignInManager.SignOutAsync();
 
         }
 
@@ -95,7 +91,7 @@ namespace Serveice_App.Controllers.AuthController
                 return BadRequest();
             }
 
-            var result = await _authServices.RefreshTokenAsync(refreshToken);
+            var result = await _unitOfWork.AuthServices.RefreshTokenAsync(refreshToken);
             if (result.Token == null)
             {
                 return BadRequest(result.Message);
@@ -113,7 +109,7 @@ namespace Serveice_App.Controllers.AuthController
             if (string.IsNullOrEmpty(token))
                 return BadRequest("Token is required!");
 
-            var result = await _authServices.RevokeTokenAsync(token);
+            var result = await _unitOfWork.AuthServices.RevokeTokenAsync(token);
 
             if (!result)
                 return BadRequest("Token is invalid!");
@@ -127,12 +123,12 @@ namespace Serveice_App.Controllers.AuthController
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var user = await _userManager.FindByEmailAsync(model.Email);
+            var user = await _unitOfWork.UserManager.FindByEmailAsync(model.Email);
             if (user == null)
             {
                 return BadRequest("invalid Email");
             }
-            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var token = await _unitOfWork.UserManager.GeneratePasswordResetTokenAsync(user);
 
             var filePath = $"{Directory.GetCurrentDirectory()}\\Email.html";
             var str = new StreamReader(filePath);
@@ -149,7 +145,7 @@ namespace Serveice_App.Controllers.AuthController
 
             mailText = mailText.Replace("[username]", user.UserName).Replace("[email]", user.Email).Replace("[Link]", confirmationLink);
 
-            await _authServices.SendingEmail(user.Email, "Welcome to our Website", mailText);
+            await _unitOfWork.AuthServices.SendingEmail(user.Email, "Welcome to our Website", mailText);
             return Ok(new { link = confirmationLink });
 
         }
@@ -160,7 +156,7 @@ namespace Serveice_App.Controllers.AuthController
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var user = await _userManager.FindByEmailAsync(model.Email);
+            var user = await _unitOfWork.UserManager.FindByEmailAsync(model.Email);
             if (user == null)
             {
                 return BadRequest("invalid user");
@@ -171,7 +167,7 @@ namespace Serveice_App.Controllers.AuthController
                 BadRequest("invalid password");
             }
 
-            var result = await _userManager.ResetPasswordAsync(user, model.Token, model.Password);
+            var result = await _unitOfWork.UserManager.ResetPasswordAsync(user, model.Token, model.Password);
             if (!result.Succeeded)
             {
                 return BadRequest(result.Errors);
@@ -183,14 +179,24 @@ namespace Serveice_App.Controllers.AuthController
         [Authorize]
         public async Task<ActionResult<logedUser>> GetLoggedInUser()
         {
-            var user = await _userManager.GetUserAsync(User);
-
-
-            return new logedUser
+            var user = await _unitOfWork.UserManager.GetUserAsync(User);
+            
+            var result = new logedUser
             {
                 Type = user.Type,
-                Name = user.Fname +" " + user.Lname
+                Name = user.Fname + " " + user.Lname,
             };
+
+            if (user.Type == UserTypes.Customer)
+            {
+                result.Id = _unitOfWork.CustomerManager.GetCustomerByUserId(user.Id).id;
+            }
+            if(user.Type == UserTypes.Provider)
+            {
+                result.Id = _unitOfWork.ProviderManger.GetProviderByUserId(user.Id).id;
+            }
+
+            return result;
         }
 
         private void sendConfirmEmail(CustomeUser user)
@@ -200,22 +206,22 @@ namespace Serveice_App.Controllers.AuthController
             var mailText = str.ReadToEnd();
             str.Close();
             
-            var token =  _userManager.GenerateEmailConfirmationTokenAsync(user);
+            var token = _unitOfWork.UserManager.GenerateEmailConfirmationTokenAsync(user);
             var confirmationLink = Url.Action(nameof(ConfirmEmail), "Auth", new { token, email = user.Email }, Request.Scheme);
 
             mailText = mailText.Replace("[username]", user.UserName).Replace("[email]", user.Email).Replace("[Link]", confirmationLink);
 
-            _authServices.SendingEmail(user.Email, "Welcome to our Website", mailText);
+            _unitOfWork.AuthServices.SendingEmail(user.Email, "Welcome to our Website", mailText);
         }
 
         [HttpGet]
         public async Task<IActionResult> ConfirmEmail(string token, string email)
         {
-            var user = await _userManager.FindByEmailAsync(email);
+            var user = await _unitOfWork.UserManager.FindByEmailAsync(email);
             if (user == null)
                 return BadRequest();
 
-            var result = await _userManager.ConfirmEmailAsync(user, token);
+            var result = await _unitOfWork.UserManager.ConfirmEmailAsync(user, token);
             return Ok(result.Succeeded ? "ConfirmEmail" : "Error");
         }
 

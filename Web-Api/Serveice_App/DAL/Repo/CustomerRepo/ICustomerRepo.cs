@@ -8,5 +8,6 @@ namespace DAL;
 
     public interface ICustomerRepo :IGenericRepo<Customer>
     {
+        public Customer GetCustomerByUserId(string Id);
     }
 
