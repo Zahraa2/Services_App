@@ -18,8 +18,7 @@ public class ProviderUser : IProviderUser
         _mapper = mapper; 
     }
 
-    //get all providers by service name
-   public List<ProviderUserReadDTO>? GetAllProviders(string Name)
+    public List<ProviderUserReadDTO>? GetAllProviders(string Name)
     {
        
         var Service = _unitOfWork.ServiceRepo.GetAll().FirstOrDefault(s => s.Name == Name);
