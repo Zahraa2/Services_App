@@ -125,7 +125,6 @@ builder.Services.AddScoped<IRequestManger, RequestManger>();
 
 #endregion
 
-
 var app = builder.Build();
 
 #region Middlewares
