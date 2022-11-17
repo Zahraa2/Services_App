@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BL;
 
-public interface IPostManger
+public interface IPostManager
 {
     public List<PostReadDTO> GetAll();
     public PostReadDTO? GetByID(Guid id);

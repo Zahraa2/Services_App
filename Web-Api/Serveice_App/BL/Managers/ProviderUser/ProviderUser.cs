@@ -10,15 +10,13 @@ namespace BL;
 
 public class ProviderUser : IProviderUser
 {
-    private readonly IUnitOfWork _unitOfWork;
+    private readonly UnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
-    public ProviderUser(IUnitOfWork unitOfWork, IMapper mapper)
+    public ProviderUser(UnitOfWork unitOfWork, IMapper mapper)
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper; 
     }
-
-    public IUnitOfWork UnitOfWork { get; }
 
     public List<ProviderUserReadDTO>? GetAllProviders(string Name)
     {

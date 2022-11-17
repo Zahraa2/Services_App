@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,4 +14,5 @@ public interface IProviderManger
     public void Add(ProviderWriteDTO Provider);
     public bool Update(ProviderWriteDTO Provider);
     public void Delete(Guid id);
+    public ProviderReadDTO GetProviderByUserId(string Id);
 }

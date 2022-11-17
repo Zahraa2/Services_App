@@ -11,11 +11,11 @@ namespace BL;
 public class ServiceManger : IServiceManger
 {
     private readonly IServiceRepo ServiceRepo;
-    private readonly IUnitOfWork unitOfWork;
+    private readonly UnitOfWork unitOfWork;
 
     public IMapper Mapper { get; }
 
-    public ServiceManger(IServiceRepo ServiceRepo, IMapper mapper,IUnitOfWork unitOfWork)
+    public ServiceManger(IServiceRepo ServiceRepo, IMapper mapper, UnitOfWork unitOfWork)
     {
         this.ServiceRepo = ServiceRepo;
         Mapper = mapper;
