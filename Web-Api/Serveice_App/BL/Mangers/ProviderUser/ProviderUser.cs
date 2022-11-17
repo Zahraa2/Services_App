@@ -22,14 +22,21 @@ public class ProviderUser : IProviderUser
         _context = context;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> db949ac9e3efaf1a31a27955f496fb16c3127ee7
     //get all providers by service name
     public List<ProviderUserReadDTO>? GetAllProviders(string Name)
     {
-        var Service = _unitOfWork.ServiceRepo.GetAll().First(s => s.Name == Name);
+       
+        var Service = _unitOfWork.ServiceRepo.GetAll().FirstOrDefault(s => s.Name == Name);
+        if (Service == null)
+            return null;
         var Providers = _unitOfWork.ProviderRepo.GetAll()
             .Where(p => p.ServiceId == Service.id);
-
+        if (Providers == null)
+            return null;
         List<ProviderUserReadDTO> providerUserReadDTO = new List<ProviderUserReadDTO>();
         foreach(Provider p in Providers)
         {
@@ -37,18 +44,28 @@ public class ProviderUser : IProviderUser
         }
         return providerUserReadDTO;
     }
+<<<<<<< HEAD
 
     public ProviderReadDTO GetProviderbyid(Guid id)
     {
         var provider = _unitOfWork.ProviderRepo.GetById(id);
         var providerReadDTO = _mapper.Map<ProviderReadDTO>(provider);
+=======
+    // function Get All data About Provider with his Posts and Medias
+    public ProviderReadDTO? GetProviderbyid(Guid id)
+    {
+        Provider? provider = _unitOfWork.ProviderRepo.SelectAlldata(id);
+        if (provider == null)
+            return null;
+        ProviderReadDTO providerReadDTO = _mapper.Map<ProviderReadDTO>(provider);
+>>>>>>> db949ac9e3efaf1a31a27955f496fb16c3127ee7
         providerReadDTO.ServiceName= _unitOfWork.ServiceRepo.GetById(provider.ServiceId).Name;
         var User = _unitOfWork.userRepo.GetUserById(provider.UserId);
         providerReadDTO.Name = User.Fname + " " + User.Lname;
         providerReadDTO.Location = User.City;
         return providerReadDTO;
     }
-
+    // map Provider to ProviderUser 
     public ProviderUserReadDTO ProviderUserReadDTO(Provider provider)
     {
         var Provider_DTO = _mapper.Map<ProviderUserReadDTO>(provider);

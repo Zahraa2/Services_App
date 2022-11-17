@@ -16,5 +16,13 @@ public class ProviderReadDTO
     public string? Location { get; set; }
     public decimal AvgRate { get; set; }
     public string? profilePicture { get; set; }
+<<<<<<< HEAD
     
+=======
+    public ICollection<PostReadDTO> posts {get; set;}
+    public ProviderReadDTO()
+    {
+        posts = new HashSet<PostReadDTO>();
+    }
+>>>>>>> db949ac9e3efaf1a31a27955f496fb16c3127ee7
 }

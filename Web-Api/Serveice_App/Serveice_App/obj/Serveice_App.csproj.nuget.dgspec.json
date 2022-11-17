@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\hp\\source\\repos\\Project ITI\\Services_App.git\\Web-Api\\Serveice_App\\Serveice_App\\Serveice_App.csproj": {}
   },
   "projects": {
@@ -12,13 +13,30 @@
         "projectPath": "C:\\Users\\hp\\source\\repos\\Project ITI\\Services_App.git\\Web-Api\\Serveice_App\\BL\\BL.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\hp\\source\\repos\\Project ITI\\Services_App.git\\Web-Api\\Serveice_App\\BL\\obj\\",
+=======
+    "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\Serveice_App\\Serveice_App.csproj": {}
+  },
+  "projects": {
+    "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj",
+        "projectName": "BL",
+        "projectPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj",
+        "packagesPath": "C:\\Users\\marim\\.nuget\\packages\\",
+        "outputPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\BL\\obj\\",
+>>>>>>> db949ac9e3efaf1a31a27955f496fb16c3127ee7
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\marim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> db949ac9e3efaf1a31a27955f496fb16c3127ee7
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,14 +45,20 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\hp\\source\\repos\\Project ITI\\Services_App.git\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {
                 "projectPath": "C:\\Users\\hp\\source\\repos\\Project ITI\\Services_App.git\\Web-Api\\Serveice_App\\DAL\\DAL.csproj"
+=======
+              "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {
+                "projectPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj"
+>>>>>>> db949ac9e3efaf1a31a27955f496fb16c3127ee7
               }
             }
           }
@@ -61,6 +85,10 @@
               "target": "Package",
               "version": "[3.4.2, )"
             },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
             "MimeKit": {
               "target": "Package",
               "version": "[3.4.2, )"
@@ -82,6 +110,7 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
@@ -94,13 +123,31 @@
         "projectPath": "C:\\Users\\hp\\source\\repos\\Project ITI\\Services_App.git\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\hp\\source\\repos\\Project ITI\\Services_App.git\\Web-Api\\Serveice_App\\DAL\\obj\\",
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
+        "projectName": "DAL",
+        "projectPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\marim\\.nuget\\packages\\",
+        "outputPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\DAL\\obj\\",
+>>>>>>> db949ac9e3efaf1a31a27955f496fb16c3127ee7
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\marim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> db949ac9e3efaf1a31a27955f496fb16c3127ee7
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -109,6 +156,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -172,6 +220,7 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
@@ -184,13 +233,31 @@
         "projectPath": "C:\\Users\\hp\\source\\repos\\Project ITI\\Services_App.git\\Web-Api\\Serveice_App\\Serveice_App\\Serveice_App.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\hp\\source\\repos\\Project ITI\\Services_App.git\\Web-Api\\Serveice_App\\Serveice_App\\obj\\",
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\Serveice_App\\Serveice_App.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\Serveice_App\\Serveice_App.csproj",
+        "projectName": "Serveice_App",
+        "projectPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\Serveice_App\\Serveice_App.csproj",
+        "packagesPath": "C:\\Users\\marim\\.nuget\\packages\\",
+        "outputPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\Serveice_App\\obj\\",
+>>>>>>> db949ac9e3efaf1a31a27955f496fb16c3127ee7
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\marim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> db949ac9e3efaf1a31a27955f496fb16c3127ee7
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -199,14 +266,20 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\hp\\source\\repos\\Project ITI\\Services_App.git\\Web-Api\\Serveice_App\\BL\\BL.csproj": {
                 "projectPath": "C:\\Users\\hp\\source\\repos\\Project ITI\\Services_App.git\\Web-Api\\Serveice_App\\BL\\BL.csproj"
+=======
+              "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj": {
+                "projectPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj"
+>>>>>>> db949ac9e3efaf1a31a27955f496fb16c3127ee7
               }
             }
           }
@@ -228,6 +301,10 @@
             "MailKit": {
               "target": "Package",
               "version": "[3.4.2, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -291,7 +368,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+>>>>>>> db949ac9e3efaf1a31a27955f496fb16c3127ee7
         }
       }
     }

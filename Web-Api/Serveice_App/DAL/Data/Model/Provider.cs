@@ -24,7 +24,11 @@ public class Provider
     
     public byte[]? profilePicture { get; set; } 
     public ICollection<Request> requests = new HashSet<Request>();
-    public ICollection<Post>? posts = new HashSet<Post>();
+    public ICollection<Post>? posts { get; set; }
     public Service? service { get; set; }
+    public Provider()
+    {
+        posts = new HashSet<Post>();
+    }
 
 }

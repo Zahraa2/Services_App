@@ -73,6 +73,9 @@ public class ServiceManger : IServiceManger
     public List<ServiceReadDTO> GetServicesByCategory(string Name)
     {
         var DTO = Mapper.Map<List<ServiceReadDTO>>(ServiceRepo.GetServicesByCategory(Name));
+        if (DTO.Count == 0)
+            return null;
+
         foreach (ServiceReadDTO Service in DTO)
         {
             Service.NumberOfProviders = unitOfWork.ProviderRepo.GetAll().Where(p => p.ServiceId == Service.id).Count();

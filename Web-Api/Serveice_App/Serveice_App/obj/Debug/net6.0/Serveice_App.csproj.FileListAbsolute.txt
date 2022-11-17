@@ -232,6 +232,7 @@ D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Deb
 D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.pdb
 D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.genruntimeconfig.cache
 D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\ref\Serveice_App.dll
+<<<<<<< HEAD
 C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\appsettings.json
 C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Serveice_App.exe
@@ -310,3 +311,7 @@ C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\Serve
 C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.pdb
 C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.genruntimeconfig.cache
 C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\ref\Serveice_App.dll
+=======
+E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\data\iti-dotnet\GraduationProject\Project\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Net.WebSockets.WebSocketProtocol.dll
+>>>>>>> db949ac9e3efaf1a31a27955f496fb16c3127ee7
