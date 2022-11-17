@@ -12,6 +12,7 @@ namespace BL
         public ProviderUserReadDTO ProviderUserReadDTO(Provider provider);
         public List<ProviderUserReadDTO>? GetAllProviders(string Name);
        public ProviderReadDTO? GetProviderbyid(Guid id);
+        public bool EditProvider(ProviderUserWriteDTO provider);
 
     }
 }

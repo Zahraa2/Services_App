@@ -21,5 +21,10 @@ public class MediaRepo : GenericRepo<Media>, IMediaRepo
         return imgs;
 
     }
+
+    public List<Media> GetMediaOfPost(Guid postId)
+    {
+        return context.Medias.Where(m=>m.PostId==postId).ToList();
+    }
 }
 

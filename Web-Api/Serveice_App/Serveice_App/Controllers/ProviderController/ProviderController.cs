@@ -43,4 +43,15 @@ public class ProviderController : ControllerBase
         return provider;
     }
 
+    [HttpPost]
+    [Route("EditProviderProfile")]
+    public ActionResult EditProviderProfile(ProviderUserWriteDTO providerUserWriteDTO)
+    {
+        var flag = providerUser.EditProvider(providerUserWriteDTO);
+        if (flag)
+            return Ok("Edit Done");
+        return BadRequest("This Provider Not Found");
+
+    }
+
 }

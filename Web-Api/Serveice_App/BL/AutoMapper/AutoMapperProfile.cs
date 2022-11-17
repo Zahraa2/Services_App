@@ -47,6 +47,9 @@ public class AutoMapperProfile :Profile
 
         CreateMap<Post, MediasforPost>();
 
+        CreateMap<ProviderUserWriteDTO,Provider>();
+        CreateMap<ProviderUserWriteDTO, CustomeUser>();
+
         
     }
 }

@@ -34,6 +34,11 @@ public class ProviderRepo : GenericRepo<Provider>, IProviderRepo
         return context.Provider.Include(s => s.service).Where(s => s.service.Name == Name).ToList();
     }
 
+    public CustomeUser GetUserByProviderID(Guid Id)
+    {
+        return context.customeUsers.Include(c => c.provider).FirstOrDefault(cd => cd.provider.id == Id);
+    }
+
     public  Provider? SelectAlldata(Guid id)
     {
 

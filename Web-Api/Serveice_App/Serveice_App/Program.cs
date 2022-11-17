@@ -113,6 +113,9 @@ builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
 #endregion
 
 #region Managers
+
+builder.Services.AddScoped<IPostManager,PostManger>();
+builder.Services.AddScoped<IMediaManger, MediaManger>();
 builder.Services.AddScoped<ICategoryManger,CategoryManger>();
 builder.Services.AddScoped<IServiceManger,ServiceManger>();
 builder.Services.AddScoped<IAuthServices, AuthServices>();

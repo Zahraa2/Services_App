@@ -12,6 +12,7 @@ public class ProviderReadDTO
     public string? UserId { get; set; }
     public string? Name { get; set; }
     public string? ServiceName { get; set; }
+    public Guid? ServiceID { get; set; }
     public string? sammary { get; set; }
     public string? Location { get; set; }
     public decimal AvgRate { get; set; }
