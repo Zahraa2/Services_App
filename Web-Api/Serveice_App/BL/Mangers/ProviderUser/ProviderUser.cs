@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BL;
 
@@ -12,13 +13,15 @@ public class ProviderUser : IProviderUser
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
-    public ProviderUser(IUnitOfWork unitOfWork, IMapper mapper)
+    private readonly DatabaseContext _context;
+
+    public ProviderUser(IUnitOfWork unitOfWork, IMapper mapper, DatabaseContext context)
     {
         _unitOfWork = unitOfWork;
-        _mapper = mapper; 
+        _mapper = mapper;
+        _context = context;
     }
 
-    public IUnitOfWork UnitOfWork { get; }
 
     //get all providers by service name
     public List<ProviderUserReadDTO>? GetAllProviders(string Name)
@@ -35,10 +38,10 @@ public class ProviderUser : IProviderUser
         return providerUserReadDTO;
     }
 
-    public ProviderReadDTO? GetProviderbyid(Guid id)
+    public ProviderReadDTO GetProviderbyid(Guid id)
     {
-        Provider? provider = UnitOfWork.ProviderRepo.SelectAlldata(id);
-        ProviderReadDTO providerReadDTO = _mapper.Map<ProviderReadDTO>(provider);
+        var provider = _unitOfWork.ProviderRepo.GetById(id);
+        var providerReadDTO = _mapper.Map<ProviderReadDTO>(provider);
         providerReadDTO.ServiceName= _unitOfWork.ServiceRepo.GetById(provider.ServiceId).Name;
         var User = _unitOfWork.userRepo.GetUserById(provider.UserId);
         providerReadDTO.Name = User.Fname + " " + User.Lname;
@@ -55,8 +58,23 @@ public class ProviderUser : IProviderUser
         return Provider_DTO;
     }
 
+    public void SetImage(ProviderWriteImageDTO ProviderImage)
+    {
+        
+        MemoryStream ms = new MemoryStream();
+        ProviderImage.image.CopyTo(ms);
+
+        Images i = new Images();
+        ProviderImage.id = Guid.NewGuid();
+        i.Id = ProviderImage.id;
+        i.image = ms.ToArray();
+        ms.Close();
+        ms.Dispose();
+        _context.Images.Add(i);
+        _context.SaveChanges();
+
+    }
 
 
 
-    
 }

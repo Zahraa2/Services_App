@@ -25,7 +25,7 @@ public class AutoMapperProfile :Profile
         CreateMap<PostWriteDTO, Post>();
 
         CreateMap<Provider, ProviderReadDTO>();
-        CreateMap<ProviderWriteDTO, Provider>();
+
 
         CreateMap<Request, RequestReadDTO>();
         CreateMap<RequestWriteDTO, Request>();

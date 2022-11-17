@@ -21,13 +21,7 @@ public class ProviderManger : IProviderManger
 
 
 
-    public void Add(ProviderWriteDTO Provider)
-    {
-        var repo = Mapper.Map<Provider>(Provider);
-        repo.id = Guid.NewGuid();
-        ProviderRepo.Add(repo);
-        ProviderRepo.SaveChange();
-    }
+
 
     public void Delete(Guid id)
     {
@@ -52,14 +46,5 @@ public class ProviderManger : IProviderManger
         return DTO;
     }
 
-    public bool Update(ProviderWriteDTO Provider)
-    {
-        var repo = ProviderRepo.GetById(Provider.id);
-        if (repo == null)
-            return false;
-
-        Mapper.Map(Provider, repo);
-        ProviderRepo.SaveChange();
-        return true;
-    }
+  
 }

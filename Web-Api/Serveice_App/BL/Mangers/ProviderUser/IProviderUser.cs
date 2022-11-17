@@ -11,7 +11,8 @@ namespace BL
     {
         public ProviderUserReadDTO ProviderUserReadDTO(Provider provider);
         public List<ProviderUserReadDTO>? GetAllProviders(string Name);
-       public ProviderReadDTO? GetProviderbyid(Guid id);
+        public ProviderReadDTO? GetProviderbyid(Guid id);
+        public void SetImage(ProviderWriteImageDTO ProviderImage);
 
     }
 }

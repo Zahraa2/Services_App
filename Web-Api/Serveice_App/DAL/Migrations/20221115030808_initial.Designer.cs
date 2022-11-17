@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAL.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20221114183942_nullable")]
-    partial class nullable
+    [Migration("20221115030808_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -191,8 +191,8 @@ namespace DAL.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("profilePicture")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<byte[]>("profilePicture")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("sammary")
                         .HasColumnType("nvarchar(max)");

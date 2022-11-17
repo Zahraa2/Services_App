@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Web-Api",
+    "\\Web-Api\\Serveice_App",
+    "\\Web-Api\\Serveice_App\\BL",
+    "\\Web-Api\\Serveice_App\\BL\\Mangers",
+    "\\Web-Api\\Serveice_App\\BL\\Mangers\\ProviderUser"
   ],
-  "SelectedNode": "\\E:\\Services_App5",
+  "SelectedNode": "\\Web-Api\\Serveice_App\\BL\\Mangers\\ProviderUser\\ProviderUser.cs",
   "PreviewInSolutionExplorer": false
 }

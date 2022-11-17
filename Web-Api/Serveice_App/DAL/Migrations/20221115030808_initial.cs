@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DAL.Migrations
 {
-    public partial class Intialization : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -239,7 +239,7 @@ namespace DAL.Migrations
                     ServiceId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     sammary = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     AvgRate = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
-                    profilePicture = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    profilePicture = table.Column<byte[]>(type: "varbinary(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -261,19 +261,17 @@ namespace DAL.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PostId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    Providerid = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProviderID = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_posts", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_posts_Provider_Providerid",
-                        column: x => x.Providerid,
+                        name: "FK_posts_Provider_ProviderID",
+                        column: x => x.ProviderID,
                         principalTable: "Provider",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "id");
                 });
 
             migrationBuilder.CreateTable(
@@ -312,7 +310,7 @@ namespace DAL.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     PostId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Image = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Image = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -376,9 +374,9 @@ namespace DAL.Migrations
                 column: "PostId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_posts_Providerid",
+                name: "IX_posts_ProviderID",
                 table: "posts",
-                column: "Providerid");
+                column: "ProviderID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Provider_ServiceId",

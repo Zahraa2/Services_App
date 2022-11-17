@@ -40,3 +40,17 @@ D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\DAL\obj\Debug\net6.0
 D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.pdb
 D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
 D:\iti\Graduation Project\Services_App\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\ref\DAL.dll
+C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\DAL\bin\Debug\net6.0\DAL.deps.json
+C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
+C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\DAL\bin\Debug\net6.0\DAL.dll
+C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\DAL\bin\Debug\net6.0\DAL.pdb
+C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.dll
+C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\refint\DAL.dll
+C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.pdb
+C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+C:\Users\hp\source\repos\Project ITI\Services_App.git\Web-Api\Serveice_App\DAL\obj\Debug\net6.0\ref\DAL.dll

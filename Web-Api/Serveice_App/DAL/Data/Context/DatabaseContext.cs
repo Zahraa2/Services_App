@@ -12,6 +12,7 @@ namespace DAL
     {
         public DbSet<Customer>? Customers {  get;  set; }
         public DbSet<Provider>? Provider { get; set; }
+        public DbSet<Images>? Images { get; set; }
 
         public DbSet<Post>? posts { get; set; }
         public DbSet<Media>? Medias { get; set; }

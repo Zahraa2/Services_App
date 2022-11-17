@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -21,7 +22,7 @@ public class Provider
 
     public decimal? AvgRate { get; set; }
     
-    public string? profilePicture { get; set; } 
+    public byte[]? profilePicture { get; set; } 
     public ICollection<Request> requests = new HashSet<Request>();
     public ICollection<Post>? posts = new HashSet<Post>();
     public Service? service { get; set; }

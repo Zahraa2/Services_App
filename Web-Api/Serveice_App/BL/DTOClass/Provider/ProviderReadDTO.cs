@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,8 +14,7 @@ public class ProviderReadDTO
     public string? ServiceName { get; set; }
     public string? sammary { get; set; }
     public string? Location { get; set; }
-
     public decimal AvgRate { get; set; }
     public string? profilePicture { get; set; }
-    public ICollection<PostReadDTO> posts = new HashSet<PostReadDTO>();
+    
 }

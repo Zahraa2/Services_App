@@ -17,9 +17,10 @@ public class ProviderController : ControllerBase
         this.providerUser = providerUser;
     }
     [HttpPost]
-    public void add(ProviderWriteDTO providerWriteDTO)
+    [Route("SetImage")]
+    public void add(ProviderWriteImageDTO providerWriteDTO)
     {
-        providerManger.Add(providerWriteDTO);
+        providerUser.SetImage(providerWriteDTO);
     }
     [HttpGet]
     [Route("ProvidersByService")]

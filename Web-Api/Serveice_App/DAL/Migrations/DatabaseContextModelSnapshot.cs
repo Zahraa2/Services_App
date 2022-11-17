@@ -135,6 +135,20 @@ namespace DAL.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("DAL.Images", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<byte[]>("image")
+                        .HasColumnType("varbinary(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Images");
+                });
+
             modelBuilder.Entity("DAL.Media", b =>
                 {
                     b.Property<Guid>("Id")
@@ -189,8 +203,8 @@ namespace DAL.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("profilePicture")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<byte[]>("profilePicture")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("sammary")
                         .HasColumnType("nvarchar(max)");
