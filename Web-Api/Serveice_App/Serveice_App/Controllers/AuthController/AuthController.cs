@@ -1,5 +1,6 @@
 ﻿using BL;
 using BL.DTO.AuthDTO;
+using BL.DTOClass.AuthDTO;
 using DAL;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -82,7 +83,7 @@ namespace Serveice_App.Controllers.AuthController
         }
 
         [HttpPost("refreshtoken")]
-        public async Task<LoginToken> RefreshTokenAsync(string refreshtoken)
+        public async Task<LoginToken> RefreshTokenAsync([FromBody]string refreshtoken)
         {
 
             if (refreshtoken == null)
@@ -99,22 +100,6 @@ namespace Serveice_App.Controllers.AuthController
             return result;
         }
 
-        [Authorize]
-        [HttpGet("revokeToken")]
-        public async Task<IActionResult> RevokeToken()
-        {
-            var token = Request.Cookies["refreshToken"];
-
-            if (string.IsNullOrEmpty(token))
-                return BadRequest("Token is required!");
-
-            var result = await _unitOfWork.AuthServices.RevokeTokenAsync(token);
-
-            if (!result)
-                return BadRequest("Token is invalid!");
-
-            return Ok();
-        }
 
         [HttpPost("forgerPassword")]
         public async Task<ActionResult> ForgerPassword(ForgetPassword model)
@@ -174,6 +159,27 @@ namespace Serveice_App.Controllers.AuthController
             return  Ok();
         }
 
+        [HttpPost("isPasswordCorrect")]
+        public async Task<bool> IsPasswordCorrect(isPasswordCorrect model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return false;
+            }
+            return await _unitOfWork.AuthServices.IsPasswordCorrect(model);
+        }
+
+        [HttpPost("ChangePassword")]
+        public async Task<bool> ChangePassword(ChangePassword model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return false;
+            }
+            return await _unitOfWork.AuthServices.ChangePassword(model);
+
+        }
+
         [HttpGet("GetLoggedInUser")]
         [Authorize]
         public async Task<ActionResult<logedUser>> GetLoggedInUser()
@@ -196,6 +202,21 @@ namespace Serveice_App.Controllers.AuthController
             }
 
             return result;
+        }
+
+        private async Task<IActionResult> RevokeToken()
+        {
+            var token = Request.Cookies["refreshToken"];
+
+            if (string.IsNullOrEmpty(token))
+                return BadRequest("Token is required!");
+
+            var result = await _unitOfWork.AuthServices.RevokeTokenAsync(token);
+
+            if (!result)
+                return BadRequest("Token is invalid!");
+
+            return Ok();
         }
 
         private void sendConfirmEmail(CustomeUser user)
