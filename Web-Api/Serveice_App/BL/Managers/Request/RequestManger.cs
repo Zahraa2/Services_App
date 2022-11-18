@@ -72,4 +72,30 @@ public class RequestManger : IRequestManger
         _unitOfWork.RequestRepo.SaveChange();
         return true;
     }
+
+    public List<RequestReadDTO> GetCustomerRequests(Guid CustomerId)
+    {
+        var customer = _unitOfWork.CustomerRepo.GetById(CustomerId);
+        if (customer == null)
+        {
+            return new List<RequestReadDTO>(); 
+        }
+
+        var requests = _unitOfWork.RequestRepo.GetAllCustomerRequsts(CustomerId);
+        var DTO = Mapper.Map<List<RequestReadDTO>>(requests);
+        return DTO;
+    }
+
+    public List<RequestReadDTO> GetProviderRequests(Guid ProviderId)
+    {
+        var provider = _unitOfWork.ProviderRepo.GetById(ProviderId);
+        if (provider == null)
+        {
+            return new List<RequestReadDTO>();
+        }
+
+        var requests = _unitOfWork.RequestRepo.GetAllProviderRequsts(ProviderId);
+        var DTO = Mapper.Map<List<RequestReadDTO>>(requests);
+        return DTO;
+    }
 }

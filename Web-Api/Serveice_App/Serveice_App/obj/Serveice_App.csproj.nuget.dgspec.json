@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Services_App\\Web-Api\\Serveice_App\\Serveice_App\\Serveice_App.csproj": {}
+    "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\Serveice_App\\Serveice_App.csproj": {}
   },
   "projects": {
-    "D:\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj": {
+    "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj",
+        "projectUniqueName": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj",
         "projectName": "BL",
-        "projectPath": "D:\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Services_App\\Web-Api\\Serveice_App\\BL\\obj\\",
+        "projectPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj",
+        "packagesPath": "C:\\Users\\marim\\.nuget\\packages\\",
+        "outputPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\BL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj"
+              "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {
+                "projectPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj"
               }
             }
           }
@@ -81,21 +86,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {
+    "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
+        "projectUniqueName": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\obj\\",
+        "projectPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\marim\\.nuget\\packages\\",
+        "outputPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -103,6 +112,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -166,21 +176,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Services_App\\Web-Api\\Serveice_App\\Serveice_App\\Serveice_App.csproj": {
+    "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\Serveice_App\\Serveice_App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Services_App\\Web-Api\\Serveice_App\\Serveice_App\\Serveice_App.csproj",
+        "projectUniqueName": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\Serveice_App\\Serveice_App.csproj",
         "projectName": "Serveice_App",
-        "projectPath": "D:\\Services_App\\Web-Api\\Serveice_App\\Serveice_App\\Serveice_App.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Services_App\\Web-Api\\Serveice_App\\Serveice_App\\obj\\",
+        "projectPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\Serveice_App\\Serveice_App.csproj",
+        "packagesPath": "C:\\Users\\marim\\.nuget\\packages\\",
+        "outputPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\Serveice_App\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -188,14 +202,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj": {
-                "projectPath": "D:\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj"
+              "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj": {
+                "projectPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj"
               }
             }
           }
@@ -284,7 +299,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

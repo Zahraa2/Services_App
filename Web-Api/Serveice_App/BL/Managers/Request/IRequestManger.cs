@@ -14,5 +14,7 @@ public interface IRequestManger
     public void Add(RequestCostemerProviderWriteDTO Request);
     public bool Update(RequestProviderCustomerWriteDTO Request);
     public bool UpdateState(RequestUpdateStateWriteDTO Request);
+    public List<RequestReadDTO> GetCustomerRequests(Guid CustomerId);
+    public List<RequestReadDTO> GetProviderRequests(Guid ProviderId);
     public void Delete(Guid id);
 }
