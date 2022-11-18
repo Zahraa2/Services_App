@@ -10,7 +10,7 @@ export class AuthGuard implements CanActivate {
 
   constructor(private authService: AuthService, private router: Router) { }
 
-  // if the user is authenticated => navigate to the profile page 
+  // if the user is authenticated => navigate to the Categories page 
   canActivate() {
     if (this.authService.isLoggedIn()) {
       this.router.navigate(['Categories']);

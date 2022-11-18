@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, OnChanges, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/Auth/services/auth.service';
 import { Subscription } from 'rxjs';
+import { AuthService } from '../../Auth/services/auth.service';
 
 // NavBar Toggeler
 
@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
 
   constructor(private authService: AuthService, private router: Router) {
   
-    // handle isAuthenticated when refreshing the page 🤝 
+    //🤝 handle isAuthenticated when refreshing the page 🤝 
     this.isAuthenticated = this.authService.isLoggedIn();
   }
 
@@ -46,13 +46,6 @@ export class NavbarComponent implements OnInit {
       this.language = 'الإنجليزية';
     }
   }
-  profileRoute() {
-    if (this.authService.getJwtToken() != null) {
-      this.router.navigate(['Profile']);
-    } else {
-      this.router.navigate(['Categories']);
-    }
-  }
 
   // loggging out
   logout() {
@@ -61,6 +54,7 @@ export class NavbarComponent implements OnInit {
         // remove tokens (jwt, refresh)
         this.authService.doLogoutUser();
         this.isAuthenticated = false;
+        this.router.navigate(['Categories'])
       }
     });
   }

@@ -1,18 +1,28 @@
+.container { 
+  margin-top: 6rem;
+}
+
 .img-responsive {
-  width:90%; 
+  width:70%; 
   margin:auto;
+}
+
+.reg-btn {
+  margin: 3rem auto;
+  width:200px;
+  font-size:1.5rem;
+  font-weight: bold;
+  padding: .8rem ;
 }
 
 .mat-flat-button.mat-primary,
 .mat-raised-button.mat-primary,
 .mat-fab.mat-primary,
 .mat-mini-fab.mat-primary {
-  background-color: var(--primary);
+  background-color: var(--secondary);
+  transition:opacity .1s;
 }
 
-.reg-btn {
-  margin: 3rem auto;
-  width:200px;
-  font-size:1.3rem;
-  font-weight: bold;
+.mat-flat-button.mat-primary:hover {
+  opacity: .8;
 }

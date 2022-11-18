@@ -15,11 +15,11 @@ export class RegisterComponent implements OnInit {
   }
 
   regUser() {
-  this.router.navigate(['userRegister']);
+  this.router.navigate(['Auth/userRegister']);
 
   }
 
   regProvider(){
-    this.router.navigate(['sellerRegister']);
+    this.router.navigate(['Auth/sellerRegister']);
   }
 }
