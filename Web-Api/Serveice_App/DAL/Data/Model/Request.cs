@@ -19,7 +19,7 @@ namespace DAL
     {
         public Guid Id { get; set; }
         public string Location { get; set; }
-        public stateType State { get; set; }
+        public stateType? State { get; set; }
         public DateTime? ProviderStartDate { get; set; }
         public DateTime?  EndDate { get; set; }
         public string? Review { get; set; }
