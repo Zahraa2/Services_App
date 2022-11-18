@@ -21,7 +21,7 @@ namespace Serveice_App.Controllers.PostaController
         }
 
         [HttpGet]
-        [Route("PostsOfProvider")]
+        [Route("PostsOfProvider/{ProviderId:Guid}")]
         public ActionResult<List<MediasforPost>> PostsOfProvider(Guid ProviderId)
         {
             var posts = _postManger.GetPostsOfProvider(ProviderId);
@@ -64,7 +64,7 @@ namespace Serveice_App.Controllers.PostaController
         }
 
         [HttpDelete]
-        [Route("DeletePost")]
+        [Route("DeletePost/{Id:Guid}")]
         public ActionResult DeletePost(Guid Id)
         {
             _postManger.Delete(Id);

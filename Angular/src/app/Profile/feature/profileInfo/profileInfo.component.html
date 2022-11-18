@@ -48,7 +48,7 @@
           </small>
         </div>
 
-        <div class="col-md-12 container mt-5 ">
+        <div class="col-md-12 container mt-5 " *ngIf="clientOptions">
           <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4 shadow">
             <p class="small mb-0">
               <i class="fa fa-picture-o mr-2"></i>
@@ -57,6 +57,7 @@
             <div class="badge bg-danger px-3 rounded-pill font-weight-normal event" (click)="customerRequest()">Now</div>
           </div>
         </div>
+
       </div>
       <div>
 
@@ -69,7 +70,7 @@
 
           <div class="d-flex align-items-center justify-content-between mb-3 container-fluid">
             <h5 class="mb-0 text-warning font-weight-bold">All Posts</h5>
-            <a routerLink="Add-Post" class="btn btn-link text-warning font-weight-bold">Add Post</a>
+            <a routerLink="Add-Post" class="btn btn-link text-warning font-weight-bold" *ngIf="editOption">Add Post</a>
           </div>
 
 
@@ -78,11 +79,11 @@
             <div class="col-lg-6 mb-2 pr-lg-1" *ngFor="let item of Posts">
               <div class="bg-white rounded shadow">
 
-                <div class="options-container">
-                  <img src={{item.image}} alt="" class="img-fluid rounded shadow-sm">
+                <div [className]="imgOptionClass">
+                  <img class="img-fluid" src="https://img.freepik.com/photos-gratuite/mockup-mur-blanc-dans-maison-style-loft-canape-accessoires-dans-rendu-room-3d_41470-3836.jpg?w=826&t=st=1668743246~exp=1668743846~hmac=bc53828f684804e879ea2d58945d1883b9daea5707c556b1ce82d606092f7e38">
                   <div class="post-options p-5 d-flex justify-content-around align-items-center">
                     <i class="fa-solid fa-pen-to-square fa-xl fa-beat" (click)="imgOptions()"></i>
-                    <i class="fa-solid fa-trash fa-xl fa-beat"></i>
+                    <i class="fa-solid fa-trash fa-xl fa-beat" (click)="deletePost(item.id)"></i>
                   </div>
                 </div>
 

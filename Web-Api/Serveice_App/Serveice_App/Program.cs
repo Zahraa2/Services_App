@@ -140,6 +140,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors(myAllowSpecificOrigins);
+
 app.UseHttpsRedirection();
 
 app.UseRouting();

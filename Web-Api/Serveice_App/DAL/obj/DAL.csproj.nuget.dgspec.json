@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\graduation Pro\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {}
+    "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "D:\\graduation Pro\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {
+    "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\graduation Pro\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\graduation Pro\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\smile\\.nuget\\packages\\",
-        "outputPath": "D:\\graduation Pro\\Services_App\\Web-Api\\Serveice_App\\DAL\\obj\\",
+        "projectPath": "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\smile\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -79,7 +75,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -88,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -14,10 +14,6 @@ export class ProfileService {
     constructor(public http: HttpClient) { }
 
 
-    getUserLoggedInfo():Observable<UserLogged>{
-        return this.http.get<UserLogged>('https://localhost:7142/api/Auth/GetLoggedInUser/');
-    }
-
     getProfileData(provId:string){
         return this.http.get<Profile>(`https://localhost:7142/api/Provider/SelectProviderById/${provId}`)
     }
@@ -29,20 +25,8 @@ export class ProfileService {
       getProviderId(){
        return this.providerId
       }
-      comparison(){
-        const providerId = this.getProviderId()
-    
-        this.getUserLoggedInfo().subscribe(data =>{
-           console.log(data)
-            if(data.id == providerId){
-                return true
-            }else{
-                return false
-            }
-        })
-      
-      }
-      
+
+
 
 
 }
