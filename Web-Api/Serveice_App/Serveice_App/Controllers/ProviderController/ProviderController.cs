@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using BL;
 
 namespace Serveice_App.Controllers;
@@ -30,6 +29,11 @@ public class ProviderController : ControllerBase
         {
             return NotFound($"NO Providers in {Name}");
         }
+        foreach(var provider in providerlist)
+        {
+            byte[] bytes = System.IO.File.ReadAllBytes(@".\Resources\Images\" + provider.profilePicture);
+            provider.profilePicture = Convert.ToBase64String(bytes);
+        }
         return providerlist;
     }
 
@@ -40,18 +44,23 @@ public class ProviderController : ControllerBase
         var provider = providerUser.GetProviderbyid(id);
         if (provider == null)
             return NotFound("This Provider Not Found");
+
+        byte[] bytes = System.IO.File.ReadAllBytes(@".\Resources\Images\" + provider.profilePicture);
+        provider.profilePicture = Convert.ToBase64String(bytes);
         return provider;
     }
 
     [HttpPost]
     [Route("EditProviderProfile")]
-    public ActionResult EditProviderProfile(ProviderUserWriteDTO providerUserWriteDTO)
+    public ActionResult EditProviderProfile([FromForm]ProviderUserWriteDTO providerUserWriteDTO)
     {
+        //providerUserWriteDTO.ImgData = formFile;
         var flag = providerUser.EditProvider(providerUserWriteDTO);
         if (flag)
             return Ok("Edit Done");
         return BadRequest("This Provider Not Found");
 
     }
+   
 
 }

@@ -29,6 +29,11 @@ public class ProviderUser : IProviderUser
         var VarProviderRepo = _providerRepo.GetById(provider.id);
         if (VarProviderRepo == null)
             return false;
+
+        if (provider.ImgData != null)
+            provider.profilePicture = _providerRepo.getImg(provider.ImgData, provider.id);
+        else
+            provider.profilePicture = VarProviderRepo.profilePicture;
         _mapper.Map(provider, VarProviderRepo);
         provider.Fname = provider.Name.Split(" ")[0];
         for (int i = 1; i < provider.Name.Split(' ').Length; i++)
@@ -90,6 +95,7 @@ public class ProviderUser : IProviderUser
         return Provider_DTO;
     }
 
+    
 
 
 

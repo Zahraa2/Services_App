@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,9 @@ public class ProviderUserWriteDTO
     public Guid id { get; set; }
     public Guid? ServiceId { get; set; }
     public string? sammary { get; set; }
+    // to get imgdata and set img name
+    public IFormFile? ImgData { get; set; }
+
     public string? profilePicture { get; set; }
     //Name just take all name to split it to Fname and Lname
     public string Name { get; set; }

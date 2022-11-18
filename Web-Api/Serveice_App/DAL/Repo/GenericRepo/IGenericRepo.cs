@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,4 +15,5 @@ public interface IGenericRepo<T>
     void Edit(T entity);
     void Delete(T entity);
     void SaveChange();
+    string getImg(IFormFile formFile,Guid ID);
 }
