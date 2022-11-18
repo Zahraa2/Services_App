@@ -1,15 +1,13 @@
 footer{
-   bottom: 0;
+   margin-bottom: -10rem;
    width: 100%; 
 }
 footer .Copyright{
     font-size: 0.9rem;
-    text-align: right;
 }
-.container-fluid .row{
-    text-align: right;
+.containerFooter{
+    background-color: var(--third);
 }
-
 .container-fluid .row .afooter{
     display: flex;
     border: 1px solid #fff ;
@@ -21,6 +19,7 @@ footer .Copyright{
 }
 .container-fluid .icon-foo-div{
     justify-content: space-between;
+    align-items: center;
     width: 60%;
 }
 .svg-style{

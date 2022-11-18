@@ -9,5 +9,5 @@ namespace BL;
 public class CustomerReadDTO
 {
     public Guid id { get; set; }
-    public string UserId { get; set; } = null!;
+    public string UserId { get; set; } 
 }

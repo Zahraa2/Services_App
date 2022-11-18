@@ -11,27 +11,16 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class NavbarComponent implements OnInit {
-  language: string = "العربية"
-  seconedLanguage: string = "الإنجليزية"
-  toggleArabic: boolean = true
-  toggle:boolean = false;
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {}
+  lang:string="";
+  ngOnInit():void {
+    this.lang=localStorage.getItem("lang")||"en"
+   }
+  
+ //change languge in local storage
+  changLang(lang:string){
+    console.log(lang);
+    localStorage.setItem("lang",lang);
+    window.location.reload()
   }
-  handleToggle(){
-    this.toggle = !this.toggle;
-  }
-
-  handleToggleLang(){
-    this.toggleArabic = !this.toggleArabic
-    if (this.toggleArabic) { 
-      this.language = "العربية"
-      this.seconedLanguage = "الإنجليزية"
-    } else {
-      this.seconedLanguage = "العربية"
-      this.language = "الإنجليزية"
-    }
-  }
-
 }

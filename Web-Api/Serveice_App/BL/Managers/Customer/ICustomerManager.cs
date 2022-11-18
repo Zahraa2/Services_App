@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,4 +14,6 @@ public interface ICustomerManager
     public void Add(CustomerWriteDTO Customer);
     public bool Update(CustomerWriteDTO Customer);
     public void Delete(Guid id);
+
+    public CustomerReadDTO GetCustomerByUserId(string Id);
 }

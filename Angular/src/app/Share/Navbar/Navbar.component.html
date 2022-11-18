@@ -2,13 +2,17 @@
   <!-- My Container -->
   <div class="container">
     <!-- Collapse Button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" [attr.aria-expanded]="toggle" aria-label="Toggle navigation"
-      (click)="handleToggle()">
-      <span class="navbar-toggler-icon" *ngIf="!toggle"></span>
-      <i class="fa-solid fa-xmark" *ngIf="toggle"></i>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="d-none showLogo">
       <h1>العنوان</h1>
     </div>
@@ -25,21 +29,31 @@
         <div class="logo">
           <h1>العنوان</h1>
         </div>
-        <div>
+        <div dir=auto >
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-            <li>
-              <a class="nav-link text-dark" href="#">إنشاء حساب</a>
-            </li>
-            <li>
-              <a class="nav-link text-dark" href="#">تسجيل الدخول</a>
-            </li>
-            <li>
-              <a class="nav-link text-dark" [routerLink]="['خدماتنا']" routerLinkActive="active">خدماتنا</a>
-            </li>
-
             <li class="nav-item">
-              <a class="nav-link active" [routerLink]="['']" routerLinkActive="active">الصفحة الرئيسية</a>
+              <a
+                class="nav-link active"
+                [routerLink]="['']"
+                routerLinkActive="active"
+                >{{"الصفحة الرئيسية"|translate}}</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link text-dark"
+                [routerLink]="['خدماتنا']"
+                routerLinkActive="active"
+                >{{"خدماتنا"|translate}}</a
+              >
+            </li>
+            <li>
+              <a class="nav-link text-dark" href="#">{{"إنشاءحساب"|translate}}</a>
+            </li>
+            <li>
+              <a class="nav-link text-dark" href="#"
+                >{{'تسجيل الدخول'| translate}}</a
+              >
             </li>
 
           </ul>
@@ -47,16 +61,10 @@
       </div>
     </div>
     <div class="language">
-      <!-- Language -->
-      <button class="dropdown" mat-button [matMenuTriggerFor]="languages">
-        <h5>
-          <i class="fa-solid fa-earth-americas"></i> | {{language}}
-          <i class="fa-solid fa-chevron-down"></i>
-        </h5>
-      </button>
-      <mat-menu #languages="matMenu">
-        <button mat-menu-item class="text-right" (click)="handleToggleLang()">{{seconedLanguage}}</button>
-      </mat-menu>
+      <select #group class="selectpicker" (change)="changLang(group.value)">
+        <option value="en" [selected]="lang == 'en'">English</option>
+        <option value="ar" [selected]="lang == 'ar'">عربي</option>
+      </select>
     </div>
   </div>
 </nav>

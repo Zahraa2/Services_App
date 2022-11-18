@@ -50,11 +50,10 @@ export class TestimonialComponent implements OnInit {
           'ليس صاحب العمل هو من يدفع المرتبات. صاحب العمل يدير فقط الأموال. العميل هو من يدفع المرتبات.” هنري العميل هو من يدفع المرتبات. فورد – مؤسس شركة فورد موتورز',
       },
       {
-        name: 'سامية عوف',
+        name:  "Sara Ali",
         rating: 3,
         photo: 'https://randomuser.me/api/portraits/women/68.jpg',
-        text:
-          "ناك مدير واحد فقط: العميل. ويمكنه طرد كل شخص في الشركة بداية من المدير ومن تحته، ببساطة عن طريق انفاق امواله في مكان اخر.” سام والتون – مؤسس والمارت وسامس كلوبناك مدير واحد فقط: العميل. ويمكنه طرد كل شخص في الشركة بداية " ,
+        text: "There is only one manager: the customer. He can fire everyone in the company, from the manager down, simply by spending his money elsewhere.” Sam Walton - Founder of Walmart and Sams Clubnecks Only one manager: the customer, and he can fire everyone in the company first",
       },
       {
         name: 'سعاد محمود',
@@ -64,7 +63,7 @@ export class TestimonialComponent implements OnInit {
           "لأصل الأعظم لكل شركة هو عملائها لأنه بدون عملاء لا يوجد شركة.” مايكل لوبوف – مؤلف أعمال وأستاذ إدارة سابق في جامعة نيو أورلينز.” مايكل لوبوف – مؤلف أعمال وأستاذ إدارة ",
       },
       {
-        name: 'عمر أحمد',
+        name: "ِAhmed Omar",
         rating: 3,
         photo: 'https://randomuser.me/api/portraits/men/43.jpg',
         text:

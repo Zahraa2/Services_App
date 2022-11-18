@@ -6,6 +6,7 @@ import { FooterComponent } from './Footer/Footer.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { ScorllToTopComponent } from './scorll-to-top/scorll-to-top.component';
 import { SharedHeaderComponent } from './shared-header/shared-header.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 const sharedComponent = [NavbarComponent, FooterComponent ,ScorllToTopComponent,SharedHeaderComponent]
@@ -18,12 +19,13 @@ const sharedComponent = [NavbarComponent, FooterComponent ,ScorllToTopComponent,
   ],
   imports: [
     CommonModule,
+    TranslateModule,
     MaterialModule, 
     AppRoutingModule
     
   ],
   exports: [
-    sharedComponent
+    sharedComponent,TranslateModule
   ]
 })
 export class ShareModule { }

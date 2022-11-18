@@ -1,34 +1,16 @@
-/* .card-body{
-    align-items: center;
-  }
-  .container .img-container {
-    width: 6rem;
-    height: 6rem;
-    border-radius: 3rem;
-    align-self: center;
-    margin-top:2rem;
-    overflow: hidden;
-  } */
+
   /* ---------------------------------------------------- */
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
-
-.container{
-	display: flex;
-	justify-content: center;
-  }
-  
   .card {
-	height: 500px;
+	height: 460px;
 	width: 300px;
 	border-radius: 15px;
 	margin-top: 70px;
-	background-color:  #4C4C4C;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.101), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.101), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   }
-  
-  
+
   .imagem {
 	display: flex;
 	justify-content: center;
@@ -40,26 +22,17 @@
 	width: 150px;
 	margin-top: 20px;
 	border-radius: 50%;
-  /* Para deixar a imagem redonda é ideal utilizar uma imagem com altura e largura iguais. */
   }
   
-  .titulo {
+  .card-title {
 	text-align: center;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 600;
-	font-size: 30px;
-	color: #fff;
+	font-size: 26px;
 	margin-top: 20px;
 	margin-bottom: 30px;
   }
   
-  .desc {
-	font-family: 'Poppins', sans-serif;
-	color: #fff;
-	font-weight: 200;
-	font-size: 15px;
-	text-align: center;
-  }
   
   .button {
 	display: flex;
@@ -80,10 +53,13 @@
 	font-family: 'Poppins', sans-serif;
 	font-size: 15px;
 	font-weight: 300;
-	color: black;
+	color: rgb(255, 255, 255);
 	text-decoration: none;
   }
   
   .button:hover{
 	margin-top: 40px;
+  }
+  .fa-star{
+	color: var(--primary);
   }

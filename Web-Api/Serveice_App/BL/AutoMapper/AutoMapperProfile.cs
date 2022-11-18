@@ -35,6 +35,10 @@ public class AutoMapperProfile :Profile
 
         CreateMap<Request, RequestReadDTO>();
         CreateMap<RequestWriteDTO, Request>();
+        CreateMap<RequestCostemerProviderWriteDTO, Request>();
+        CreateMap<RequestProviderCustomerWriteDTO, Request>();
+        
+        CreateMap <RequestmessageWriteDTO, RequestUpdateStateWriteDTO>();
 
         CreateMap<Service, ServiceReadDTO>();
         CreateMap<ServiceWriteDTO, Service>();
@@ -42,5 +46,7 @@ public class AutoMapperProfile :Profile
         CreateMap<Provider, ProviderUserReadDTO>();
 
         CreateMap<Post, MediasforPost>();
+
+        
     }
 }

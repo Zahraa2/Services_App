@@ -3,10 +3,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShareModule } from './Share/share.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule , HttpClient } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { OnboardingModule} from './onboarding/onboarding.module';
 
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { SettingModule } from './setting/setting.module';
+import { ServicesProvidersModule } from './services-providers/services-providers.module';
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -18,9 +26,20 @@ import { OnboardingModule} from './onboarding/onboarding.module';
     HttpClientModule,
     RouterModule,   
     ShareModule,
-    OnboardingModule
+    OnboardingModule,
+    SettingModule,
+    HttpClientModule,
+    ServicesProvidersModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+
  ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

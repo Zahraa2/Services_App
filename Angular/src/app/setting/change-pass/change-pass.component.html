@@ -1,0 +1,90 @@
+<div class="container my-5">
+  <div class="card p-3 text-center my-5">
+    <div class="d-flex flex-row justify-content-center mb-3">
+      <div class="image">
+        <img src="https://i.imgur.com/hczKIze.jpg" class="rounded-circle" />
+      </div>
+      <div class="d-flex flex-column ms-3 user-details">
+        <h4 class="mb-0">name</h4>
+        <div class="ratings">
+          <span>rate</span>
+          <i class="bx bx-star ms-1"></i>
+        </div>
+        <span>Pro Member</span>
+      </div>
+    </div>
+
+    <form [formGroup]="settingForm">
+      <div class="row my-5 justify-content-center">
+        <h4>{{ "تعديل الحساب" | translate }}</h4>
+        <div class="col-6">
+          <div class="inputs">
+            <label>{{"كلمة السر الحالية"|translate}}</label>
+            <input
+              formControlName="Currentpassword"
+              class="form-control"
+              type="password"
+              placeholder="Current Password"
+            />
+          </div>
+
+          <div class="inputs">
+            <label>{{"كلمة السر الجديدة"|translate}}</label>
+            <input
+              formControlName="Newpassword"
+              class="form-control"
+              type="text"
+              placeholder="New Password"
+            />
+          
+          <div class="error-messages">
+            <ng-container *ngFor="let error of error_messages.password">
+              <div
+                class="error-message text-start"
+                *ngIf="
+                  settingForm.get('Newpassword')?.hasError(error.type) &&
+                  (settingForm.get('Newpassword')?.dirty ||
+                    settingForm.get('Newpassword')?.touched)
+                "
+              >
+                {{ error.message }}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+          <div class="inputs">
+            <label>{{"تأكيد كلمة السر"|translate}}</label>
+            <input
+              formControlName="Confirmpassword"
+              class="form-control"
+              type="text"
+              placeholder="Confirm Password"
+            />
+            <div class="error-messages d-flex">
+              <ng-container
+                *ngFor="let error of error_messages.confirmpassword"
+              >
+                <div
+                  class="error-message text-start"
+                  *ngIf="
+                    settingForm.get('Confirmpassword')?.hasError(error.type) &&
+                    (settingForm.get('Confirmpassword')?.dirty ||
+                      settingForm.get('Confirmpassword')?.touched)
+                  "
+                >
+                  {{ error.message }}
+                </div>
+              </ng-container>
+              <div class="text-start text-danger" *ngIf = "confirmPasswordError">{{ confirmPasswordError }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gap-2 d-flex justify-content-center">
+        <button class="px-3 btn btn-sm btn-outline-warning">{{"إلغاء"|translate}}</button>
+        <button class="px-3 btn btn-sm btn-warning text-white" [disabled]="!settingForm.valid">{{"حفظ"|translate}}</button>
+      </div>
+    </form>
+  </div>
+</div>

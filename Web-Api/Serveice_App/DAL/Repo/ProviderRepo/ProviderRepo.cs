@@ -23,9 +23,22 @@ public class ProviderRepo : GenericRepo<Provider>, IProviderRepo
         return providers;
     }
 
+    public Provider GetProviderByUserId(string Id)
+    {
+        Provider provider = context.Provider.FirstOrDefault(u => u.UserId == Id);
+        return provider;
+    }
+
     public List<Provider> GetProvidersByService(string Name)
     {
         return context.Provider.Include(s => s.service).Where(s => s.service.Name == Name).ToList();
     }
 
+    public  Provider? SelectAlldata(Guid id)
+    {
+
+        Provider? provider = context.Provider.Include(po => po.posts).ThenInclude(post=>post.Medias).FirstOrDefault(p=>p.id==id);
+        return provider;
+       
+    }
 }

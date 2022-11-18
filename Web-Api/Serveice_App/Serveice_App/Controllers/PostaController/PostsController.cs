@@ -9,10 +9,10 @@ namespace Serveice_App.Controllers.PostaController
     [ApiController]
     public class PostsController : ControllerBase
     {
-        private readonly IPostManger _postManger;
+        private readonly IPostManager _postManger;
         private readonly IProviderManger _providerManger;
 
-        public PostsController(IPostManger postManger, IProviderManger providerManger)
+        public PostsController(IPostManager postManger, IProviderManger providerManger)
         {
             _postManger = postManger;
             _providerManger = providerManger;
