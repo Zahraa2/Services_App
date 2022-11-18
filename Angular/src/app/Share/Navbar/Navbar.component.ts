@@ -48,9 +48,9 @@ export class NavbarComponent implements OnInit {
   }
   profileRoute() {
     if (this.authService.getJwtToken() != null) {
-      this.router.navigate(['profile']);
+      this.router.navigate(['Profile']);
     } else {
-      this.router.navigate(['خدماتنا']);
+      this.router.navigate(['Categories']);
     }
   }
 

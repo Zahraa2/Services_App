@@ -55,7 +55,7 @@ export class UserRegComponent implements OnInit {
             jwt: resData.token,
             refreshToken: resData.refreshToken,
           });
-          this.router.navigate(['خدماتنا']);
+          this.router.navigate(['Categories']);
           // console.log(this.authService.getJwtToken());
           this.authService.islogged = true;
           this.isLoading = false;
