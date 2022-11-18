@@ -119,7 +119,7 @@ namespace Serveice_App.Controllers
         //get all request for customer
         [HttpGet]
         [Route("CustomerAllRequest/{CustomerId:Guid}")]
-        public ActionResult<List<RequestReadDTO>> CustomerAllRequest([FromBody] Guid CustomerId)
+        public ActionResult<List<RequestReadDTO>> CustomerAllRequest(Guid CustomerId)
         {
             var result = _requestManger.GetCustomerRequests(CustomerId);
             if (result==null)
@@ -132,7 +132,7 @@ namespace Serveice_App.Controllers
         //get all request for provider
         [HttpGet]
         [Route("ProviderAllRequest/{ProviderId:Guid}")]
-        public ActionResult<List<RequestReadDTO>> ProviderAllRequest([FromBody] Guid ProviderId)
+        public ActionResult<List<RequestReadDTO>> ProviderAllRequest(Guid ProviderId)
         {
             var result = _requestManger.GetProviderRequests(ProviderId);
             if (result == null)
@@ -144,7 +144,7 @@ namespace Serveice_App.Controllers
 
         [HttpGet]
         [Route("GetRequest/{RequestId:Guid}")]
-        public ActionResult<RequestReadDTO> GetRequest([FromBody] Guid RequestId)
+        public ActionResult<RequestReadDTO> GetRequest(Guid RequestId)
         {
             var result = _requestManger.GetByID(RequestId);
             if (result == null)
@@ -156,7 +156,7 @@ namespace Serveice_App.Controllers
 
         [HttpGet]
         [Route("CountProviderAllRequest/{ProviderId:Guid}")]
-        public ActionResult<int> CountProviderAllRequest([FromBody] Guid ProviderId)
+        public ActionResult<int> CountProviderAllRequest(Guid ProviderId)
         {
             var result = _requestManger.GetProviderRequests(ProviderId);
             if (result == null)
@@ -167,15 +167,15 @@ namespace Serveice_App.Controllers
         }
 
         [HttpGet]
-        [Route("CountCustomerAllRequest")]
-        public ActionResult<List<RequestReadDTO>> CountCustomerAllRequest([FromBody] Guid CustomerId)
+        [Route("CountCustomerAllRequest/{CustomerId:Guid}")]
+        public ActionResult<int> CountCustomerAllRequest(Guid CustomerId)
         {
             var result = _requestManger.GetCustomerRequests(CustomerId);
             if (result == null)
             {
                 return BadRequest("No data");
             }
-            return result;
+            return result.Count;
         }
     }
 }
