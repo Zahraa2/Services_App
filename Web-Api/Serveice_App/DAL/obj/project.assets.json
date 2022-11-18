@@ -2932,11 +2932,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\lenovo\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+>>>>>>> 80669781cef118aad809e763c17815fba627d868
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\Service_WebApp\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
       "projectName": "DAL",
       "projectPath": "D:\\Service_WebApp\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
@@ -2945,6 +2950,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
+      "projectName": "DAL",
+      "projectPath": "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 80669781cef118aad809e763c17815fba627d868
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3018,5 +3033,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

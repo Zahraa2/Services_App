@@ -13,6 +13,7 @@ D:\graduation Pro\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.dll
 D:\graduation Pro\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\refint\BL.dll
 D:\graduation Pro\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.pdb
 D:\graduation Pro\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\ref\BL.dll
+<<<<<<< HEAD
 D:\Service_WebApp\Web-Api\Serveice_App\BL\bin\Debug\net6.0\BL.deps.json
 D:\Service_WebApp\Web-Api\Serveice_App\BL\bin\Debug\net6.0\BL.dll
 D:\Service_WebApp\Web-Api\Serveice_App\BL\bin\Debug\net6.0\BL.pdb
@@ -28,3 +29,38 @@ D:\Service_WebApp\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.dll
 D:\Service_WebApp\Web-Api\Serveice_App\BL\obj\Debug\net6.0\refint\BL.dll
 D:\Service_WebApp\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.pdb
 D:\Service_WebApp\Web-Api\Serveice_App\BL\obj\Debug\net6.0\ref\BL.dll
+=======
+<<<<<<< HEAD
+D:\Services_App\Web-Api\Serveice_App\BL\bin\Debug\net6.0\BL.deps.json
+D:\Services_App\Web-Api\Serveice_App\BL\bin\Debug\net6.0\BL.dll
+D:\Services_App\Web-Api\Serveice_App\BL\bin\Debug\net6.0\BL.pdb
+D:\Services_App\Web-Api\Serveice_App\BL\bin\Debug\net6.0\DAL.dll
+D:\Services_App\Web-Api\Serveice_App\BL\bin\Debug\net6.0\DAL.pdb
+D:\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.csproj.AssemblyReference.cache
+D:\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.AssemblyInfoInputs.cache
+D:\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.AssemblyInfo.cs
+D:\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.csproj.CoreCompileInputs.cache
+D:\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.csproj.CopyComplete
+D:\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.dll
+D:\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\refint\BL.dll
+D:\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.pdb
+D:\Services_App\Web-Api\Serveice_App\BL\obj\Debug\net6.0\ref\BL.dll
+=======
+E:\Services_App_12\Web-Api\Serveice_App\BL\bin\Debug\net6.0\DAL.dll
+E:\Services_App_12\Web-Api\Serveice_App\BL\bin\Debug\net6.0\DAL.pdb
+E:\Services_App_12\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.csproj.AssemblyReference.cache
+E:\Services_App_12\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Services_App_12\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.AssemblyInfoInputs.cache
+E:\Services_App_12\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.AssemblyInfo.cs
+E:\Services_App_12\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.csproj.CoreCompileInputs.cache
+E:\Services_App_12\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.csproj.CopyComplete
+E:\Services_App_12\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.dll
+E:\Services_App_12\Web-Api\Serveice_App\BL\obj\Debug\net6.0\refint\BL.dll
+E:\Services_App_12\Web-Api\Serveice_App\BL\obj\Debug\net6.0\BL.pdb
+E:\Services_App_12\Web-Api\Serveice_App\BL\bin\Debug\net6.0\BL.deps.json
+E:\Services_App_12\Web-Api\Serveice_App\BL\bin\Debug\net6.0\BL.dll
+E:\Services_App_12\Web-Api\Serveice_App\BL\bin\Debug\net6.0\BL.pdb
+E:\Services_App_12\Web-Api\Serveice_App\BL\obj\Debug\net6.0\ref\BL.dll
+>>>>>>> f6f8ff700e28468cc91362ae33ccf8df80a088ce
+>>>>>>> 80669781cef118aad809e763c17815fba627d868

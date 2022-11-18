@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, OnChanges, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/Auth/services/auth.service';
 import { Subscription } from 'rxjs';
+import { AuthService } from '../../Auth/services/auth.service';
 
 // NavBar Toggeler
 

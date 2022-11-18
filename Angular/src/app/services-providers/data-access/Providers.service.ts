@@ -13,6 +13,7 @@ export class ProvidersService {
   constructor(public http:HttpClient) {}
 
   getAllProviders(id:string){
+    console.log(id)
     return this.http.get<Providers[]>(`https://localhost:7142/api/Provider/ProvidersByService/${id}`)
   }
 

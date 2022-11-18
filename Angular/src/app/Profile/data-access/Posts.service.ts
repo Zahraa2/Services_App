@@ -16,9 +16,9 @@ export class PostsService {
 
   // Posts handel Functions
 
-  getAllPosts():Observable<Post[]> {
+  getAllPosts(id:string):Observable<Post[]> {
    
-    let url = `${this.baseUrl}PostsOfProvider/`;
+    let url = `${this.baseUrl}PostsOfProvider/${id}`;
     return this.httpClient.get<Post[]>(url)
     .pipe(
       catchError(this.handelErrors)
@@ -39,7 +39,7 @@ export class PostsService {
   updatePost(data: Post):Observable<Post> {
     debugger
 
-    let url = `${this.baseUrl}UpdatePost/${data.id}`;
+    let url = `${this.baseUrl}UpdatePost/${data.ProviderId}`;
    return this.httpClient.put<Post>(url, data , {headers: this.Header})
     .pipe(
       map( () => data),
@@ -51,11 +51,7 @@ export class PostsService {
   deletePost(id: string):Observable<{}> {
 
     let url = `${this.baseUrl}DeletePost/${id}`;
-   return this.httpClient.delete<Post>(url ,{headers : this.Header} )
-    .pipe(
-      catchError(this.handelErrors)
-      )
-    
+   return this.httpClient.delete(url ,{headers : this.Header} )  
   }
 
   private handelErrors(err:any){

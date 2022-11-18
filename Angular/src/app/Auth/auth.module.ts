@@ -9,7 +9,7 @@ import { ForgetPasswordComponent } from './password/forget-password/forget-passw
 import { ResetPasswordComponent } from './password/reset-password/reset-password.component';
 import { RegisterComponent } from './Regiter/Register/Register.component';
 import { ProviderRegComponent } from './serviceProvider/provider-reg/provider-reg.component';
-import { AuthRoutesModule } from './auth.routing.module';
+import { AuthRoutesMoudel } from './auth.routing.module';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 @NgModule({
@@ -20,7 +20,7 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
     ReactiveFormsModule,
     FormsModule,
     RouterModule,
-    AuthRoutesModule
+    AuthRoutesMoudel
   ],
   exports: [UserRegComponent],
 })

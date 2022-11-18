@@ -3,13 +3,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShareModule } from './Share/share.module';
-import { AuthModule } from './Auth/auth.module';
-import { CommonModule } from '@angular/common';
-import { ProfileModule } from './Profile/profile.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { OnboardingModule} from './onboarding/onboarding.module';
-import { SettingModule } from './setting/setting.module';
 
 
 @NgModule({
@@ -23,7 +19,6 @@ import { SettingModule } from './setting/setting.module';
     RouterModule,   
     ShareModule,
     OnboardingModule,
-    AuthModule,
  ],
   bootstrap: [AppComponent]
 })

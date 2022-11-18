@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\Service_WebApp\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {}
+  },
+  "projects": {
+    "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
+        "projectName": "DAL",
+        "projectPath": "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 80669781cef118aad809e763c17815fba627d868
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
