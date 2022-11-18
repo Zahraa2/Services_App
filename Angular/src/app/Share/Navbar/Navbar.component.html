@@ -26,7 +26,7 @@
 
     <div *ngIf="openCloseNot" class="notifications-container w-25 border shadow p-3 m-3 bg-white text-right">
       <h3>Notifications</h3>
-      <div class="custom-notification-content row border shadow-sm" routerLink="Request/details">
+      <div class="custom-notification-content row border shadow-sm" (click)="RequestDetails()">
         <div class="col-2 bg-warning p-2 align-items-center text-center">
           <i class="fa-regular fa-bell text-white font-weight-boled"></i>
         </div>

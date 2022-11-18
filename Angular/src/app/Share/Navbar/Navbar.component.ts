@@ -67,8 +67,13 @@ export class NavbarComponent implements OnInit {
 
 
   // Notifcations Part
-
   openNotifications(){
     this.openCloseNot = !this.openCloseNot
+  }
+
+  // notifications details
+  RequestDetails(){
+    this.openCloseNot = false
+    this.router.navigate(['Request/details']);
   }
 }

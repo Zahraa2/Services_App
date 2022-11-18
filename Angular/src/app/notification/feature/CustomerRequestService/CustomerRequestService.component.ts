@@ -26,8 +26,6 @@ export class CustomerRequestServiceComponent implements OnInit {
 
   customer: CustomerRequest[] = []
   allRequestSubscription: any;
-
-
   private subscriptions = new Subscription()
 
 
@@ -36,24 +34,23 @@ export class CustomerRequestServiceComponent implements OnInit {
 
   ngOnInit() {
  
+
   }
 
   sendRequest() {
     this.customerResquest.providerId = this.Provider.getProviderId();
-    this.customerResquest.customerId = this.Provider.getCustomerId();
+   this.customerResquest.customerId = this.Provider.getCustomerId();
+
     console.log(this.customerResquest)
     
-    this.postData()
+    this.request.CustomerRequest(this.customerResquest).subscribe(data =>{
+      console.log(data)
+    }, error => console.log(error))
+
     this.signelConnection()
     this.route.navigateByUrl('Profile')
 
 
-  }
-
-  postData(){
-    this.request.CustomerRequest(this.customerResquest).subscribe(data =>{
-      console.log(data)
-    }, error => console.log(error))
   }
 
   signelConnection(){
