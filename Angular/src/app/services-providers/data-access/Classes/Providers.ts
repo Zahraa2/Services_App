@@ -1,6 +1,9 @@
-export class Providers {
-
-    constructor(public servicesName:string,public pic:string,public name:string,public Summary:string,public location:string){}
+export interface Providers {
+    id:string
+    name:string,
+    profilePicture:string,
+    avgRate:number,
+    serviceName:string,
     
 }
     

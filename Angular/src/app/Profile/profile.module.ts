@@ -7,11 +7,13 @@ import { FormsModule } from '@angular/forms';
 import { EditProfileInfoComponent } from './feature/EditProfileInfo/EditProfileInfo.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from '../Auth/token.interceptor';
+import { AddPofilePostComponent } from './feature/AddProfilePost/AddProfilePost.component';
+import { CustomerRequestServiceComponent } from './feature/CustomerRequestService/CustomerRequestService.component';
 
 
 
 const importedComponent = [
-  ProfileInfoComponent,EditProfileInfoComponent
+  ProfileInfoComponent,EditProfileInfoComponent , AddPofilePostComponent , CustomerRequestServiceComponent
 ]
 
 

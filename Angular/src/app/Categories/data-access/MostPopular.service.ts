@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { service } from './Classes/serivce';
+import { Service } from './Classes/Service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +10,6 @@ export class MostPopularService {
   constructor(public http: HttpClient) { }
   
   fetchServices (){
-    return this.http.get<service[]>('http://localhost:3000/MostPopularServices');
+    return this.http.get<Service[]>('https://localhost:7142/api/Services/MostPopular');
   }
 }

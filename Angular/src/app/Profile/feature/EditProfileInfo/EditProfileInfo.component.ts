@@ -11,14 +11,14 @@ import { ProfileService } from '../../data-access/profile-service.service';
 })
 export class EditProfileInfoComponent implements OnInit {
 
-  profile: Profile = { ServiceName: '', Pic: '', Name: '', Summary: '', Location: '', Rate: 0, Posts: [] }
+  profile:Profile = {id:'',serviceName:'', profilePicture:'assets/Images/Profile/Default-Profile-Picture.png',name:'',sammary:'',location:'',avgRate:0}
   service: Service | any
   constructor(public profileService: ProfileService, public allService: ourServicese) { }
 
   ngOnInit() {
-    this.profileService.getProfileData().subscribe(a => {
-      this.profile = a
-    })
+    // this.profileService.getProfileData().subscribe(a => {
+    //   this.profile = a
+    // } )
     this.allService.getAllServiecs().subscribe(a => {
       this.service = a
     }
@@ -27,7 +27,6 @@ export class EditProfileInfoComponent implements OnInit {
 
   uploadImage(event:HTMLElement){
     console.log(event);
-
   }
 
 }

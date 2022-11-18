@@ -10,18 +10,19 @@
 
 
           <div class="mt-2">
-            <span class="box-pensil" (click)="EditInfo()"><i class="fa fa-pencil"></i></span>
+            <span *ngIf="editOption" class="box-pensil" (click)="EditInfo()"><i class="fa fa-pencil"></i></span>
           </div>
 
           <div>
             <div class="position-relative">
-              <img src="https://i.imgur.com/EnANUqj.jpg" width="130" class="rounded-circle">
+              <img *ngIf="!profile.profilePicture" width="130" class="rounded-circle" src="assets/Images/Profile/Default-Profile-Picture.png">
+              <img src={{profile.profilePicture}} width="130" class="rounded-circle">
               <span class="position-absolute dots"></span>
             </div>
 
             <div class="media-body text-white text-center">
-              <h4 class=""> {{profile.Name}} </h4>
-              <h5 class="small font-weight-bold">{{profile.ServiceName}}</h5>
+              <h4 class=""> {{profile.name}} </h4>
+              <h5 class="small font-weight-bold">{{profile.serviceName}}</h5>
             </div>
           </div>
 
@@ -40,10 +41,10 @@
         <div class="col-md-6">
           <p class=" mb-4">
             <i class="fa-solid fa-location-dot text-warning"></i>
-            {{profile.Location}}
+            {{profile.location}}
           </p>
           <small class="text-muted font-weight-bold">
-            {{profile.Summary}}
+            {{profile.sammary}}
           </small>
         </div>
 
@@ -53,7 +54,7 @@
               <i class="fa fa-picture-o mr-2"></i>
               <span class="font-weight-bold">أحصل على خدمه الان</span>
             </p>
-            <div class="badge bg-danger px-3 rounded-pill font-weight-normal event">Now</div>
+            <div class="badge bg-danger px-3 rounded-pill font-weight-normal event" (click)="customerRequest()">Now</div>
           </div>
         </div>
       </div>
@@ -74,11 +75,11 @@
 
           <div class="row text-left">
 
-            <div class="col-lg-6 mb-2 pr-lg-1" *ngFor="let item of profile.Posts">
+            <div class="col-lg-6 mb-2 pr-lg-1" *ngFor="let item of Posts">
               <div class="bg-white rounded shadow">
 
                 <div class="options-container">
-                  <img src={{item.img}} alt="" class="img-fluid rounded shadow-sm">
+                  <img src={{item.image}} alt="" class="img-fluid rounded shadow-sm">
                   <div class="post-options p-5 d-flex justify-content-around align-items-center">
                     <i class="fa-solid fa-pen-to-square fa-xl fa-beat" (click)="imgOptions()"></i>
                     <i class="fa-solid fa-trash fa-xl fa-beat"></i>
@@ -89,9 +90,14 @@
                 <div class="p-4 ">
                   <p class="small text-muted "> {{item.description}}</p>
                 </div>
+
+
               </div>
             </div>
 
+            <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}
+            </div>
+            
           </div>
 
         </div>

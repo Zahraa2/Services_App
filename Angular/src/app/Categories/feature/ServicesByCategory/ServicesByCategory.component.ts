@@ -37,4 +37,9 @@ export class ServicesByCategoryComponent implements OnInit {
     })
   }
 
+  routeTo(serviceName:string){
+    this.route.navigateByUrl("services")
+    this.selectedService.setProviderServices(serviceName);
+  }
+
 }
