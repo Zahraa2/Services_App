@@ -5,7 +5,9 @@ import { Providers } from './Classes/Providers';
 @Injectable({
   providedIn: 'root',
 })
+
 export class ProvidersService {
+
   providers: Providers[] = []
 
   constructor(public http:HttpClient) {}
@@ -13,4 +15,6 @@ export class ProvidersService {
   getAllProviders(id:string){
     return this.http.get<Providers[]>(`https://localhost:7142/api/Provider/ProvidersByService/${id}`)
   }
+
+
 }

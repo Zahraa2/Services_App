@@ -23,10 +23,12 @@ export class AllServicesComponent implements OnInit {
     this.selectedService.getAllServiecs().subscribe(a =>{
       this.seleted = a
       this.totalNumber = a.length
+    
     })
   }
-  routeTo(){
+  routeTo(serviceName:string){
     this.route.navigateByUrl("services")
+    this.selectedService.setProviderServices(serviceName);
   }
 
 }

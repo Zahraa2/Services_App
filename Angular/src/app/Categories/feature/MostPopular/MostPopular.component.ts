@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MostPopularService } from '../../data-access/MostPopular.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Service } from '../../data-access/Classes/Service';
+import { ourServicese } from '../../data-access/Services.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +15,7 @@ import { Service } from '../../data-access/Classes/Service';
 
 export class MostPopularComponent implements OnInit {
 
-  constructor(private servies:MostPopularService) { }
+  constructor(private servies:MostPopularService , public selectedService:ourServicese , public route:Router) { }
   mostPopularService:Service[] =[]
   ngOnInit() {
     this.onFetchServices();
@@ -23,6 +25,11 @@ export class MostPopularComponent implements OnInit {
     this.servies.fetchServices().subscribe(services => {
       this.mostPopularService = services;
     });
+  }
+  
+  routeTo(serviceName:string){
+    this.route.navigateByUrl("services")
+    this.selectedService.setProviderServices(serviceName);
   }
 
   customOptions: OwlOptions = {

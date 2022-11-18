@@ -1,0 +1,39 @@
+<div class="container my-5 text-center ">
+
+  <div class="row my-5">
+    <h4 class="my-3">Request</h4>
+    <div class="input-group input-group-icon">
+      <input type="text" [(ngModel)]="customerResquest.name" placeholder="Full Name" />
+      <div class="input-icon"><i class="fa fa-user"></i></div>
+    </div>
+
+    <div class="input-group input-group-icon">
+      <input type="text" placeholder="Adress" [(ngModel)]="customerResquest.location" />
+      <div class="input-icon">
+        <i class="fa fa-address-book" aria-hidden="true"></i>
+      </div>
+    </div>
+
+
+    <div class="input-group input-group-icon">
+      <select class="w-100" type="text" placeholder="Service" [(ngModel)]="customerResquest.requestType">
+        <option></option>
+      </select>
+      <div class="input-icon">
+        <i class="fas fa-hammer"></i>
+      </div>
+    </div>
+
+    <div class="input-group input-group-icon about-inputs">
+      <textarea class="form-control" type="text" placeholder="What You Need" [(ngModel)]="customerResquest.description"> </textarea>
+    </div>
+
+    <div class="mt-3 gap-2 d-flex justify-content-center">
+      <button class="px-3 btn btn-sm btn-outline-warning">Cancel</button>
+      <button class="px-3 btn btn-sm btn-warning text-white" (click)="sendRequest()">Send</button>
+  </div>
+
+  </div>
+
+
+</div>

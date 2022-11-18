@@ -1,4 +1,6 @@
 export interface Post {
-    img:string,
+    id:string,
+    ProviderId:string,
+    image:string,
     description:string
 }

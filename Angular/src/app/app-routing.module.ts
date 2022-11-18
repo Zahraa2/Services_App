@@ -26,6 +26,7 @@ const routes: Routes = [
   { path: 'sellerRegister', component: ProviderRegComponent, canActivate: [AuthGuard] },
   { path: 'forgetPassword', component: ForgetPasswordComponent ,canActivate: [AuthGuard]},
   { path: 'resetpassword', component: ResetPasswordComponent ,canActivate: [AuthGuard]},
+  { path: 'notification', loadChildren: () => import('./notification/notification.module').then(m => m.NotificationModule) },
 
 ];
 

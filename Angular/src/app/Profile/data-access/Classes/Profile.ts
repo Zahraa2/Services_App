@@ -1,13 +1,14 @@
 import { Post } from "./Post";
 
 export interface Profile {
-    ServiceName:string,
-    Pic:string,
-    Name:string,
-    Summary:string,
-    Location:string,
-    Rate:number,
-    Posts:Post[]
+    id:string,
+    name:string,
+    serviceName:string,
+    profilePicture:string,
+    sammary:string,
+    location:string,
+    avgRate:number,
+    
 }
 
 
