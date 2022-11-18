@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'Auth', loadChildren: () => import('./Auth/auth.module').then(m => m.AuthModule)},
   {path: 'Profile', loadChildren: () => import('./Profile/profile.module').then(m => m.ProfileModule)},
   {path: 'services', loadChildren: () => import('./services-providers/services-providers.module').then(m => m.ServicesProvidersModule)},
-  { path: 'notification', loadChildren: () => import('./notification/notification.module').then(m => m.NotificationModule) },
+  {path: 'notification', loadChildren: () => import('./notification/notification.module').then(m => m.NotificationModule) },
 
 ];
 

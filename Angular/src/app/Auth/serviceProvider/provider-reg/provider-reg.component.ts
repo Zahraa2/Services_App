@@ -5,7 +5,7 @@ import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'app-provider-reg',
   templateUrl: './provider-reg.component.html',
-  styleUrls: ['./provider-reg.component.css'],
+  styleUrls: ['../../user/UserReg/UserReg.component.css', './provider-reg.component.css'],
 })
 export class ProviderRegComponent implements OnInit {
   services: any = [];

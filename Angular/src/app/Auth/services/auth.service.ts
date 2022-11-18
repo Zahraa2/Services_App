@@ -1,20 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { of, Observable, Subject } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { Subject } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { config } from './../config';
 import { Tokens } from '../models/tokens';
 import { User } from '../models/user.model';
 import { ForgotPassword } from '../_passwordModels/forgetPass';
 import { ResetPasswordDto } from '../_passwordModels/resetPass';
+import {AuthResponseData} from "../models/AuthResponseData"
 
-export interface AuthResponseData {
-  token: string;
-  expirOn: string;
-  refreshToken: string;
-  refershTokenExpirOn: string;
-  message?: string;
-}
 
 @Injectable({
   providedIn: 'root',
@@ -70,7 +64,7 @@ export class AuthService {
     serviceId:string; 
     sammary:string
   }) {
-    return this.http.post<any>(
+    return this.http.post<AuthResponseData>(
       `${config.apiUrl}/Provider-register`,
       user
     )
@@ -121,11 +115,6 @@ export class AuthService {
         })
       );
   }
-
-  // refreshToken() {
-  //   return this.http.post(`${config.apiUrl}/refreshtoken`, this.getRefreshToken());
-  // }
-
 
   // log in | register actions => store tokens in local storage
   doLoginUser(username: string, tokens: Tokens) {

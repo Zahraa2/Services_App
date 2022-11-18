@@ -10,9 +10,10 @@ import { ResetPasswordComponent } from './password/reset-password/reset-password
 import { RegisterComponent } from './Regiter/Register/Register.component';
 import { ProviderRegComponent } from './serviceProvider/provider-reg/provider-reg.component';
 import { AuthRoutesModule } from './auth.routing.module';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 @NgModule({
-  declarations: [UserRegComponent, UserLoginComponent, ForgetPasswordComponent, ResetPasswordComponent,RegisterComponent, ProviderRegComponent],
+  declarations: [UserRegComponent, UserLoginComponent, ForgetPasswordComponent, ResetPasswordComponent,RegisterComponent, ProviderRegComponent, LoadingSpinnerComponent],
   imports: [
     CommonModule,
     MaterialModule,
