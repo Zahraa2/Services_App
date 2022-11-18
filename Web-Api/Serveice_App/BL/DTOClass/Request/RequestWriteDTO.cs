@@ -17,4 +17,5 @@ public class RequestWriteDTO
     public decimal Rate { get; set; }
     public Guid? CustomerId { get; set; }
     public Guid? ProviderId { get; set; }
+    public string RequestType { get; set; }
 }

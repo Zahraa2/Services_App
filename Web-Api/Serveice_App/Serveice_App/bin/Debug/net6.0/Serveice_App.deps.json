@@ -25,6 +25,14 @@
         },
         "runtime": {
           "Serveice_App.dll": {}
+        },
+        "resources": {
+          "ar/Serveice_App.resources.dll": {
+            "locale": "ar"
+          },
+          "en/Serveice_App.resources.dll": {
+            "locale": "en"
+          }
         }
       },
       "AutoMapper/12.0.0": {
