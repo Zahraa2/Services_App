@@ -145,7 +145,6 @@ namespace DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid?>("PostId")
-                        .IsRequired()
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
@@ -273,8 +272,9 @@ namespace DAL.Migrations
                     b.Property<decimal?>("Rate")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("RequestType")
-                        .HasColumnType("int");
+                    b.Property<string>("RequestType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Review")
                         .HasColumnType("nvarchar(max)");
@@ -462,9 +462,7 @@ namespace DAL.Migrations
                 {
                     b.HasOne("DAL.Post", "Post")
                         .WithMany("Medias")
-                        .HasForeignKey("PostId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("PostId");
 
                     b.Navigation("Post");
                 });

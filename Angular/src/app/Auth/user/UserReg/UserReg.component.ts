@@ -55,10 +55,10 @@ export class UserRegComponent implements OnInit {
             jwt: resData.token,
             refreshToken: resData.refreshToken,
           });
-          this.router.navigate(['خدماتنا']);
           // console.log(this.authService.getJwtToken());
-          this.authService.islogged = true;
           this.isLoading = false;
+          this.authService.islogged = true;
+          this.router.navigate(['Categories']);
         },
         error: (err) => {
           // console.log(err.error);

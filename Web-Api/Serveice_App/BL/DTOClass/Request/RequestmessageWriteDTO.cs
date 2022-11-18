@@ -12,4 +12,5 @@ public class RequestmessageWriteDTO
     public Guid CustomerId { get; set; }
     public Guid Id { get; set; }
     public string Message { get; set; }
+    public string RequestType { get; set; }
 }

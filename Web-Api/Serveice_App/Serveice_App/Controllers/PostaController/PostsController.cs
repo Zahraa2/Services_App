@@ -69,7 +69,7 @@ namespace Serveice_App.Controllers.PostaController
         }
 
         [HttpDelete]
-        [Route("DeletePost")]
+        [Route("DeletePost/{Id:Guid}")]
         public ActionResult DeletePost(Guid Id)
         {
             _postManger.Delete(Id);

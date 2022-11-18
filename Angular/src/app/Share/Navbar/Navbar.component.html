@@ -14,7 +14,7 @@
     </div>
 
     <div class="icons">
-      <a  (click) ="profileRoute()">
+      <a >
           <i class="fa-regular fa-user text-dark">
           </i>
         </a>
@@ -36,10 +36,10 @@
             </li>
             <ng-template #loggedout>
               <li >
-                <a class="nav-link text-dark" [routerLink]="['register']" routerLinkActive="active">إنشاء حساب</a>
+                <a class="nav-link text-dark" [routerLink]="['Auth/register']" routerLinkActive="active">إنشاء حساب</a>
               </li>
               <li>
-                <a class="nav-link text-dark" [routerLink]="['login']" routerLinkActive="active">تسجيل الدخول</a>
+                <a class="nav-link text-dark" [routerLink]="['Auth/login']" routerLinkActive="active">تسجيل الدخول</a>
               </li>
             </ng-template>
             <li>

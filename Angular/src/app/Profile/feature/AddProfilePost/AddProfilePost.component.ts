@@ -14,7 +14,7 @@ import { ProfileService } from '../../data-access/profile-service.service';
 export class AddPofilePostComponent implements OnInit {
 
   errorMessage: string = ''
-  Post: Post = { id: '', ProviderId: this.profileService.getProviderId(), image: "assets/Images/Profile/Default-Profile-Picture.png", description: '' }
+  Post: Post = {id:'', ProviderId: this.profileService.getProviderId(), image: "assets/Images/Profile/Default-Profile-Picture.png", description: '' }
 
   constructor(public profileService: ProfileService, public post: PostsService , public router:Router) { }
 
@@ -24,6 +24,7 @@ export class AddPofilePostComponent implements OnInit {
 
   handelImage(file:FileList |any){
     file = file.item(0);
+
     this.Post.image = file.name
  }
   saveChanges() {

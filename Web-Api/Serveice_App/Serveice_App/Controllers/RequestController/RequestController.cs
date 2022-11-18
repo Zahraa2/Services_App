@@ -14,6 +14,7 @@ namespace Serveice_App.Controllers
         private readonly IProviderManger _providerManger;
         private readonly ICustomerManager _customerManager;
         private readonly IMapper _mapper;
+
         public RequestController(IRequestManger requestManger, IProviderManger providerManger, ICustomerManager customerManager, IMapper mapper)
         {
             _requestManger = requestManger;
@@ -21,6 +22,7 @@ namespace Serveice_App.Controllers
             _customerManager = customerManager;
             _mapper = mapper;
         }
+
         [HttpPost]
         [Route("CustomerSendRequest")]
         public ActionResult CustomerSendRequest(RequestCostemerProviderWriteDTO model)
@@ -114,6 +116,66 @@ namespace Serveice_App.Controllers
             return Ok(model.Message);
         }
 
+        //get all request for customer
+        [HttpGet]
+        [Route("CustomerAllRequest/{CustomerId:Guid}")]
+        public ActionResult<List<RequestReadDTO>> CustomerAllRequest(Guid CustomerId)
+        {
+            var result = _requestManger.GetCustomerRequests(CustomerId);
+            if (result==null)
+            {
+                return BadRequest("No data");
+            }
+            return result;
+        }
 
+        //get all request for provider
+        [HttpGet]
+        [Route("ProviderAllRequest/{ProviderId:Guid}")]
+        public ActionResult<List<RequestReadDTO>> ProviderAllRequest(Guid ProviderId)
+        {
+            var result = _requestManger.GetProviderRequests(ProviderId);
+            if (result == null)
+            {
+                return BadRequest("No data");
+            }
+            return result;
+        }
+
+        [HttpGet]
+        [Route("GetRequest/{RequestId:Guid}")]
+        public ActionResult<RequestReadDTO> GetRequest(Guid RequestId)
+        {
+            var result = _requestManger.GetByID(RequestId);
+            if (result == null)
+            {
+                return BadRequest("no Data");
+            }
+            return result;
+        }
+
+        [HttpGet]
+        [Route("CountProviderAllRequest/{ProviderId:Guid}")]
+        public ActionResult<int> CountProviderAllRequest(Guid ProviderId)
+        {
+            var result = _requestManger.GetProviderRequests(ProviderId);
+            if (result == null)
+            {
+                return BadRequest("No data");
+            }
+            return result.Count;
+        }
+
+        [HttpGet]
+        [Route("CountCustomerAllRequest/{CustomerId:Guid}")]
+        public ActionResult<int> CountCustomerAllRequest(Guid CustomerId)
+        {
+            var result = _requestManger.GetCustomerRequests(CustomerId);
+            if (result == null)
+            {
+                return BadRequest("No data");
+            }
+            return result.Count;
+        }
     }
 }

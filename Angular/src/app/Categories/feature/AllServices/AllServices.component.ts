@@ -27,8 +27,8 @@ export class AllServicesComponent implements OnInit {
     })
   }
   routeTo(serviceName:string){
-    this.route.navigateByUrl("services")
     this.selectedService.setProviderServices(serviceName);
+    this.route.navigateByUrl("services")
   }
 
 }

@@ -8,5 +8,7 @@ namespace DAL;
 
 public interface IRequestRepo:IGenericRepo<Request>
 {
+    public List<Request> GetAllCustomerRequsts(Guid CustomerId);
+    public List<Request> GetAllProviderRequsts(Guid PrpviderId);
 
 }

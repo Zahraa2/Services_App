@@ -1,5 +1,5 @@
 export interface UserLogged {
     id:string,
-    userType:boolean,
+    userType:number,
     name:string
 }
