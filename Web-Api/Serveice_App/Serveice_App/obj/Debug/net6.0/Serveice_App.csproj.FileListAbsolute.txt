@@ -78,3 +78,12 @@ D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.
 D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.pdb
 D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.genruntimeconfig.cache
 D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\ref\Serveice_App.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\ar\Serveice_App.resources.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\en\Serveice_App.resources.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.Resources.Controllers.CategoryController.ar.resources
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.Resources.Controllers.CategoryController.en.resources
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.Resources.Controllers.ServicesController.ar.resources
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.Resources.Controllers.ServicesController.en.resources
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.csproj.GenerateResource.cache
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\ar\Serveice_App.resources.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\en\Serveice_App.resources.dll

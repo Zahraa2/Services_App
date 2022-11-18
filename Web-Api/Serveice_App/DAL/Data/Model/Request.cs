@@ -9,9 +9,8 @@ namespace DAL
 {
     public enum type
     {
-          A = 0,
-          B = 1,
-          C = 2
+        Consultation = 0,
+        Repairing = 1,
     };
 
     public enum stateType

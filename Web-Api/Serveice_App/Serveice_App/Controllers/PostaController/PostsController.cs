@@ -21,7 +21,7 @@ namespace Serveice_App.Controllers.PostaController
         }
 
         [HttpGet]
-        [Route("PostsOfProvider")]
+        [Route("PostsOfProvider/{ProviderId:Guid}")]
         public ActionResult<List<MediasforPost>> PostsOfProvider(Guid ProviderId)
         {
             var posts = _postManger.GetPostsOfProvider(ProviderId);
