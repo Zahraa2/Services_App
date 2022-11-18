@@ -151,8 +151,7 @@
       "number": 200
     }
   ],
-  "ServiceByCategories":
-   [
+  "ServiceByCategories": [
     {
       "نجاره": [
         {
@@ -275,9 +274,42 @@
       ]
     }
 <<<<<<< HEAD
+  ],
+  "Profiles": 
+    {
+      "ServiceName": "تشطيب شقق",
+      "Pic": "https://picsum.photos/400/300",
+      "Name": " أحلام إسلام",
+      "Summary": "كل ما تريده وتحتاجه من تجهيز وتفريش ودهان , فقط اجلس وشاهد كل ما تحتاجه يتم بسهولة ويسر ههه",
+      "Location": "الشرقيه",
+      "Rate": 5,
+      "Posts": [
+        {
+          "img": "https://picsum.photos/500/300",
+          "description": "اخر اعمالي بالفحم , انتظرونا لتروا كل جديد"
+        },
+        {
+          "img": "https://picsum.photos/500/300",
+          "description": "اخر اعمالي بالفحم , انتظرونا لتروا كل جديد"
+        },
+        {
+          "img": "https://picsum.photos/500/300",
+          "description": "اخر اعمالي بالفحم , انتظرونا لتروا كل جديد"
+        },
+        {
+          "img": "https://picsum.photos/500/300",
+          "description": "اخر اعمالي بالفحم , انتظرونا لتروا كل جديد"
+        }
+      ]
+    }
+  
+}
+=======
+<<<<<<< HEAD
   ]
 }
 =======
    ]
   }
 >>>>>>> e00f792892fec825d1b4d6f275d6abc42a5b204f
+>>>>>>> afaff65786b620c565ef3cb32bdde37623291919

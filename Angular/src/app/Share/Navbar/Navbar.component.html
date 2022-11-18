@@ -14,7 +14,7 @@
     </div>
 
     <div class="icons">
-      <a  (click) ="profileRoute()">
+      <a >
           <i class="fa-regular fa-user text-dark">
           </i>
         </a>
@@ -32,18 +32,18 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
             <li *ngIf="isAuthenticated; else loggedout">
-              <a class="nav-link text-dark cursor-pointer" (click)="logout()" >تسجيل الخروج </a>
+              <a class="nav-link text-dark cursor-pointer" (click)="logout()" routerLinkActive="active">تسجيل الخروج </a>
             </li>
             <ng-template #loggedout>
               <li >
-                <a class="nav-link text-dark" [routerLink]="['register']" >إنشاء حساب</a>
+                <a class="nav-link text-dark" [routerLink]="['Auth/register']" routerLinkActive="active">إنشاء حساب</a>
               </li>
               <li>
-                <a class="nav-link text-dark" [routerLink]="['login']">تسجيل الدخول</a>
+                <a class="nav-link text-dark" [routerLink]="['Auth/login']" routerLinkActive="active">تسجيل الدخول</a>
               </li>
             </ng-template>
             <li>
-              <a class="nav-link text-dark" [routerLink]="['خدماتنا']" routerLinkActive="active">خدماتنا</a>
+              <a class="nav-link text-dark" [routerLink]="['Categories']" routerLinkActive="active">خدماتنا</a>
             </li>
 
             <li class="nav-item">

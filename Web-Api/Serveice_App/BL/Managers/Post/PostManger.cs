@@ -8,17 +8,19 @@ using System.Threading.Tasks;
 
 namespace BL;
 
-public class PostManger : IPostManger
+public class PostManger : IPostManager
 {
     private readonly IPostRepo _postRepo;
     private readonly IMediaRepo _mediaRepo;
+    private readonly IMediaManger mediaManger;
     private readonly IMapper _Mapper;
 
-    public PostManger(IPostRepo PostRepo, IMapper mapper, IMediaRepo mediaRepo)
+    public PostManger(IPostRepo PostRepo, IMapper mapper, IMediaRepo mediaRepo, IMediaManger mediaManger)
     {
         _postRepo = PostRepo;
         _Mapper = mapper;
         _mediaRepo = mediaRepo;
+        this.mediaManger = mediaManger;
     }
 
 
@@ -27,8 +29,16 @@ public class PostManger : IPostManger
     {
         var repo = _Mapper.Map<Post>(Post);
         repo.Id = Guid.NewGuid();
+        MediaWriteDTO mediaWrite = new MediaWriteDTO();
+        mediaWrite.Id = Guid.NewGuid();
+        mediaWrite.PostId = repo.Id;
+        mediaWrite.Image=Post.Image;
         _postRepo.Add(repo);
         _postRepo.SaveChange();
+        mediaManger.Add(mediaWrite);
+        _postRepo.SaveChange();
+        
+        
     }
 
     public void Delete(Guid id)
@@ -36,6 +46,7 @@ public class PostManger : IPostManger
         var repo = _postRepo.GetById(id);
         if (repo != null)
             _postRepo.Delete(repo);
+        _postRepo.SaveChange();
     }
 
     public List<PostReadDTO> GetAll()
@@ -61,6 +72,21 @@ public class PostManger : IPostManger
             return false;
 
         _Mapper.Map(Post, repo);
+        //get media of this post 
+        var media = _mediaRepo.GetMediaOfPost(Post.Id)[0];
+        //if this post not has media before 
+        if(media == null)
+        {
+            MediaWriteDTO mediaWrite = new MediaWriteDTO();
+            mediaWrite.Id = Guid.NewGuid();
+            mediaWrite.PostId = Post.Id;
+            mediaWrite.Image=Post.Image;
+        }
+        // if post already had media
+        else
+        {
+            media.Image=Post.Image;
+        }
         _postRepo.SaveChange();
         return true;
     }

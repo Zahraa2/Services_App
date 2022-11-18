@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {}
+    "D:\\graduation Pro\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {
+    "D:\\graduation Pro\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\graduation Pro\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\marim\\.nuget\\packages\\",
-        "outputPath": "E:\\data\\iti-dotnet\\GraduationProject\\Project\\Services_App\\Web-Api\\Serveice_App\\DAL\\obj\\",
+        "projectPath": "D:\\graduation Pro\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\smile\\.nuget\\packages\\",
+        "outputPath": "D:\\graduation Pro\\Services_App\\Web-Api\\Serveice_App\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\marim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\smile\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -80,8 +79,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -90,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

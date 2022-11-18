@@ -13,7 +13,7 @@ export class AuthGuard implements CanActivate {
   // if the user is authenticated => navigate to the profile page 
   canActivate() {
     if (this.authService.isLoggedIn()) {
-      this.router.navigate(['profile']);
+      this.router.navigate(['Categories']);
     }
     // activate the register | login page if the user is not logged in
     return !this.authService.isLoggedIn();

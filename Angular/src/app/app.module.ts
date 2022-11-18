@@ -24,9 +24,6 @@ import { SettingModule } from './setting/setting.module';
     ShareModule,
     OnboardingModule,
     AuthModule,
-    CommonModule,
-    ProfileModule, 
-    SettingModule
  ],
   bootstrap: [AppComponent]
 })

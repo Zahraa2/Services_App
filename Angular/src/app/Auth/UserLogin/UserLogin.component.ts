@@ -46,12 +46,11 @@ export class UserLoginComponent implements OnInit {
             jwt: resData.token,
             refreshToken: resData.refreshToken,
           });
-          this.router.navigate(['خدماتنا']);
           // console.log(this.authService.getJwtToken());
           // console.log(resData);
           this.isLoading = false;
           this.authService.islogged = true;
-          this.router.navigate(['profile'])
+          this.router.navigate(['Categories']);
         },
         error: (err) => {
           // console.log(err.error);

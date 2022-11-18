@@ -9,13 +9,15 @@ namespace Serveice_App.Controllers.PostaController
     [ApiController]
     public class PostsController : ControllerBase
     {
-        private readonly IPostManger _postManger;
+        private readonly IPostManager _postManger;
         private readonly IProviderManger _providerManger;
+        private readonly IMediaManger mediaManger;
 
-        public PostsController(IPostManger postManger, IProviderManger providerManger)
+        public PostsController(IPostManager postManger, IProviderManger providerManger ,IMediaManger mediaManger)
         {
             _postManger = postManger;
             _providerManger = providerManger;
+            this.mediaManger = mediaManger;
         }
 
         [HttpGet]
@@ -61,7 +63,7 @@ namespace Serveice_App.Controllers.PostaController
 
         }
 
-        [HttpPost]
+        [HttpDelete]
         [Route("DeletePost")]
         public ActionResult DeletePost(Guid Id)
         {

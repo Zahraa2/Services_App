@@ -19,6 +19,7 @@ using Microsoft.EntityFrameworkCore;
 using MimeKit;
 using MailKit.Security;
 using MailKit.Net.Smtp;
+using BL.DTOClass.AuthDTO;
 
 namespace BL
 {
@@ -245,6 +246,64 @@ namespace BL
             smtp.Disconnect(true);
         }
 
+        public async Task<bool> IsPasswordCorrect(isPasswordCorrect model)
+        {
+            if (model == null)
+            {
+                return false;
+            }
+
+            var user = await GetCustomeUser(model.Type, model.Id);
+            if (user != null)
+            {
+                return await _userManager.CheckPasswordAsync(user, model.Password);
+            }
+
+            return false;
+        }
+
+        public async Task<bool> ChangePassword(ChangePassword model)
+        {
+            if (model == null)
+            {
+                return false;
+            }
+
+            if (model.NewPassword != model.ConfirmPassword)
+            {
+                return false;
+            }
+
+            var user = await GetCustomeUser(model.Type, model.Id);
+            if (user == null)
+            {
+                return false;
+            }
+
+            var result = await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
+            if (!result.Succeeded)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private async Task <CustomeUser> GetCustomeUser(int Type , Guid Id)
+        {
+            if (Type == 0)
+            {
+                var user = await _userManager.FindByIdAsync(_customerRepo.GetById(Id).UserId);
+                return user;
+            }
+
+            if (Type == 1)
+            {
+                var user = await _userManager.FindByIdAsync(_providerRepo.GetById(Id).UserId);
+                return user;
+            }
+            return new CustomeUser { };
+        }
 
         private async Task<LoginToken> CreateTokenAsync(CustomeUser user)
         {

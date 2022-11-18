@@ -46,14 +46,6 @@ export class NavbarComponent implements OnInit {
       this.language = 'الإنجليزية';
     }
   }
-  
-  profileRoute() {
-    if (this.authService.getJwtToken() != null) {
-      this.router.navigate(['profile']);
-    } else {
-      this.router.navigate(['خدماتنا']);
-    }
-  }
 
   // loggging out
   logout() {
@@ -62,7 +54,7 @@ export class NavbarComponent implements OnInit {
         // remove tokens (jwt, refresh)
         this.authService.doLogoutUser();
         this.isAuthenticated = false;
-        this.router.navigate(['خدماتنا'])
+        this.router.navigate(['Categories'])
       }
     });
   }

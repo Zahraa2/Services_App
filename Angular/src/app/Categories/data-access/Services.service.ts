@@ -10,16 +10,22 @@ import { Service } from './Classes/Service';
 
 export class ourServicese {
 
+  providerService:string = ''
   services: Service[] = [ ]
   constructor(public http:HttpClient , public activeRouter:ActivatedRoute) { }
 
   getAllServiecs(){
-  return this.http.get<Service[]>("http://localhost:3000/allServices")
+  return this.http.get<Service[]>("https://localhost:7142/api/Services")
 }
-
-
   getSelectedServices(id:string) {
-    return this.http.get<Service[]>("http://localhost:3000/ServiceByCategories/"+id);
+    return this.http.get<Service[]>("https://localhost:7142/api/Services/ByCatigory/"+id);
+  }
+
+  setProviderServices(id:string){
+    this.providerService = id
+  }
+  getProviderServices(){
+    return this.providerService
   }
 
 }
