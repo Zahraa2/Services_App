@@ -9,6 +9,7 @@ import { ProfileModule } from './Profile/profile.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { OnboardingModule} from './onboarding/onboarding.module';
+import { SettingModule } from './setting/setting.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { OnboardingModule} from './onboarding/onboarding.module';
     OnboardingModule,
     AuthModule,
     CommonModule,
-    ProfileModule
+    ProfileModule, 
+    SettingModule
  ],
   bootstrap: [AppComponent]
 })

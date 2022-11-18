@@ -2,11 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from '../Auth/token.interceptor';
-import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
-    TestComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +18,6 @@ import { TestComponent } from './test/test.component';
     }
   ],
   exports: [
-    TestComponent
   ]
 })
 export class ProfileModule { }

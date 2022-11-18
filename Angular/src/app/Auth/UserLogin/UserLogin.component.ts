@@ -16,7 +16,8 @@ export class UserLoginComponent implements OnInit {
 
   constructor(private authService: AuthService, private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {    
+  }
 
   // form validation inputs
   loginform: FormGroup = new FormGroup({
@@ -50,6 +51,7 @@ export class UserLoginComponent implements OnInit {
           // console.log(resData);
           this.isLoading = false;
           this.authService.islogged = true;
+          this.router.navigate(['profile'])
         },
         error: (err) => {
           // console.log(err.error);

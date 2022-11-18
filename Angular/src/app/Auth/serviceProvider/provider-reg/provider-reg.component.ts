@@ -79,6 +79,7 @@ export class ProviderRegComponent implements OnInit {
             // console.log(this.authService.getJwtToken());
             this.authService.islogged = true;
             this.isLoading = false;
+          this.router.navigate(['profile'])
           },
           error: (err) => {
             // console.log(err.error);

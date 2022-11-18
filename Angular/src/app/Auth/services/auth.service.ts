@@ -8,8 +8,6 @@ import { User } from '../models/user.model';
 import { ForgotPassword } from '../_passwordModels/forgetPass';
 import { ResetPasswordDto } from '../_passwordModels/resetPass';
 
-// 🥳
-
 export interface AuthResponseData {
   token: string;
   expirOn: string;
@@ -18,17 +16,10 @@ export interface AuthResponseData {
   message?: string;
 }
 
-// {
-//   "token": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjczMjNhYzgwLWEyOTEtNGI5YS1iMmE2LWIzY2MyOWFjYWI2OCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6ImN1c3RvbWVyIiwidW5pcXVlX25hbWUiOiJhaGxhbSIsImVtYWlsIjoiZ29nb0BnbWFpbC5jb20iLCJuYmYiOjE2Njg0NjIyMTIsImV4cCI6MTY2ODQ2MjI3Mn0.p4n41FZ1qcpXFqAWbgrOq9YWBfGmvgOjtNSQEsAY0ls",
-//   "expirOn": "2022-11-14T23:44:32.5076945+02:00",
-//   "refreshToken": "JY0P4da4U+L8V74RffIdQPc2BFUIS4khOZtuBbkSfis=",
-//   "refershTokenExpirOn": "2022-11-24T18:30:18.8642512",
-//   "message": null
-// }
-
 @Injectable({
   providedIn: 'root',
 })
+
 export class AuthService {
   private readonly JWT_TOKEN = 'JWT_TOKEN';
   private readonly REFRESH_TOKEN = 'REFRESH_TOKEN';
@@ -38,9 +29,6 @@ export class AuthService {
 
   userSub = new Subject<User>();
 
-  // 👉 try some code  👈
-
-  // 👉 try some code  👈
 
   //Register as user => return observable 😥
   signup(user: {
@@ -122,18 +110,21 @@ export class AuthService {
     return this.http.get<any>(`${config.apiUrl}/Logout`);
   }
 
-  // resfreshing the token
+  //resfreshing the token
   refreshToken() {
     return this.http
-      .post<any>(`${config.apiUrl}/refreshtoken`, {
-        refreshToken: this.getRefreshToken(),
-      })
+      .post<any>(`${config.apiUrl}/refreshtoken`,this.getRefreshToken())
       .pipe(
         tap((tokens: Tokens) => {
+          console.log(tokens.jwt);
           this.storeJwtToken(tokens.jwt);
         })
       );
   }
+
+  // refreshToken() {
+  //   return this.http.post(`${config.apiUrl}/refreshtoken`, this.getRefreshToken());
+  // }
 
 
   // log in | register actions => store tokens in local storage

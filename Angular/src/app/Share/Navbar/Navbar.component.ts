@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
 
   constructor(private authService: AuthService, private router: Router) {
   
-    // handle isAuthenticated when refreshing the page 🤝 
+    //🤝 handle isAuthenticated when refreshing the page 🤝 
     this.isAuthenticated = this.authService.isLoggedIn();
   }
 
@@ -46,6 +46,7 @@ export class NavbarComponent implements OnInit {
       this.language = 'الإنجليزية';
     }
   }
+  
   profileRoute() {
     if (this.authService.getJwtToken() != null) {
       this.router.navigate(['profile']);
@@ -61,6 +62,7 @@ export class NavbarComponent implements OnInit {
         // remove tokens (jwt, refresh)
         this.authService.doLogoutUser();
         this.isAuthenticated = false;
+        this.router.navigate(['خدماتنا'])
       }
     });
   }
