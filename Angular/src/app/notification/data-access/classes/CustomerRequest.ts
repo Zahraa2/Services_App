@@ -5,5 +5,5 @@ export interface CustomerRequest {
     location:string,
     custmoerSendDate:Date,
     providerId:string,
-
+    customerId:string,
 }

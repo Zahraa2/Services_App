@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs';
 export class NavbarComponent implements OnInit {
   usersub!: Subscription;
   isAuthenticated = false;
-
+  openCloseNot = false;
   language: string = 'العربية';
   seconedLanguage: string = 'الإنجليزية';
   toggleArabic: boolean = true;
@@ -63,5 +63,12 @@ export class NavbarComponent implements OnInit {
         this.isAuthenticated = false;
       }
     });
+  }
+
+
+  // Notifcations Part
+
+  openNotifications(){
+    this.openCloseNot = !this.openCloseNot
   }
 }
