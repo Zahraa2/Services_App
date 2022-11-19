@@ -13,7 +13,7 @@ public class ProviderUserWriteDTO
     public Guid? ServiceId { get; set; }
     public string? sammary { get; set; }
     // to get imgdata and set img name
-    public IFormFile? ImgData { get; set; }
+    //public IFormFile? ImgData { get; set; }
 
     public string? profilePicture { get; set; }
     //Name just take all name to split it to Fname and Lname

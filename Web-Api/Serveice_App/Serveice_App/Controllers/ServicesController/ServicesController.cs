@@ -28,7 +28,7 @@ namespace Serveice_App.Controllers
         [Route("ByCatigory/{Name}")]
 
         public ActionResult<List<ServiceReadDTO>> GetServicesByCatigory(string Name)
-        {
+        {   
             var service = _serviceManger.GetServicesByCategory(Name);
 
             if (service == null)
@@ -60,6 +60,7 @@ namespace Serveice_App.Controllers
             }
             return services;
         }
+       
 
 
     }

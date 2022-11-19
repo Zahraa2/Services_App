@@ -52,15 +52,18 @@ public class ProviderController : ControllerBase
 
     [HttpPost]
     [Route("EditProviderProfile")]
-    public ActionResult EditProviderProfile([FromForm]ProviderUserWriteDTO providerUserWriteDTO)
+    public ActionResult EditProviderProfile(ProviderUserWriteDTO providerUserWriteDTO)
     {
-        //providerUserWriteDTO.ImgData = formFile;
         var flag = providerUser.EditProvider(providerUserWriteDTO);
         if (flag)
             return Ok("Edit Done");
         return BadRequest("This Provider Not Found");
 
     }
-   
-
+    [HttpPost]
+    [Route("TestIMG")]
+    public IFormFile EditProviderProfile(IFormFile formFile)
+    {
+        return formFile;
+    }
 }

@@ -16,4 +16,5 @@ public class PostWriteDTO
     public IFormFile? ImgData { get; set; }
     [Required]
     public Guid ProviderId { get; set; }
+    
 }
