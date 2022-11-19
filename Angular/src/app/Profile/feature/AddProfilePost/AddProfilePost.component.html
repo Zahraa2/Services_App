@@ -1,0 +1,40 @@
+<div class="container py-5 my-5">
+
+  <div class="row py-4">
+    <div class="col-lg-6 mx-auto">
+
+      <!-- <form (ngSubmit)="saveEmployee()"> -->
+
+      <!-- Upload image input-->
+
+    
+      <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+
+        <input id="upload" type="file" (change)="handelImage($any($event).target.files)"  class="form-control border-0" required>
+
+        <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
+        <div class="input-group-append">
+          <label for="upload" class="btn btn-light m-0 rounded-pill px-4">
+            <i class="fa fa-cloud-upload mr-2 text-warning"></i>
+            <small class="text-uppercase font-weight-bold text-muted">Choose file</small>
+          </label>
+        </div>
+      </div>
+
+
+      <div class="about-inputs">
+        <label>About</label>
+        <textarea class="form-control" [(ngModel)]="Post.description" type="text" placeholder="Tell us about yourself" required></textarea> 
+      </div>
+
+      <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}
+      </div>
+      <div class="my-5 gap-4 d-flex justify-content-center ">
+        <button class="px-3 btn btn-sm btn-outline-warning">Cancel</button>
+        <button class="px-3 btn btn-sm btn-warning text-white" (click)="saveChanges()">Add</button>
+      </div>
+    
+    <!-- </form> -->
+    </div>
+  </div>
+</div>

@@ -1,6 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Categorie } from './Classes/categorie';
-import { Service } from './Classes/Service';
+
 
 @Injectable(
     {
@@ -9,21 +10,10 @@ import { Service } from './Classes/Service';
 )
 export class CategoriesService {
 
-    categories: Categorie[] = [
-        new Categorie("نجاره"),
-        new Categorie("حدادة"),
-        new Categorie("طبخ"),
-        new Categorie("تشطيب"),
-    ]
-
-
-
+    constructor(public http:HttpClient) { }
+    lang:string =localStorage.getItem('lang')||'en';
     getAllCategories() {
-        return this.categories
+        return this.http.get<Categorie[]>(`https://localhost:7142/api/Category/CategoryNames?culture=${this.lang}`);
     }
-
-
-
-    constructor() { }
 
 }

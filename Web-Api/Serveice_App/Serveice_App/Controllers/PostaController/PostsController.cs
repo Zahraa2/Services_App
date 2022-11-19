@@ -11,15 +11,17 @@ namespace Serveice_App.Controllers.PostaController
     {
         private readonly IPostManager _postManger;
         private readonly IProviderManger _providerManger;
+        private readonly IMediaManger mediaManger;
 
-        public PostsController(IPostManager postManger, IProviderManger providerManger)
+        public PostsController(IPostManager postManger, IProviderManger providerManger ,IMediaManger mediaManger)
         {
             _postManger = postManger;
             _providerManger = providerManger;
+            this.mediaManger = mediaManger;
         }
 
         [HttpGet]
-        [Route("PostsOfProvider")]
+        [Route("PostsOfProvider/{ProviderId:Guid}")]
         public ActionResult<List<MediasforPost>> PostsOfProvider(Guid ProviderId)
         {
             var posts = _postManger.GetPostsOfProvider(ProviderId);
@@ -61,8 +63,8 @@ namespace Serveice_App.Controllers.PostaController
 
         }
 
-        [HttpPost]
-        [Route("DeletePost")]
+        [HttpDelete]
+        [Route("DeletePost/{Id:Guid}")]
         public ActionResult DeletePost(Guid Id)
         {
             _postManger.Delete(Id);

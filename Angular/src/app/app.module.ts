@@ -11,6 +11,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SettingModule } from './setting/setting.module';
 import { ServicesProvidersModule } from './services-providers/services-providers.module';
+import { AuthModule } from './Auth/auth.module';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -29,6 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     OnboardingModule,
     SettingModule,
     HttpClientModule,
+    AuthModule,
     ServicesProvidersModule,
     TranslateModule.forRoot({
       loader: {
@@ -38,8 +40,9 @@ export function HttpLoaderFactory(http: HttpClient) {
       },
     }),
 
- ],
+ ],exports:[TranslateModule],
   providers: [HttpClient],
+ 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

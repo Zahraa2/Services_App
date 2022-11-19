@@ -23,6 +23,30 @@ public class ProviderUser : IProviderUser
         _serviceRepo = serviceRepo;
         _userRepo = userRepo;
     }
+    //Edit data Of provider in user Table and Provider Table
+    public bool EditProvider(ProviderUserWriteDTO provider)
+    {
+        var VarProviderRepo = _providerRepo.GetById(provider.id);
+        if (VarProviderRepo == null)
+            return false;
+        _mapper.Map(provider, VarProviderRepo);
+        provider.Fname = provider.Name.Split(" ")[0];
+        for (int i = 1; i < provider.Name.Split(' ').Length; i++)
+        {
+            provider.Lname += provider.Name.Split(" ")[i];
+            if (i != provider.Name.Split(' ').Length-1)
+            {
+                provider.Lname += " ";
+            }
+        }
+        var customRepo = _providerRepo.GetUserByProviderID(provider.id);
+        customRepo.City = provider.City;
+        customRepo.Fname = provider.Fname;
+        customRepo.Lname = provider.Lname;
+        //_mapper.Map(provider, customRepo);
+        _providerRepo.SaveChange();
+        return true;
+    }
 
     public List<ProviderUserReadDTO>? GetAllProviders(string Name)
     {
@@ -48,7 +72,9 @@ public class ProviderUser : IProviderUser
         if (provider == null)
             return null;
         ProviderReadDTO providerReadDTO = _mapper.Map<ProviderReadDTO>(provider);
-        providerReadDTO.ServiceName= _serviceRepo.GetById(provider.ServiceId).Name;
+        var Service = _serviceRepo.GetById(provider.ServiceId);
+        providerReadDTO.ServiceName= Service.Name;
+        providerReadDTO.ServiceID= Service.id;
         var User = _userRepo.GetUserById(provider.UserId);
         providerReadDTO.Name = User.Fname + " " + User.Lname;
         providerReadDTO.Location = User.City;

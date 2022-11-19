@@ -10,9 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { AllServicesComponent } from './feature/AllServices/AllServices.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MostPopularComponent } from './feature/MostPopular/MostPopular.component';
-import { ShareModule } from '../Share/share.module';
 import { CategoriesRoutesModule } from './categories.routing.module';
-
+import { SharedHeaderComponent } from './feature/Categorie-header/shared-header.component';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 
 const importedComponent = [
   AllCategoriesComponent,
@@ -20,6 +20,8 @@ const importedComponent = [
   ServicesByCategoryComponent,
   AllServicesComponent,
   MostPopularComponent,
+  SharedHeaderComponent
+
 ]
 
 
@@ -35,7 +37,9 @@ const importedComponent = [
     CarouselModule,
     CommonModule,
     // ShareModule,
-    CategoriesRoutesModule
+    CategoriesRoutesModule,
+    TranslateModule
+  
   ],
   exports: [
     CategoriesComponent

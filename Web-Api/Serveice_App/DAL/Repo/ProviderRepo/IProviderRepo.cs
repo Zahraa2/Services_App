@@ -13,4 +13,6 @@ public interface IProviderRepo:IGenericRepo<Provider>
     public Provider SelectAlldata(Guid id);
     public Provider GetProviderByUserId(string Id);
 
+    public CustomeUser GetUserByProviderID(Guid Id);
+
 }

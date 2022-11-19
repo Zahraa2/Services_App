@@ -1,25 +1,33 @@
-<section>
+<!-- <section> -->
   <div class="container">
     <div class="row row-cols-1 row-cols-md-3">
       <div class="card col-lg-3 col-md-4 mx-2" *ngFor="let item of providers">
         <div class="imagem">
-          <img class="img" src="{{ item.pic }}" />
+          <img class="img" src="assets/Images/Profile/Default-Profile-Picture.png" />
         </div>
         <div>
           <h5 class="card-title">{{ item.name }}</h5>
         </div>
+
+        <div class="texto">
+          <h2 class="titulo">{{ item.name }}</h2>
+          <p class="desc">
+           {{item.serviceName}}
+          </p>
+          <p>{{item.avgRate}}</p>
+        </div>
         <ul class="list-group list-group-light list-group-small text-start">
-          <li class="list-group-item px-4">{{item.servicesName}}</li>
+          <!-- <li class="list-group-item px-4">{{item.servicesName}}</li> -->
           <li class="list-group-item px-4">
             1 &ensp; <i class="fa-solid fa-star"></i>
           </li>
         </ul>
         <div class="button">
-          <button type="buttom" class="btn">
-            <a href="#"> Saiba mais </a>
+          <button type="buttom" class="btn" >
+            <a (click)="profileRoute(item.id)"> تواصل معاه </a>
           </button>
         </div>
       </div>
     </div>
   </div>
-</section>
+<!-- </section> -->

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DAL;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace BL;
 public class RequestManger : IRequestManger
 {
     private readonly IUnitOfWork _unitOfWork;
+
     public IMapper Mapper { get; }
 
     public RequestManger(IRequestRepo RequestRepo, IMapper mapper, IUnitOfWork unitOfWork)
@@ -71,5 +73,31 @@ public class RequestManger : IRequestManger
         repo.State = model.State;
         _unitOfWork.RequestRepo.SaveChange();
         return true;
+    }
+
+    public List<RequestReadDTO> GetCustomerRequests(string CustomerId)
+    {
+        var customer = _unitOfWork.CustomerRepo.GetCustomerByUserId(CustomerId).id;
+        if (customer == null)
+        {
+            return new List<RequestReadDTO>(); 
+        }
+
+        var requests = _unitOfWork.RequestRepo.GetAllCustomerRequsts(customer);
+        var DTO = Mapper.Map<List<RequestReadDTO>>(requests);
+        return DTO;
+    }
+
+    public List<RequestReadDTO> GetProviderRequests(string ProviderId)
+    {
+        var provider = _unitOfWork.ProviderRepo.GetProviderByUserId(ProviderId).id;
+        if (provider == null)
+        {
+            return new List<RequestReadDTO>();
+        }
+
+        var requests = _unitOfWork.RequestRepo.GetAllProviderRequsts(provider);
+        var DTO = Mapper.Map<List<RequestReadDTO>>(requests);
+        return DTO;
     }
 }

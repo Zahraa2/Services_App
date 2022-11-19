@@ -7,12 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public enum type
-    {
-          A = 0,
-          B = 1,
-          C = 2
-    };
+   
 
     public enum stateType
     {
@@ -29,10 +24,12 @@ namespace DAL
         public DateTime?  EndDate { get; set; }
         public string? Review { get; set; }
         public string? Description { get; set; }
-        public type RequestType { get; set; }
+        public string RequestType { get; set; }
         public string? Img { get; set; }
-        public DateTime CustmoerSendDate { get; set; }
+        public string CustmoerSendDate { get; set; }
         public int? Price { get; set; }
+
+        public string? Phone { get; set; }
         public decimal? Rate { get; set; }
         [ForeignKey("Customer")]
         public Guid CustomerId { get; set; }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HjzbJvZsFKeoQY3A2BMgNJMBrRKle1gsxTvGxTzAOHxIW56A/45Q8URJjdDEZr8vPN0HO+Wk6kOJn/6U2Lsscg==",
+  "dgSpecHash": "5SGq69koYcHiOgWzQhnsrDPGUq2W83D3cEKK2wxGUbIb//YkV2pens2vX6MVqM2+TX/MYEM5Uo6ZRsm2iiMokA==",
   "success": true,
-  "projectFilePath": "E:\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj",
+  "projectFilePath": "D:\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

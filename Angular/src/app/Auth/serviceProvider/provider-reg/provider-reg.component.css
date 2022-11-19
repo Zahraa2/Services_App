@@ -1,0 +1,9 @@
+.wave-card {
+  height: 850px;
+}
+
+@media (max-width: 994px) {
+  .wave-card {
+    height: 1200px;
+  }
+}

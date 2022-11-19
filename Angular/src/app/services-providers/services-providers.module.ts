@@ -6,6 +6,9 @@ import { ProviderProfileComponent } from './ui/provider-profile/provider-profile
 import { MainComponent } from './ui/main/main.component';
 import { RouterModule } from '@angular/router';
 import { NavBarComponent } from './ui/nav-bar/nav-bar.component';
+import { ServiceProviderRoutesModule } from './service.provider.routing.module';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+
 @NgModule({
   declarations: [
     ProvidersHeaderComponent,
@@ -16,8 +19,11 @@ import { NavBarComponent } from './ui/nav-bar/nav-bar.component';
   ],
   imports: [
     CommonModule,
-    ShareModule,
-    RouterModule
+    // ShareModule,
+    RouterModule,
+    ServiceProviderRoutesModule,
+    TranslateModule
+
   ],
   exports:[
     ProvidersHeaderComponent,

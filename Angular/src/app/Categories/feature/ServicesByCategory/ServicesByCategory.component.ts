@@ -1,6 +1,5 @@
-import {  Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import {  Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { error } from 'jquery';
 import { Service } from '../../data-access/Classes/Service';
 import { ourServicese } from '../../data-access/Services.service';
 
@@ -12,10 +11,9 @@ import { ourServicese } from '../../data-access/Services.service';
 })
 
 
-export class ServicesByCategoryComponent implements OnInit , OnChanges{
+export class ServicesByCategoryComponent implements OnInit {
 
   id:string =  ''
-
   searchText:any
   active:number = 1
   size:number = 5
@@ -23,20 +21,25 @@ export class ServicesByCategoryComponent implements OnInit , OnChanges{
   seleted:Service[] = [] 
   constructor(public selectedService:ourServicese , public activeRouter:ActivatedRoute , public route:Router) { }
 
-  ngOnChanges(changes: SimpleChanges): void {
-
-  }
-
   ngOnInit() {
-  
+    
     this.activeRouter.params.subscribe(a => {
       this.id = a['id']
+
       this.selectedService.getSelectedServices(this.id).subscribe(a =>{
         this.seleted = a
+      
       } , error => {
-        this.route.navigateByUrl('/')
+
+        this.route.navigateByUrl('خدمتنا')
+        console.log(a['id'])
       })
     })
+  }
+
+  routeTo(serviceName:string){
+    this.route.navigateByUrl("services")
+    this.selectedService.setProviderServices(serviceName);
   }
 
 }

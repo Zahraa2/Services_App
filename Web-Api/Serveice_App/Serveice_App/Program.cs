@@ -3,11 +3,13 @@ using BL;
 using BL.Managers.UserManager;
 using DAL;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
+using System.Globalization;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -113,6 +115,9 @@ builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
 #endregion
 
 #region Managers
+
+builder.Services.AddScoped<IPostManager,PostManger>();
+builder.Services.AddScoped<IMediaManger, MediaManger>();
 builder.Services.AddScoped<ICategoryManger,CategoryManger>();
 builder.Services.AddScoped<IServiceManger,ServiceManger>();
 builder.Services.AddScoped<IAuthServices, AuthServices>();
@@ -126,7 +131,20 @@ builder.Services.AddScoped<ICustomerManager, CustomerManger>();
 
 #endregion
 
+#region Localization
 
+builder.Services.AddLocalization(r => { r.ResourcesPath = "Resources"; });
+var supportedCultures = new[]
+{
+    new CultureInfo("en"),
+    new CultureInfo("ar")
+};
+builder.Services.Configure<RequestLocalizationOptions>(options => {
+    options.DefaultRequestCulture = new RequestCulture(culture: "en", uiCulture: "en");
+    options.SupportedCultures = supportedCultures;
+    options.SupportedUICultures = supportedCultures;
+});
+#endregion
 var app = builder.Build();
 
 #region Middlewares
@@ -136,12 +154,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors(myAllowSpecificOrigins);
 
 app.UseHttpsRedirection();
 
 app.UseRouting();
 
 app.UseAuthentication();
+
+var LocOptions = app.Services.GetService<IOptions<RequestLocalizationOptions>>();
+app.UseRequestLocalization(LocOptions.Value);
 
 app.UseAuthorization();
 

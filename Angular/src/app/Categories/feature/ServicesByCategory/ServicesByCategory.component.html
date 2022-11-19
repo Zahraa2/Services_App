@@ -15,17 +15,17 @@
     *ngFor="let item of seleted | filter:searchText | paginate: {id:'my-paginate' , itemsPerPage :3 ,currentPage:active , totalItems:totalNumber}">
     <div class="box-wrapper shadow">
       <div >
-        <img src={{item.img}} alt="rhcp" />
+        <img src="https://picsum.photos/400/300" alt="rhcp" />
    
       </div>
       <div class="box-content">
       <div class="title">{{item.name}} </div>
-        <div class="desc">اي هري يحرق ميتنكم</div>
-        <span class="profiles"> المهنين<span>:{{item.num}}</span>
+        <div class="desc"> خدمات لا تنتهي فقط لأجل</div>
+        <span class="profiles"> المهنين<span>:{{item.numberOfProviders}}</span>
           <i class="fa-solid fa-user p-1"></i> </span>
 
-        <button class="button m-auto my-5">
-          احصل علي عروض الأسعار
+        <button class="button m-auto my-5" (click)="routeTo(item.name)">
+          مزودي الخدمه المتاحين
           <div class="button__horizontal"></div>
           <div class="button__vertical"></div>
         </button>

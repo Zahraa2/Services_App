@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj": {}
+    "D:\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj": {}
   },
   "projects": {
-    "E:\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj": {
+    "D:\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj",
+        "projectUniqueName": "D:\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj",
         "projectName": "BL",
-        "projectPath": "E:\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj",
+        "projectPath": "D:\\Services_App\\Web-Api\\Serveice_App\\BL\\BL.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "E:\\Services_App\\Web-Api\\Serveice_App\\BL\\obj\\",
+        "outputPath": "D:\\Services_App\\Web-Api\\Serveice_App\\BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {
-                "projectPath": "E:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj"
+              "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj"
               }
             }
           }
@@ -81,18 +81,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {
+    "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "E:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
+        "projectPath": "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "E:\\Services_App\\Web-Api\\Serveice_App\\DAL\\obj\\",
+        "outputPath": "D:\\Services_App\\Web-Api\\Serveice_App\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -166,7 +166,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

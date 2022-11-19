@@ -18,7 +18,10 @@
     </div>
 
     <div class="icons">
-      <i class="fa-regular fa-user"></i>
+      <a >
+          <i class="fa-regular fa-user text-dark">
+          </i>
+        </a>
       <i class="fa-solid fa-magnifying-glass language"></i>
       <i class="fa-regular fa-heart"></i>
       <i class="fa-regular fa-bell"></i>
@@ -40,20 +43,18 @@
               >
             </li>
             <li>
-              <a
-                class="nav-link text-dark"
-                [routerLink]="['خدماتنا']"
-                routerLinkActive="active"
-                >{{"خدماتنا"|translate}}</a
-              >
+              <a class="nav-link text-dark" [routerLink]="['Categories']" routerLinkActive="active">{{"خدماتنا"|translate}}</a>
             </li>
-            <li>
-              <a class="nav-link text-dark" href="#">{{"إنشاءحساب"|translate}}</a>
-            </li>
-            <li>
-              <a class="nav-link text-dark" href="#"
-                >{{'تسجيل الدخول'| translate}}</a
-              >
+            <ng-template #loggedout>
+              <li >
+                <a class="nav-link text-dark" [routerLink]="['Auth/register']" routerLinkActive="active">{{"إنشاءحساب"|translate}}</a>
+              </li>
+              <li>
+                <a class="nav-link text-dark" [routerLink]="['Auth/login']" routerLinkActive="active">{{'تسجيل الدخول'| translate}}</a>
+              </li>
+            </ng-template>
+            <li *ngIf="isAuthenticated; else loggedout">
+              <a class="nav-link text-dark cursor-pointer" (click)="logout()" routerLinkActive="active">{{"تسجيل الخروج"|translate}}</a>
             </li>
 
           </ul>

@@ -9,4 +9,5 @@ namespace DAL;
 public interface IMediaRepo:IGenericRepo<Media>
 {
     public List<string> GetimgsOfPost(Guid postId);
+    public List<Media> GetMediaOfPost(Guid postId);
 }
