@@ -27,7 +27,6 @@ export class NavbarComponent implements OnInit {
   }
   usersub!: Subscription;
   isAuthenticated = false;
-
   language: string = 'العربية';
   seconedLanguage: string = 'الإنجليزية';
   toggleArabic: boolean = true;
@@ -66,4 +65,9 @@ export class NavbarComponent implements OnInit {
       }
     });
   }
+  // Notifcations Part
+  openNotifications(){
+    this.router.navigateByUrl("Request/all-Request");
+  }
+
 }

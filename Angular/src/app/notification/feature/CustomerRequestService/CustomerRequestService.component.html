@@ -17,7 +17,7 @@
 
     <div class="input-group input-group-icon">
       <select class="w-100" type="text" placeholder="Service" [(ngModel)]="customerResquest.requestType">
-        <option></option>
+        <option *ngFor="let item of Types" [value]="item">{{item}}</option>
       </select>
       <div class="input-icon">
         <i class="fas fa-hammer"></i>

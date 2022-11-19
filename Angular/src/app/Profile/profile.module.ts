@@ -8,7 +8,7 @@ import { EditProfileInfoComponent } from './feature/EditProfileInfo/EditProfileI
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from '../Auth/token.interceptor';
 import { AddPofilePostComponent } from './feature/AddProfilePost/AddProfilePost.component';
-import { CustomerRequestServiceComponent } from './feature/CustomerRequestService/CustomerRequestService.component';
+import { CustomerRequestServiceComponent } from '../notification/feature/CustomerRequestService/CustomerRequestService.component';
 
 
 

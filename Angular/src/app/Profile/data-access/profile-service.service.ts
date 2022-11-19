@@ -10,6 +10,7 @@ import { UserLogged } from './Classes/UserLogged';
 export class ProfileService {
 
     providerId:string = ''
+    customerId:string=''
     
     constructor(public http: HttpClient) { }
 
@@ -19,6 +20,16 @@ export class ProfileService {
     }
 
 
+    //store customer id
+    setCustomerId(CustomerID:string){
+        this.customerId =  CustomerID
+    }
+    getCustomerId(){
+        return this.customerId
+       }
+
+
+       //store provider id
     setProviderId(provId:string){
         this.providerId = provId
       }
