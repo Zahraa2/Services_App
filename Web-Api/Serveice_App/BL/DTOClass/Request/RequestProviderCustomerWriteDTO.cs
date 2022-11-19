@@ -13,9 +13,9 @@ public class RequestProviderCustomerWriteDTO
     public Guid Id { get; set; }
     public Guid CustomerId { get; set; }
     public Guid ProviderId { get; set; }
-    public string ProviderStartDate { get; set; }
+    public DateTime ProviderStartDate { get; set; }
     public int Price { get; set; }
     public string PhoneNumber { get; set; }
-    public string? message { get; set; }
+    public string message { get; set; }
 
 }

@@ -27,15 +27,17 @@ public class PostManger : IPostManager
 
     public void Add(PostWriteDTO Post)
     {
+        
         var repo = _Mapper.Map<Post>(Post);
         repo.Id = Guid.NewGuid();
         MediaWriteDTO mediaWrite = new MediaWriteDTO();
         mediaWrite.Id = Guid.NewGuid();
         mediaWrite.PostId = repo.Id;
-        mediaWrite.Image=Post.Image;
+        mediaWrite.Image = _mediaRepo.getImg(Post.ImgData, mediaWrite.Id);
         _postRepo.Add(repo);
         _postRepo.SaveChange();
         mediaManger.Add(mediaWrite);
+       
         _postRepo.SaveChange();
         
         
@@ -80,12 +82,13 @@ public class PostManger : IPostManager
             MediaWriteDTO mediaWrite = new MediaWriteDTO();
             mediaWrite.Id = Guid.NewGuid();
             mediaWrite.PostId = Post.Id;
-            mediaWrite.Image=Post.Image;
+            mediaWrite.Image = _mediaRepo.getImg(Post.ImgData, mediaWrite.Id);
+
         }
         // if post already had media
         else
         {
-            media.Image=Post.Image;
+           media.Image= _mediaRepo.getImg(Post.ImgData, media.Id);
         }
         _postRepo.SaveChange();
         return true;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -42,5 +43,18 @@ public class GenericRepo<T> : IGenericRepo<T> where T : class
         _context.SaveChanges();
     }
 
-    
+    public string? getImg(IFormFile formFile,Guid Id)
+    {
+        if (formFile != null)
+        {
+            string picname = Id.ToString() + "." + formFile.FileName.Split(".")[1].ToString();
+            
+            using (FileStream fs = new FileStream(@".\Resources\Images\" + picname, FileMode.Create))
+            {
+                formFile.CopyTo(fs);
+            }
+            return picname;
+        }
+        return null;
+    }
 }

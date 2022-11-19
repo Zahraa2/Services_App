@@ -22,7 +22,7 @@ namespace BL
         public async Task CustomerSendNotification(RequestCostemerProviderWriteDTO RequestData)
         {
             var userId = _providerManger.GetByID(RequestData.ProviderId).UserId;
-            await Clients.All.SendAsync("ProviderReciveNotification", "Hello World");
+            await Clients.User(userId).SendAsync("ProviderReciveNotification", RequestData);
         }
 
         public async Task ProviderSendNotification(RequestProviderCustomerWriteDTO RequestData)

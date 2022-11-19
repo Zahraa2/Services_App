@@ -1,89 +1,89 @@
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\appsettings.Development.json
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\appsettings.json
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Serveice_App.exe
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Serveice_App.deps.json
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Serveice_App.runtimeconfig.json
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Serveice_App.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Serveice_App.pdb
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\ar\Serveice_App.resources.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\en\Serveice_App.resources.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\AutoMapper.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Humanizer.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\MailKit.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.Identity.Client.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.OpenApi.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\MimeKit.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Newtonsoft.Json.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\BouncyCastle.Crypto.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Drawing.Common.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Net.WebSockets.WebSocketProtocol.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Runtime.Caching.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Security.Permissions.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Windows.Extensions.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\BL.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\DAL.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\BL.pdb
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\DAL.pdb
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.csproj.AssemblyReference.cache
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.Resources.Controllers.CategoryController.ar.resources
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.Resources.Controllers.CategoryController.en.resources
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.Resources.Controllers.ServicesController.ar.resources
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.Resources.Controllers.ServicesController.en.resources
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.csproj.GenerateResource.cache
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.GeneratedMSBuildEditorConfig.editorconfig
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.AssemblyInfoInputs.cache
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.AssemblyInfo.cs
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.csproj.CoreCompileInputs.cache
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.MvcApplicationPartsAssemblyInfo.cs
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.MvcApplicationPartsAssemblyInfo.cache
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\ar\Serveice_App.resources.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\en\Serveice_App.resources.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\staticwebassets.build.json
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\staticwebassets.development.json
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\scopedcss\bundle\Serveice_App.styles.css
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.csproj.CopyComplete
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\refint\Serveice_App.dll
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.pdb
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.genruntimeconfig.cache
-D:\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\ref\Serveice_App.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\appsettings.Development.json
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\appsettings.json
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Serveice_App.exe
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Serveice_App.deps.json
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Serveice_App.runtimeconfig.json
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Serveice_App.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Serveice_App.pdb
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\ar\Serveice_App.resources.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\en\Serveice_App.resources.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\AutoMapper.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Humanizer.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\MailKit.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\MimeKit.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Net.WebSockets.WebSocketProtocol.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\BL.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\DAL.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\BL.pdb
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\bin\Debug\net6.0\DAL.pdb
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.csproj.AssemblyReference.cache
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.Resources.Controllers.CategoryController.ar.resources
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.Resources.Controllers.CategoryController.en.resources
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.Resources.Controllers.ServicesController.ar.resources
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.Resources.Controllers.ServicesController.en.resources
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.csproj.GenerateResource.cache
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.GeneratedMSBuildEditorConfig.editorconfig
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.AssemblyInfoInputs.cache
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.AssemblyInfo.cs
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.csproj.CoreCompileInputs.cache
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.MvcApplicationPartsAssemblyInfo.cs
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.MvcApplicationPartsAssemblyInfo.cache
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\ar\Serveice_App.resources.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\en\Serveice_App.resources.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\staticwebassets.build.json
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\staticwebassets.development.json
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\scopedcss\bundle\Serveice_App.styles.css
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.csproj.CopyComplete
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\refint\Serveice_App.dll
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.pdb
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\Serveice_App.genruntimeconfig.cache
+D:\graduation Pro\Services_App\Web-Api\Serveice_App\Serveice_App\obj\Debug\net6.0\ref\Serveice_App.dll
