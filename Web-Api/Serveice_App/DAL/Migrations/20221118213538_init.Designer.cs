@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAL.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20221116221306_init")]
+    [Migration("20221118213538_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -147,7 +147,6 @@ namespace DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid?>("PostId")
-                        .IsRequired()
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
@@ -275,13 +274,14 @@ namespace DAL.Migrations
                     b.Property<decimal?>("Rate")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("RequestType")
-                        .HasColumnType("int");
+                    b.Property<string>("RequestType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Review")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("State")
+                    b.Property<int?>("State")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -464,9 +464,7 @@ namespace DAL.Migrations
                 {
                     b.HasOne("DAL.Post", "Post")
                         .WithMany("Medias")
-                        .HasForeignKey("PostId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("PostId");
 
                     b.Navigation("Post");
                 });

@@ -29,11 +29,11 @@ public class ProviderController : ControllerBase
         {
             return NotFound($"NO Providers in {Name}");
         }
-        foreach(var provider in providerlist)
-        {
-            byte[] bytes = System.IO.File.ReadAllBytes(@".\Resources\Images\" + provider.profilePicture);
-            provider.profilePicture = Convert.ToBase64String(bytes);
-        }
+        //foreach(var provider in providerlist)
+        //{
+        //    byte[] bytes = System.IO.File.ReadAllBytes(@".\Resources\Images\" + provider.profilePicture);
+        //    provider.profilePicture = Convert.ToBase64String(bytes);
+        //}
         return providerlist;
     }
 

@@ -279,7 +279,7 @@ namespace DAL.Migrations
                     b.Property<string>("Review")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("State")
+                    b.Property<int?>("State")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

@@ -48,7 +48,7 @@ public class ProviderUser : IProviderUser
         customRepo.City = provider.City;
         customRepo.Fname = provider.Fname;
         customRepo.Lname = provider.Lname;
-        //_mapper.Map(provider, customRepo);
+        _mapper.Map(provider, customRepo);
         _providerRepo.SaveChange();
         return true;
     }
