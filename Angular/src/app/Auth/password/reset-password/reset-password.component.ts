@@ -13,7 +13,7 @@ import { ResetPasswordDto } from '../../_passwordModels/resetPass';
 export class ResetPasswordComponent implements OnInit {
   hide = true;
   errorMessage: any;
-  successMessage: any ;
+  successMessage: any;
   isLoading = false;
 
   token: any;

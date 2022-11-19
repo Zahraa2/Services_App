@@ -1,9 +1,6 @@
-<h2 class="text-center mt-5 fw-bold"> تسجيل الدخول </h2>
 
-  <div *ngIf="isLoading">
-    <!-- <app-loading-spinner></app-loading-spinner> -->
-  </div>
-<div class="d-flex justify-content-center align-items-center container" *ngIf="!isLoading">
+<h2 class="text-center fw-bold mt-5"> تسجيل الدخول </h2>
+<div class="d-flex justify-content-center align-items-center container" >
 
   <div class="wave-card pb-2 ">
 
@@ -12,37 +9,43 @@
       <div class="wave-card-shape"></div>
       <div class="wave-card-shape"></div>
     </div>
-    <div class="d-flex justify-content-center form">
-      <form (ngSubmit)="onlogin()" name="loginform" [formGroup]="loginform">
-
-            <mat-form-field class="width" appearance="outline">
-              <mat-label>User Name</mat-label>
-              <input matInput formControlName="userName">
-              <mat-icon matSuffix>account_circle</mat-icon>
-  
-            </mat-form-field>
-  
-            <mat-form-field class="width" appearance="outline">
-              <mat-label>password</mat-label>
-              <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
-              <button type="button" class="password" mat-icon-button matSuffix (click)="hide = !hide"
-                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-              </button>
-            </mat-form-field>
-       
-        
-        <h6 *ngIf="errorMessage != null">{{errorMessage}}</h6>
-           <div class="my-2 forgetPass">
-            <button type="button" class="bg-transparent border-0 text-info fw-bold" (click)="forgetPass()">Forget Password ?</button>
-           </div>
-        <div class="d-flex justify-content-center">
-          <button [disabled]="loginform.invalid" mat-flat-button color="primary">تسجيل</button>
-        </div>
-
-      </form>
+    <div *ngIf="isLoading; else notloading">
+      <app-loading-spinner></app-loading-spinner>
     </div>
-
+    <ng-template #notloading>
+      <div class="d-flex justify-content-center form" >
+        <form (ngSubmit)="onlogin()" name="loginform" [formGroup]="loginform">
+  
+              <mat-form-field class="width" appearance="outline">
+                <mat-label>User Name</mat-label>
+                <input matInput formControlName="userName">
+                <mat-icon matSuffix>account_circle</mat-icon>
+    
+              </mat-form-field>
+    
+              <mat-form-field class="width" appearance="outline">
+                <mat-label>password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                <button type="button" class="password" mat-icon-button matSuffix (click)="hide = !hide"
+                  [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+         
+          
+          <h6 *ngIf="errorMessage != null">{{errorMessage}}</h6>
+             <div class="my-2 forgetPass">
+              <button type="button" class="bg-transparent border-0 text-info fw-bold" (click)="forgetPass()">Forget Password ?</button>
+             </div>
+          <div class="d-flex justify-content-center">
+            <button [disabled]="loginform.invalid" mat-flat-button color="primary">تسجيل</button>
+          </div>
+  
+        </form>
+      </div>
+  
+    </ng-template>
+    
 
   </div>
 </div>

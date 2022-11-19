@@ -24,7 +24,7 @@ public class MediaManger : IMediaManger
     public void Add(MediaWriteDTO Media)
     {
         var repo = Mapper.Map<Media>(Media);
-        //repo.Id = Guid.NewGuid();
+        repo.Id = Guid.NewGuid();
         MediaRepo.Add(repo);
         MediaRepo.SaveChange();
     }

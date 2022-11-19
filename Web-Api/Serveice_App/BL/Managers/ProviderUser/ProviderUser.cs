@@ -27,13 +27,8 @@ public class ProviderUser : IProviderUser
     public bool EditProvider(ProviderUserWriteDTO provider)
     {
         var VarProviderRepo = _providerRepo.GetById(provider.id);
-        //if (VarProviderRepo == null)
-        //    return false;
-
-        //if (provider.ImgData != null)
-        //    provider.profilePicture = _providerRepo.getImg(provider.ImgData, provider.id);
-        //else
-        //    provider.profilePicture = VarProviderRepo.profilePicture;
+        if (VarProviderRepo == null)
+            return false;
         _mapper.Map(provider, VarProviderRepo);
         provider.Fname = provider.Name.Split(" ")[0];
         for (int i = 1; i < provider.Name.Split(' ').Length; i++)
@@ -48,7 +43,7 @@ public class ProviderUser : IProviderUser
         customRepo.City = provider.City;
         customRepo.Fname = provider.Fname;
         customRepo.Lname = provider.Lname;
-        _mapper.Map(provider, customRepo);
+        //_mapper.Map(provider, customRepo);
         _providerRepo.SaveChange();
         return true;
     }
@@ -95,7 +90,6 @@ public class ProviderUser : IProviderUser
         return Provider_DTO;
     }
 
-    
 
 
 

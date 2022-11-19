@@ -3,6 +3,7 @@ using BL;
 using DAL;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 
 namespace Serveice_App.Controllers
 {
@@ -14,13 +15,15 @@ namespace Serveice_App.Controllers
         private readonly IProviderManger _providerManger;
         private readonly ICustomerManager _customerManager;
         private readonly IMapper _mapper;
+        private readonly IHubContext<NotificationHup> _hub;
 
-        public RequestController(IRequestManger requestManger, IProviderManger providerManger, ICustomerManager customerManager, IMapper mapper)
+        public RequestController(IRequestManger requestManger, IProviderManger providerManger, ICustomerManager customerManager, IMapper mapper , IHubContext<NotificationHup> hup)
         {
             _requestManger = requestManger;
             _providerManger = providerManger;
             _customerManager = customerManager;
             _mapper = mapper;
+            _hub = hup;
         }
 
         [HttpPost]
@@ -36,6 +39,8 @@ namespace Serveice_App.Controllers
                 return BadRequest();
 
             _requestManger.Add(model);
+            var userId = _providerManger.GetByID(model.ProviderId).UserId;
+            _hub.Clients.All.SendAsync("ReciveNotification", model);
             return Ok();
         }
 
@@ -119,7 +124,7 @@ namespace Serveice_App.Controllers
         //get all request for customer
         [HttpGet]
         [Route("CustomerAllRequest/{CustomerId:Guid}")]
-        public ActionResult<List<RequestReadDTO>> CustomerAllRequest(Guid CustomerId)
+        public ActionResult<List<RequestReadDTO>> CustomerAllRequest(string CustomerId)
         {
             var result = _requestManger.GetCustomerRequests(CustomerId);
             if (result==null)
@@ -132,7 +137,7 @@ namespace Serveice_App.Controllers
         //get all request for provider
         [HttpGet]
         [Route("ProviderAllRequest/{ProviderId:Guid}")]
-        public ActionResult<List<RequestReadDTO>> ProviderAllRequest(Guid ProviderId)
+        public ActionResult<List<RequestReadDTO>> ProviderAllRequest(string ProviderId)
         {
             var result = _requestManger.GetProviderRequests(ProviderId);
             if (result == null)
@@ -156,7 +161,7 @@ namespace Serveice_App.Controllers
 
         [HttpGet]
         [Route("CountProviderAllRequest/{ProviderId:Guid}")]
-        public ActionResult<int> CountProviderAllRequest(Guid ProviderId)
+        public ActionResult<int> CountProviderAllRequest(string ProviderId)
         {
             var result = _requestManger.GetProviderRequests(ProviderId);
             if (result == null)
@@ -168,7 +173,7 @@ namespace Serveice_App.Controllers
 
         [HttpGet]
         [Route("CountCustomerAllRequest/{CustomerId:Guid}")]
-        public ActionResult<int> CountCustomerAllRequest(Guid CustomerId)
+        public ActionResult<int> CountCustomerAllRequest(string CustomerId)
         {
             var result = _requestManger.GetCustomerRequests(CustomerId);
             if (result == null)

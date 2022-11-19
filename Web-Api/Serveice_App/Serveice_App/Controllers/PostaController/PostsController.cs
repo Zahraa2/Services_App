@@ -25,17 +25,12 @@ namespace Serveice_App.Controllers.PostaController
         public ActionResult<List<MediasforPost>> PostsOfProvider(Guid ProviderId)
         {
             var posts = _postManger.GetPostsOfProvider(ProviderId);
-            foreach (var post in posts)
-            {
-                byte[] bytes = System.IO.File.ReadAllBytes(@".\Resources\Images\" + post.Imgs[0]);
-                post.Imgs[0] = Convert.ToBase64String(bytes);
-            }
             return posts;
         }
 
         [HttpPost]
         [Route("AddPost")]
-        public ActionResult AddPost([FromForm]PostWriteDTO model)
+        public ActionResult AddPost(PostWriteDTO model)
         {
             var provider = _providerManger.GetByID(model.ProviderId);
             if (provider == null)
@@ -52,7 +47,7 @@ namespace Serveice_App.Controllers.PostaController
 
         [HttpPost]
         [Route("UpdatePost")]
-        public ActionResult UpdatePost([FromForm]PostWriteDTO model)
+        public ActionResult UpdatePost(PostWriteDTO model)
         {
             var provider = _providerManger.GetByID(model.ProviderId);
             if (provider == null)

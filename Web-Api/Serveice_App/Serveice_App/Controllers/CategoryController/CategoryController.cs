@@ -22,7 +22,6 @@ namespace Serveice_App.Controllers
         [Route("CategoryNames")]
         public ActionResult<List<string>> GetCategoryName()
         {
-            category.GetAll();
             List<string> CategoryNames = category.GetAllNames();
             return LocalizeCategories(CategoryNames);
         }
