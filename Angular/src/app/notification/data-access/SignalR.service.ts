@@ -26,20 +26,28 @@ export class SignalRService {
   }
 
 
-  //on function to handel recived request
-  on(method: string):Observable<CustomerRequest> {
-    this.connection.on(method, (data: any) => {
-      return this.subject.next(data);
+  // on function to handel recived request
+  // on(method: string ):Observable<CustomerRequest> {
+  //   this.connection.on(method,  (data) => {
+  //     console.log(data);
+  //   })
+  //   return this.subject.asObservable();
+  // }
+
+  on(method:string){
+    this.connection.on(method , data =>{
+      console.log(data)
     })
-    return this.subject.asObservable();
   }
 
 
-  invoke(method: string, ...data: any): Observable<any> {
+
+
+  invoke(method: string, data: CustomerRequest): Observable<any> {
     return from(this.startedConntion)
       .pipe(
         mergeMap(_ => {
-          return this.connection.invoke(method, ...data)
+          return this.connection.send(method, data)
         })
       )
   }

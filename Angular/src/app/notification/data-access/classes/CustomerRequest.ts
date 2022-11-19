@@ -3,7 +3,11 @@ export interface CustomerRequest {
     description:string,
     requestType:string,
     location:string,
-    custmoerSendDate:Date,
+    custmoerSendDate:string,
     providerId:string,
     customerId:string,
+    id:string,
+    massage:string,
+    image:string,
+    price:number|null
 }

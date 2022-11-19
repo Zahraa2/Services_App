@@ -11,8 +11,8 @@ public class RequestWriteDTO
     public Guid Id { get; set; }
     public string? Location { get; set; }
     public string? State { get; set; }
-    public DateTime CreateDate { get; set; }
-    public DateTime EndDate { get; set; }
+    public string CreateDate { get; set; }
+    public string EndDate { get; set; }
     public string? Review { get; set; }
     public decimal Rate { get; set; }
     public Guid? CustomerId { get; set; }

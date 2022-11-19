@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import * as signalR from '@microsoft/signalr';
 import { Subscription } from 'rxjs';
 import { CustomerRequest } from 'src/app/notification/data-access/classes/CustomerRequest';
 import { SignalRService } from 'src/app/notification/data-access/SignalR.service';
@@ -18,10 +19,14 @@ export class CustomerRequestServiceComponent implements OnInit {
     name: '',
     description: '',
     requestType: '',
+    custmoerSendDate: (new Date()).toString(),
     location: '',
-    custmoerSendDate: new Date(),
-    providerId: '',
-    customerId: ''
+    providerId: this.Provider.getProviderId(),
+    customerId: this.Provider.getCustomerId(),
+    massage: '',
+    image: '',
+    price:null,
+    id:''
   }
 
   customer: CustomerRequest[] = []
@@ -29,47 +34,38 @@ export class CustomerRequestServiceComponent implements OnInit {
   private subscriptions = new Subscription()
 
 
-  constructor(public Provider: ProfileService, public route: Router, public signalR: SignalRService ,public request:NotificationsService ) { }
+  constructor(public Provider: ProfileService, public route: Router, public request: NotificationsService , public signalR:SignalRService) { }
 
 
   ngOnInit() {
- 
 
   }
 
   sendRequest() {
-    this.customerResquest.providerId = this.Provider.getProviderId();
-   this.customerResquest.customerId = this.Provider.getCustomerId();
 
     console.log(this.customerResquest)
-    
-    this.request.CustomerRequest(this.customerResquest).subscribe(data =>{
-      console.log(data)
-    }, error => console.log(error))
 
+    this.request.CustomerRequest(this.customerResquest).subscribe(() => console.log("hello"),
+      error => console.log(error))
     this.signelConnection()
+
     this.route.navigateByUrl('Profile')
-
-
   }
 
-  signelConnection(){
-   //send data to server by Invoke
+  signelConnection() {
+    //send data to server by Invoke
     const sendCustomerRequest = this.signalR.invoke("CustomerSendNotification", this.customerResquest).subscribe()
     this.subscriptions.add(sendCustomerRequest);
 
-
-    //recive data from ON
-    this.allRequestSubscription = this.signalR.on("ProviderReciveNotification").subscribe(
-      (data:CustomerRequest) => {
-        this.customer.push(data)
-      }
-    )
+    // //recive data from ON
+    this.allRequestSubscription = this.signalR.on("ProviderReciveNotification")
 
     //print data
-    console.log(this.customer)
+    console.log(this.allRequestSubscription)
   }
 
-  
+
+
+
 
 }

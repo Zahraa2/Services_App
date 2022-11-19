@@ -16,7 +16,7 @@ public class RequestCostemerProviderWriteDTO
     public string RequestType { get; set; }
     public string? Img { get; set; }
     public string Location { get; set; }
-    public DateTime CustmoerSendDate { get; set; }
-    public string message { get; set; }
+    public string CustmoerSendDate { get; set; }
+    public string? message { get; set; }
 
 }

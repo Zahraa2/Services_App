@@ -145,33 +145,3 @@ nav {
 
 /* =========================================== */
 
-.related-notifications{
-  position: relative;
-}
-.notifications-container{
-  position: absolute;
-  top: 50%;
-  left: 15%;
-  z-index: 10000;
-  
-}
-
-.notifications-container h3{
-  text-transform: uppercase;
-  font-size: 75%;
-  font-weight: 700;
-  color: #84929f;
-
-}
-.notifications-container p{
-  font-size: 1.1rem;
-  color: #84929f;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.notifications-container .timer small{
-  margin-top: 3px !important;
-  display: block !important;
-  font-size: 12px !important;
-  opacity: 0.8;
-}

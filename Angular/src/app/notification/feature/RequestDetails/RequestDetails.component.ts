@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CustomerRequest } from '../../data-access/classes/CustomerRequest';
+import { NotificationsService } from '../../data-access/notifications.service';
 
 @Component({
   selector: 'app-RequestDetails',
@@ -8,9 +10,14 @@ import { Router } from '@angular/router';
 })
 export class RequestDetailsComponent implements OnInit {
 
-  constructor(public route:Router) { }
+  notifcation:CustomerRequest | any
+  constructor(public route:Router , public notifications:NotificationsService) { }
 
   ngOnInit() {
+    this.notifications.getNotificationsDetails(this.notifications.getPostId()).subscribe( data =>{
+      this.notifcation = data
+    }
+    )
   }
 
   sendRequest(){
